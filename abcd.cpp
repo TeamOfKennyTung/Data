@@ -69,6 +69,7 @@ void Print(dt dathuc)
 }
 int main()
 {
+	//t thu file lan 1
 	dt1 dathuc1=NULL;
 	dt2 dathuc2=NULL;
 	InsertAtFirst(dathuc1,5);
