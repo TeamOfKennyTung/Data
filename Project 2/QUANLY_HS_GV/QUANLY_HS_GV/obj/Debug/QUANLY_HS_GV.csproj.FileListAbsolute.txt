@@ -10,3 +10,6 @@ c:\users\ubuntu\documents\visual studio 2013\Projects\QUANLY_HS_GV\QUANLY_HS_GV\
 c:\users\ubuntu\documents\visual studio 2013\Projects\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.csproj.GenerateResource.Cache
 c:\users\ubuntu\documents\visual studio 2013\Projects\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.exe
 c:\users\ubuntu\documents\visual studio 2013\Projects\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.pdb
+E:\GitHub\Data\Project 2\QUANLY_HS_GV\QUANLY_HS_GV\bin\Debug\QUANLY_HS_GV.exe.config
+E:\GitHub\Data\Project 2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.exe
+E:\GitHub\Data\Project 2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.pdb
