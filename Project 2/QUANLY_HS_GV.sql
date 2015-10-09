@@ -33,6 +33,20 @@ CREATE TABLE LopHoc(
 	ID_Gv char(10)--giao vien chu nhiem
 )
 
+create table tblUser
+(
+	TaiKhoan varchar(50) not null,
+	MatKhau varchar(50) not null
+)
+
+
+insert into tblUser values (N'nguyenanhdung', N'nguyenanhdung')
+insert into tblUser values (N'hoangdinhdat', N'hoangdinhdat')
+insert into tblUser values (N'phixuandao', N'phixuandao')
+insert into tblUser values (N'phamdinhminh', N'phamdinhminh')
+insert into tblUser values (N'levanvu', N'levanvu')
+insert into tblUser values (N'luongvanluan', N'luongvanluan')
+
 alter table GiaoVien add constraint GV_ID_PK primary key(ID_Gv)
 alter table HocSinh add constraint HS_ID_PK primary key(ID_Hs)
 alter table LopHoc add constraint LH_ID_PK primary key(ID_Lop)

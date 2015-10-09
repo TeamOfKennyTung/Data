@@ -81,6 +81,20 @@ alter table HangHoa add constraint fk_hanghoa_hoadon foreign key (ID_HangHoa) re
 alter table KhachHang add constraint fk_khachhang_hoadon foreign key(ID_KhachHang) references HoaDon(ID_KhachHang)
 alter table NhanVien add constraint fk_nhanvien_hoadon foreign key(ID_NhanVien) references HoaDon(ID_NhanVien)
 
+create table tblUser
+(
+	TaiKhoan varchar(50) not null,
+	MatKhau varchar(50) not null
+)
+
+
+insert into tblUser values (N'nguyenanhdung', N'nguyenanhdung')
+insert into tblUser values (N'hoangdinhdat', N'hoangdinhdat')
+insert into tblUser values (N'phixuandao', N'phixuandao')
+insert into tblUser values (N'phamdinhminh', N'phamdinhminh')
+insert into tblUser values (N'levanvu', N'levanvu')
+insert into tblUser values (N'luongvanluan', N'luongvanluan')
+
 create proc LoadHangHoa
 as
 begin
