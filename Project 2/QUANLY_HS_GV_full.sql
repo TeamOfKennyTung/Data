@@ -33,10 +33,21 @@ CREATE TABLE LopHoc(
 	ID_Gv char(10)--giao vien chu nhiem
 )
 
+CREATE TABLE DangNhap(
+	Username char(10) NOT NULL,
+	Pass	nvarchar(20)
+)
+
 alter table GiaoVien add constraint GV_ID_PK primary key(ID_Gv)
 alter table HocSinh add constraint HS_ID_PK primary key(ID_Hs)
 alter table LopHoc add constraint LH_ID_PK primary key(ID_Lop)
 alter table MonHoc add constraint MH_ID_PK primary key(ID_MonHoc)
+
+insert into DangNhap(Username,Pass)
+values
+('admin1','12345'),
+('admin2','123456'),
+('admin3','123')
 
 insert into HocSinh(ID_Hs,HoTen,GT,NgaySinh,Quequan,ID_Lop,ID_MonHoc)
 values
