@@ -18,14 +18,13 @@ namespace QuanLiNhanSu
             InitializeComponent();
         }
         private SqlConnection con;
-        private DataTable dt = new DataTable();
+        DataTable dt;
         private SqlDataAdapter da = new SqlDataAdapter();
         private void connect()
         {
-            string cn = @"Data Source=(local);Initial Catalog=QuanLiNhanSu;Integrated Security=True";
             try
             {
-                con = new SqlConnection(cn);
+                con = new SqlConnection(ConnectDATA.getconnect());
                 con.Open();
             }
             catch (Exception)
@@ -44,16 +43,17 @@ namespace QuanLiNhanSu
             SqlCommand command = new SqlCommand();
             command.Connection = con;
             command.CommandType = CommandType.Text;
-            command.CommandText = "Select * From tblDangNhap Where (name=@user) And (pass=@password)";
+            command.CommandText = "Select * From tblDangNhap Where (Taikhoan=@user) And (matkhau=@password)";
             command.Parameters.Add("@user", SqlDbType.NVarChar, 50).Value = txtTaiKhoan.Text;
             command.Parameters.Add("@password", SqlDbType.NVarChar, 50).Value = txtMatKhau.Text;
             da.SelectCommand = command;
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                Form frm = new frmMenu();
-                frm.Show();
+                MessageBox.Show("Dang nhap thanh cong");
                 Hide();
+                frmMain main = new frmMain();
+                main.Show();
             }
             else
             {

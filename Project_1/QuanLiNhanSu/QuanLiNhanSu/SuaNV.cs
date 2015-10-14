@@ -9,7 +9,7 @@ namespace QuanLiNhanSu
 {
     public class SuaNV
     {
-        public string SuaNV(string manv, string tennv, string ngaysinh, string gioitinh, string quequan, string luong, string macv, string mapb)
+        public string SuaNhanVien(string manv, string tennv, string ngaysinh, string gioitinh, string quequan, string luong, string macv, string mapb)
         {
             string str = "SuaNhanVien";
             SqlConnection con = new SqlConnection(ConnectDATA.getconnect());

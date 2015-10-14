@@ -38,12 +38,12 @@
             // 
             // txtMatKhau
             // 
+            this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Location = new System.Drawing.Point(125, 74);
-            this.txtMatKhau.Multiline = true;
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMatKhau.Size = new System.Drawing.Size(149, 28);
+            this.txtMatKhau.Size = new System.Drawing.Size(149, 22);
             this.txtMatKhau.TabIndex = 3;
             this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -90,12 +90,13 @@
             // 
             // txtTaiKhoan
             // 
+            this.txtTaiKhoan.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaiKhoan.Location = new System.Drawing.Point(125, 34);
-            this.txtTaiKhoan.Multiline = true;
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.PasswordChar = '*';
             this.txtTaiKhoan.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTaiKhoan.Size = new System.Drawing.Size(149, 28);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(149, 22);
             this.txtTaiKhoan.TabIndex = 7;
             this.txtTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

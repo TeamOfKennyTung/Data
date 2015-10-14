@@ -9,7 +9,7 @@ namespace QuanLiNhanSu
 {
     public class ThemNV
     {
-        public string ThemNV(string tennv, string ngaysinh, string gioitinh, string quequan, string luong, string macv, string mapb)
+        public string ThemNhanVien(string tennv, string ngaysinh, string gioitinh, string quequan, string luong, string macv, string mapb)
         {
             string str = "ThemNhanVien";
             SqlConnection con = new SqlConnection(ConnectDATA.getconnect());
@@ -18,7 +18,7 @@ namespace QuanLiNhanSu
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@ten", tennv);
             cmd.Parameters["@ten"].Direction = ParameterDirection.Input;
-            cmd.Parameters.AddWithValue("@ns", ngaysinh);
+            cmd.Parameters.Add("@ns", Convert.ToDateTime(ngaysinh));
             cmd.Parameters["@ns"].Direction = ParameterDirection.Input;
             cmd.Parameters.AddWithValue("@gt", gioitinh);
             cmd.Parameters["@gt"].Direction = ParameterDirection.Input;

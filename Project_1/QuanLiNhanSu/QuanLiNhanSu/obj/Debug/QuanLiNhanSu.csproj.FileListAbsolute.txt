@@ -9,9 +9,14 @@ C:\Users\LUANJR1994\documents\visual studio 2012\Projects\QuanLiNhanSu\QuanLiNha
 C:\Users\LUANJR1994\documents\visual studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.pdb
 C:\Users\LUANJR1994\documents\visual studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmMenu.resources
 C:\Users\LUANJR1994\documents\visual studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmDangNhap.resources
-<<<<<<< HEAD
-E:\GitHub_Data\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe.config
-E:\GitHub_Data\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.exe
-E:\GitHub_Data\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.pdb
-=======
->>>>>>> KennyTung94-patch-1
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe.config
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.exe
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.pdb
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.pdb
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.csprojResolveAssemblyReference.cache
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmDangNhap.resources
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmMain.resources
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmMenu.resources
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.Properties.Resources.resources
+E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.csproj.GenerateResource.Cache
