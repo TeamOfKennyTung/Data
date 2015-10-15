@@ -21,5 +21,10 @@ namespace QuanLyThuVien
         {
 
         }
+
+        private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+
+        }
     }
 }

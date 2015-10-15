@@ -11,28 +11,3 @@ C:\Users\Admin\documents\visual studio 2012\Projects\QuanLyThuVien\QuanLyThuVien
 C:\Users\Admin\documents\visual studio 2012\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 C:\Users\Admin\documents\visual studio 2012\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDangNhap.resources
 C:\Users\Admin\documents\visual studio 2012\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmHuongDan.resources
-C:\Users\Admin\Documents\GitHub\Data\Project 3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
-C:\Users\Admin\Documents\GitHub\Data\Project 3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
-C:\Users\Admin\Documents\GitHub\Data\Project 3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
-<<<<<<< HEAD
-E:\GitHub_Data\Data\Project 3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
-E:\GitHub_Data\Data\Project 3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
-E:\GitHub_Data\Data\Project 3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
-=======
-C:\Users\Administrator\Documents\GitHub\Data\Data\Project 3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
-C:\Users\Administrator\Documents\GitHub\Data\Data\Project 3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
-C:\Users\Administrator\Documents\GitHub\Data\Data\Project 3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
->>>>>>> KennyTung94-patch-1
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDangNhap.resources
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDocGia.resources
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmHuongDan.resources
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMuonTra.resources
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSach.resources
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
-C:\Users\Admin\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache

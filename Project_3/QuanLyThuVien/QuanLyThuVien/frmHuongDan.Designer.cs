@@ -40,9 +40,9 @@
             treeNode5});
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Thông tin liên hệ");
             this.panel1 = new System.Windows.Forms.Panel();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel2 = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 442);
             this.panel1.TabIndex = 0;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(377, 442);
+            this.webBrowser1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -94,15 +103,7 @@
             this.treeView1.Size = new System.Drawing.Size(241, 442);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(377, 442);
-            this.webBrowser1.TabIndex = 0;
+            this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
             // 
             // frmHuongDan
             // 
