@@ -43,7 +43,7 @@
             this.lblMonhoc = new System.Windows.Forms.Label();
             this.dtNgaysinh = new System.Windows.Forms.DateTimePicker();
             this.lblNgaysinh = new System.Windows.Forms.Label();
-            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtChucvu = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.cboGioitinh = new System.Windows.Forms.ComboBox();
             this.txtQueQuan = new System.Windows.Forms.TextBox();
@@ -60,15 +60,6 @@
             this.qUANLY_HS_GVDataSet1 = new QUANLY_HS_GV.QUANLY_HS_GVDataSet1();
             this.giaoVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.giaoVienTableAdapter = new QUANLY_HS_GV.QUANLY_HS_GVDataSet1TableAdapters.GiaoVienTableAdapter();
-            this.iDLopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDMonHocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chucVuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cMNDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quequanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDGvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaovien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet1)).BeginInit();
@@ -85,6 +76,7 @@
             this.btnEdit.TabIndex = 124;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnShow
             // 
@@ -96,6 +88,7 @@
             this.btnShow.TabIndex = 117;
             this.btnShow.Text = "Show";
             this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnDelete
             // 
@@ -107,6 +100,7 @@
             this.btnDelete.TabIndex = 118;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // bntThoat
             // 
@@ -121,6 +115,7 @@
             this.bntThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bntThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bntThoat.UseVisualStyleBackColor = true;
+            this.bntThoat.Click += new System.EventHandler(this.bntThoat_Click);
             // 
             // cboSearch
             // 
@@ -159,7 +154,7 @@
             this.groupBox1.Controls.Add(this.lblMonhoc);
             this.groupBox1.Controls.Add(this.dtNgaysinh);
             this.groupBox1.Controls.Add(this.lblNgaysinh);
-            this.groupBox1.Controls.Add(this.txtSDT);
+            this.groupBox1.Controls.Add(this.txtChucvu);
             this.groupBox1.Controls.Add(this.txtCMND);
             this.groupBox1.Controls.Add(this.cboGioitinh);
             this.groupBox1.Controls.Add(this.txtQueQuan);
@@ -248,12 +243,12 @@
             this.lblNgaysinh.TabIndex = 95;
             this.lblNgaysinh.Text = "Ngày sinh";
             // 
-            // txtSDT
+            // txtChucvu
             // 
-            this.txtSDT.Location = new System.Drawing.Point(488, 61);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(175, 22);
-            this.txtSDT.TabIndex = 93;
+            this.txtChucvu.Location = new System.Drawing.Point(488, 61);
+            this.txtChucvu.Name = "txtChucvu";
+            this.txtChucvu.Size = new System.Drawing.Size(175, 22);
+            this.txtChucvu.TabIndex = 93;
             // 
             // txtCMND
             // 
@@ -370,31 +365,21 @@
             this.btnAdd.TabIndex = 123;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dgvGiaovien
             // 
-            this.dgvGiaovien.AutoGenerateColumns = false;
             this.dgvGiaovien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGiaovien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvGiaovien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dgvGiaovien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGiaovien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDGvDataGridViewTextBoxColumn,
-            this.hoTenDataGridViewTextBoxColumn,
-            this.quequanDataGridViewTextBoxColumn,
-            this.gTDataGridViewTextBoxColumn,
-            this.cMNDDataGridViewTextBoxColumn,
-            this.ngaySinhDataGridViewTextBoxColumn,
-            this.chucVuDataGridViewTextBoxColumn,
-            this.iDMonHocDataGridViewTextBoxColumn,
-            this.iDLopDataGridViewTextBoxColumn});
-            this.dgvGiaovien.DataSource = this.giaoVienBindingSource;
             this.dgvGiaovien.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvGiaovien.Location = new System.Drawing.Point(0, 330);
             this.dgvGiaovien.Name = "dgvGiaovien";
             this.dgvGiaovien.ShowRowErrors = false;
             this.dgvGiaovien.Size = new System.Drawing.Size(784, 231);
             this.dgvGiaovien.TabIndex = 122;
+            this.dgvGiaovien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaovien_CellClick);
             // 
             // qUANLY_HS_GVDataSet1
             // 
@@ -409,60 +394,6 @@
             // giaoVienTableAdapter
             // 
             this.giaoVienTableAdapter.ClearBeforeFill = true;
-            // 
-            // iDLopDataGridViewTextBoxColumn
-            // 
-            this.iDLopDataGridViewTextBoxColumn.DataPropertyName = "ID_Lop";
-            this.iDLopDataGridViewTextBoxColumn.HeaderText = "ID_Lop";
-            this.iDLopDataGridViewTextBoxColumn.Name = "iDLopDataGridViewTextBoxColumn";
-            // 
-            // iDMonHocDataGridViewTextBoxColumn
-            // 
-            this.iDMonHocDataGridViewTextBoxColumn.DataPropertyName = "ID_MonHoc";
-            this.iDMonHocDataGridViewTextBoxColumn.HeaderText = "ID_MonHoc";
-            this.iDMonHocDataGridViewTextBoxColumn.Name = "iDMonHocDataGridViewTextBoxColumn";
-            // 
-            // chucVuDataGridViewTextBoxColumn
-            // 
-            this.chucVuDataGridViewTextBoxColumn.DataPropertyName = "ChucVu";
-            this.chucVuDataGridViewTextBoxColumn.HeaderText = "ChucVu";
-            this.chucVuDataGridViewTextBoxColumn.Name = "chucVuDataGridViewTextBoxColumn";
-            // 
-            // ngaySinhDataGridViewTextBoxColumn
-            // 
-            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
-            // 
-            // cMNDDataGridViewTextBoxColumn
-            // 
-            this.cMNDDataGridViewTextBoxColumn.DataPropertyName = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.HeaderText = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.Name = "cMNDDataGridViewTextBoxColumn";
-            // 
-            // gTDataGridViewTextBoxColumn
-            // 
-            this.gTDataGridViewTextBoxColumn.DataPropertyName = "GT";
-            this.gTDataGridViewTextBoxColumn.HeaderText = "GT";
-            this.gTDataGridViewTextBoxColumn.Name = "gTDataGridViewTextBoxColumn";
-            // 
-            // quequanDataGridViewTextBoxColumn
-            // 
-            this.quequanDataGridViewTextBoxColumn.DataPropertyName = "Quequan";
-            this.quequanDataGridViewTextBoxColumn.HeaderText = "Quequan";
-            this.quequanDataGridViewTextBoxColumn.Name = "quequanDataGridViewTextBoxColumn";
-            // 
-            // hoTenDataGridViewTextBoxColumn
-            // 
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            // 
-            // iDGvDataGridViewTextBoxColumn
-            // 
-            this.iDGvDataGridViewTextBoxColumn.DataPropertyName = "ID_Gv";
-            this.iDGvDataGridViewTextBoxColumn.HeaderText = "ID_Gv";
-            this.iDGvDataGridViewTextBoxColumn.Name = "iDGvDataGridViewTextBoxColumn";
             // 
             // GiaoVien
             // 
@@ -503,7 +434,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtChucvu;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.ComboBox cboGioitinh;
         private System.Windows.Forms.TextBox txtQueQuan;
@@ -526,14 +457,5 @@
         private QUANLY_HS_GVDataSet1 qUANLY_HS_GVDataSet1;
         private System.Windows.Forms.BindingSource giaoVienBindingSource;
         private QUANLY_HS_GVDataSet1TableAdapters.GiaoVienTableAdapter giaoVienTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDGvDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quequanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gTDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cMNDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chucVuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDMonHocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDLopDataGridViewTextBoxColumn;
     }
 }

@@ -39,10 +39,5 @@ namespace QUANLY_HS_GV
             Help tg = new Help();
             tg.Show();
         }
-
-        private void quảnLýToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
