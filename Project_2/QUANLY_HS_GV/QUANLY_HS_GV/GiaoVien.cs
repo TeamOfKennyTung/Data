@@ -217,5 +217,26 @@ namespace QUANLY_HS_GV
             }
         }
 
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (cboSearch.Text == "Mã giáo viên")
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                SqlDataAdapter sda = new SqlDataAdapter("select *from GiaoVien where ID_Gv like '" + txtSearch.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dgvGiaovien.DataSource = dt;
+            }
+            else
+                if (cboSearch.Text == "Họ tên giáo viên")
+                {
+                    SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                    SqlDataAdapter sdap = new SqlDataAdapter("select *from GiaoVien where HoTen like '" + txtSearch.Text + "%'", con);
+                    DataTable data = new DataTable();
+                    sdap.Fill(data);
+                    dgvGiaovien.DataSource = data;
+                }
+        }
+
     }
 }

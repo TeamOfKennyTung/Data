@@ -51,11 +51,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtquequan = new System.Windows.Forms.TextBox();
             this.qUANLY_HS_GVDataSet1 = new QUANLY_HS_GV.QUANLY_HS_GVDataSet();
             this.hocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hocSinhTableAdapter1 = new QUANLY_HS_GV.QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter();
-            this.txtquequan = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocsinh)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet1)).BeginInit();
@@ -269,8 +269,8 @@
             // 
             this.cboSearch.FormattingEnabled = true;
             this.cboSearch.Items.AddRange(new object[] {
-            "ID_Khach",
-            "CMND"});
+            "Mã học sinh",
+            "Họ tên học sinh"});
             this.cboSearch.Location = new System.Drawing.Point(179, 224);
             this.cboSearch.Name = "cboSearch";
             this.cboSearch.Size = new System.Drawing.Size(121, 21);
@@ -293,6 +293,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(161, 20);
             this.txtSearch.TabIndex = 130;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // groupBox1
             // 
@@ -319,6 +320,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(6, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.TabIndex = 103;
+            this.label2.Text = "Quê quán";
+            // 
+            // txtquequan
+            // 
+            this.txtquequan.Location = new System.Drawing.Point(119, 89);
+            this.txtquequan.Name = "txtquequan";
+            this.txtquequan.Size = new System.Drawing.Size(175, 22);
+            this.txtquequan.TabIndex = 102;
+            // 
             // qUANLY_HS_GVDataSet1
             // 
             this.qUANLY_HS_GVDataSet1.DataSetName = "QUANLY_HS_GVDataSet";
@@ -332,24 +351,6 @@
             // hocSinhTableAdapter1
             // 
             this.hocSinhTableAdapter1.ClearBeforeFill = true;
-            // 
-            // txtquequan
-            // 
-            this.txtquequan.Location = new System.Drawing.Point(119, 89);
-            this.txtquequan.Name = "txtquequan";
-            this.txtquequan.Size = new System.Drawing.Size(175, 22);
-            this.txtquequan.TabIndex = 102;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(6, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
-            this.label2.TabIndex = 103;
-            this.label2.Text = "Quê quán";
             // 
             // HocSinh
             // 
