@@ -31,6 +31,7 @@ D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.f
 D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmMenu.resources
 D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.Properties.Resources.resources
 D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 D:\ThucTapNhom\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe.config
 D:\ThucTapNhom\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.exe
 D:\ThucTapNhom\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.pdb
@@ -42,3 +43,5 @@ D:\ThucTapNhom\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.f
 D:\ThucTapNhom\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmMenu.resources
 D:\ThucTapNhom\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.Properties.Resources.resources
 D:\ThucTapNhom\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.csproj.GenerateResource.Cache
+=======
+>>>>>>> master

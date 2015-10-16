@@ -105,9 +105,13 @@
             this.rBTenNV = new System.Windows.Forms.RadioButton();
             this.rBMaNV = new System.Windows.Forms.RadioButton();
             this.txtTKTenNV = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
             this.quanLiNhanSuDataSet = new QuanLiNhanSu.QuanLiNhanSuDataSet();
             this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter();
+=======
+            this.cbxTimKiemMaNV = new System.Windows.Forms.ComboBox();
+>>>>>>> master
             this.tabXoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgXoaNV)).BeginInit();
             this.tabSua.SuspendLayout();
@@ -161,8 +165,11 @@
             // 
             // cbxXoaMaNV
             // 
+<<<<<<< HEAD
             this.cbxXoaMaNV.DataSource = this.tblNhanVienBindingSource;
             this.cbxXoaMaNV.DisplayMember = "MaNV";
+=======
+>>>>>>> master
             this.cbxXoaMaNV.FormattingEnabled = true;
             this.cbxXoaMaNV.Location = new System.Drawing.Point(116, 22);
             this.cbxXoaMaNV.Name = "cbxXoaMaNV";
@@ -374,7 +381,10 @@
             // 
             // dtgSuaNV
             // 
+<<<<<<< HEAD
             this.dtgSuaNV.AllowUserToAddRows = false;
+=======
+>>>>>>> master
             this.dtgSuaNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgSuaNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSuaNV.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -565,7 +575,10 @@
             // 
             // dtgThemNV
             // 
+<<<<<<< HEAD
             this.dtgThemNV.AllowUserToAddRows = false;
+=======
+>>>>>>> master
             this.dtgThemNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgThemNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgThemNV.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -900,6 +913,7 @@
             this.txtTKTenNV.TextChanged += new System.EventHandler(this.txtTKTenNV_TextChanged);
             this.txtTKTenNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTKTenNV_KeyDown);
             // 
+<<<<<<< HEAD
             // quanLiNhanSuDataSet
             // 
             this.quanLiNhanSuDataSet.DataSetName = "QuanLiNhanSuDataSet";
@@ -913,6 +927,15 @@
             // tblNhanVienTableAdapter
             // 
             this.tblNhanVienTableAdapter.ClearBeforeFill = true;
+=======
+            // cbxTimKiemMaNV
+            // 
+            this.cbxTimKiemMaNV.FormattingEnabled = true;
+            this.cbxTimKiemMaNV.Location = new System.Drawing.Point(398, 55);
+            this.cbxTimKiemMaNV.Name = "cbxTimKiemMaNV";
+            this.cbxTimKiemMaNV.Size = new System.Drawing.Size(121, 27);
+            this.cbxTimKiemMaNV.TabIndex = 30;
+>>>>>>> master
             // 
             // frmMain
             // 
@@ -1024,9 +1047,12 @@
         private System.Windows.Forms.Button bntLamRong;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox cbxTimKiemMaNV;
+<<<<<<< HEAD
         private QuanLiNhanSuDataSet quanLiNhanSuDataSet;
         private System.Windows.Forms.BindingSource tblNhanVienBindingSource;
         private QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
+=======
+>>>>>>> master
 
     }
 }
