@@ -27,6 +27,8 @@ namespace QuanLiNhanSu
             dtgNhanVien.DataSource = dt;
             dtgSuaNV.DataSource = dt;
 
+           
+
             cbxTKMaCV.DataSource = dt1;
             cbxTKMaCV.DisplayMember = "Mã Chức Vụ";
             
@@ -36,9 +38,6 @@ namespace QuanLiNhanSu
             cbxThemMaPB.DataSource = dt2;
             cbxThemMaPB.DisplayMember = "Mã Phòng Ban";
 
-            cbxTKMaNV.DataSource = dt;
-            cbxTKMaNV.DisplayMember = "Mã nhân viên";
-
             cbxTKMaCV.DataSource = dt1;
             cbxTKMaCV.DisplayMember = "Mã Chức Vụ";
         }
@@ -46,7 +45,7 @@ namespace QuanLiNhanSu
         private void dtgNhanVien_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             int dong = e.RowIndex;
-            cbxMaCV.Text = dtgNhanVien.Rows[dong].Cells[0].Value.ToString();
+            comboBox1.Text = dtgNhanVien.Rows[dong].Cells[0].Value.ToString();
             txtTenNV.Text = dtgNhanVien.Rows[dong].Cells[1].Value.ToString();
             dTPNgaySinh.Text = dtgNhanVien.Rows[dong].Cells[2].Value.ToString();
             cbxGT.Text = dtgNhanVien.Rows[dong].Cells[5].Value.ToString();
@@ -76,10 +75,10 @@ namespace QuanLiNhanSu
                 MessageBox.Show("Thêm thành công");
             else
                 if (kq == "0")
-                    MessageBox.Show("Không có mã công việc này");
+                    MessageBox.Show("Không có mã công việc này hoặc mã công việc bị sai");
                 else
                     if (kq == "1")
-                        MessageBox.Show("Không có mã phòng ban");
+                        MessageBox.Show("Không có mã phòng ban hoặc mã phòng ban bị sai");
 
         }
 
@@ -113,7 +112,7 @@ namespace QuanLiNhanSu
         private void rBMaNV_CheckedChanged(object sender, EventArgs e)
         {
             chose = 1;
-            cbxTKMaNV.Enabled = true;
+            cbxTimKiemMaNV.Enabled = true;
             cbxTKMaCV.Enabled = false;
             txtTKTenNV.Enabled = false;
         }
@@ -121,7 +120,7 @@ namespace QuanLiNhanSu
         private void rBTenNV_CheckedChanged(object sender, EventArgs e)
         {
             chose = 2;
-            cbxTKMaNV.Enabled = false;
+            cbxTimKiemMaNV.Enabled=false;
             cbxTKMaCV.Enabled = false;
             txtTKTenNV.Enabled = true;
         }
@@ -129,16 +128,83 @@ namespace QuanLiNhanSu
         private void rBMaCV_CheckedChanged(object sender, EventArgs e)
         {
             chose = 3;
-            cbxTKMaNV.Enabled = false;
+            cbxTimKiemMaNV.Enabled = false;
             cbxTKMaCV.Enabled = true;
             txtTKTenNV.Enabled = false;
         }
 
-        private void txtTKTenNV_Enter(object sender, EventArgs e)
+        private void bntSua_Click(object sender, EventArgs e)
         {
-            TimKiemNV tk = new TimKiemNV();
-            DataTable dt = tk.TimKiem(cbxTKMaNV.Text, txtTKTenNV.Text, cbxTKMaCV.Text);
-            dtgTimKiem.DataSource = dt;
+            SuaNV sua = new SuaNV();
+            string kq=sua.SuaNhanVien(cbxSuaMaNV.Text, txtSuaTenNV.Text, dTPSuaNS.Text, cbxSuaGT.Text, txtSuaQQ.Text, txtSuaLuong.Text, cbxSuaMaCV.Text, cbxSuaMaPB.Text);
+            if (kq == "0")
+                MessageBox.Show("Không có mã nhân viên hoặc mã nhân viên bị sai");
+            else
+                if (kq == "1")
+                    MessageBox.Show("Không có mã công việc hoặc mã công việc bị sai");
+                else
+                    if (kq == "2")
+                        MessageBox.Show("Không có mã phòng ban hoặc mã phòng ban bị sai");
+                    else
+                        MessageBox.Show("Sửa thành công");
         }
+
+        private void bntRefreshSua_Click(object sender, EventArgs e)
+        {
+            DataTable dt = NV.ShowNhanVien();
+            dtgThemNV.DataSource = dt;
+            Init();
+        }
+
+        private void bntXoa_Click(object sender, EventArgs e)
+        {
+            XoaNV xoa = new XoaNV();
+            string kq=xoa.XoaNhanVien(cbxXoaMaNV.Text);
+            if (kq == "0")
+                MessageBox.Show("Không có mã nhân viên hoặc mã nhân viên bị sai");
+            else
+                MessageBox.Show("Xóa thành công");
+        }
+
+        private void txtTKTenNV_TextChanged(object sender, EventArgs e)
+        {
+            dtgTimKiem.DataSource = null;
+        }
+        private void TimKiem()
+        {
+            try
+            {
+                TimKiemNV tk = new TimKiemNV();
+                DataTable dt = tk.TimKiem(cbxTimKiemMaNV.Text, txtTKTenNV.Text, cbxTKMaCV.Text, chose);
+                dtgTimKiem.DataSource = dt;
+            }
+            catch (Exception er)
+            { MessageBox.Show(er.Message); }
+        }
+
+        private void txtTKTenNV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                TimKiem();
+            }
+        }
+
+        private void cbxTimKiemMaNV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                TimKiem();
+            }
+        }
+
+        private void cbxTKMaCV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                TimKiem();
+            }
+        }
+        
     }
 }

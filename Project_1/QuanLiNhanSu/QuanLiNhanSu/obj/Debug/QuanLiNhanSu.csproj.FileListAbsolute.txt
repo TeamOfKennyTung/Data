@@ -20,3 +20,14 @@ E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.
 E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmMenu.resources
 E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.Properties.Resources.resources
 E:\Visual Studio 2012\Projects\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.csproj.GenerateResource.Cache
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe.config
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.exe
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.pdb
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.pdb
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.csprojResolveAssemblyReference.cache
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmDangNhap.resources
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmMain.resources
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.frmMenu.resources
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.Properties.Resources.resources
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.csproj.GenerateResource.Cache

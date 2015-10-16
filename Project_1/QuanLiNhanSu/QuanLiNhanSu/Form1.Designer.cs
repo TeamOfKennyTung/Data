@@ -31,7 +31,7 @@
             this.tabXoa = new System.Windows.Forms.TabPage();
             this.bntXoa = new System.Windows.Forms.Button();
             this.bntRefreshXoa = new System.Windows.Forms.Button();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.cbxXoaMaNV = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.dtgXoaNV = new System.Windows.Forms.DataGridView();
             this.tabSua = new System.Windows.Forms.TabPage();
@@ -74,12 +74,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtgThemNV = new System.Windows.Forms.DataGridView();
             this.TabThongTin = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cbxMaPB = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbxMaCV = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxGT = new System.Windows.Forms.ComboBox();
-            this.cbxMaNV = new System.Windows.Forms.ComboBox();
             this.txtLuong = new System.Windows.Forms.TextBox();
             this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
@@ -98,12 +98,12 @@
             this.lblTKTenNV = new System.Windows.Forms.Label();
             this.cbxTKMaCV = new System.Windows.Forms.ComboBox();
             this.lblTKMaCV = new System.Windows.Forms.Label();
-            this.cbxTKMaNV = new System.Windows.Forms.ComboBox();
             this.lblTKMaNV = new System.Windows.Forms.Label();
             this.rBMaCV = new System.Windows.Forms.RadioButton();
             this.rBTenNV = new System.Windows.Forms.RadioButton();
             this.rBMaNV = new System.Windows.Forms.RadioButton();
             this.txtTKTenNV = new System.Windows.Forms.TextBox();
+            this.cbxTimKiemMaNV = new System.Windows.Forms.ComboBox();
             this.tabXoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgXoaNV)).BeginInit();
             this.tabSua.SuspendLayout();
@@ -122,7 +122,7 @@
             // 
             this.tabXoa.Controls.Add(this.bntXoa);
             this.tabXoa.Controls.Add(this.bntRefreshXoa);
-            this.tabXoa.Controls.Add(this.comboBox9);
+            this.tabXoa.Controls.Add(this.cbxXoaMaNV);
             this.tabXoa.Controls.Add(this.label18);
             this.tabXoa.Controls.Add(this.dtgXoaNV);
             this.tabXoa.Location = new System.Drawing.Point(4, 28);
@@ -141,6 +141,7 @@
             this.bntXoa.TabIndex = 39;
             this.bntXoa.Text = "Xóa";
             this.bntXoa.UseVisualStyleBackColor = true;
+            this.bntXoa.Click += new System.EventHandler(this.bntXoa_Click);
             // 
             // bntRefreshXoa
             // 
@@ -152,13 +153,13 @@
             this.bntRefreshXoa.UseVisualStyleBackColor = true;
             this.bntRefreshXoa.Click += new System.EventHandler(this.bntRefreshXoa_Click);
             // 
-            // comboBox9
+            // cbxXoaMaNV
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(116, 22);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 27);
-            this.comboBox9.TabIndex = 32;
+            this.cbxXoaMaNV.FormattingEnabled = true;
+            this.cbxXoaMaNV.Location = new System.Drawing.Point(116, 22);
+            this.cbxXoaMaNV.Name = "cbxXoaMaNV";
+            this.cbxXoaMaNV.Size = new System.Drawing.Size(121, 27);
+            this.cbxXoaMaNV.TabIndex = 32;
             // 
             // label18
             // 
@@ -215,6 +216,7 @@
             this.bntSua.TabIndex = 37;
             this.bntSua.Text = "Sửa";
             this.bntSua.UseVisualStyleBackColor = true;
+            this.bntSua.Click += new System.EventHandler(this.bntSua_Click);
             // 
             // bntRefreshSua
             // 
@@ -224,6 +226,7 @@
             this.bntRefreshSua.TabIndex = 36;
             this.bntRefreshSua.Text = "Làm mới";
             this.bntRefreshSua.UseVisualStyleBackColor = true;
+            this.bntRefreshSua.Click += new System.EventHandler(this.bntRefreshSua_Click);
             // 
             // cbxSuaMaPB
             // 
@@ -262,6 +265,9 @@
             // cbxSuaGT
             // 
             this.cbxSuaGT.FormattingEnabled = true;
+            this.cbxSuaGT.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cbxSuaGT.Location = new System.Drawing.Point(442, 16);
             this.cbxSuaGT.Name = "cbxSuaGT";
             this.cbxSuaGT.Size = new System.Drawing.Size(121, 27);
@@ -359,6 +365,7 @@
             // 
             // dtgSuaNV
             // 
+            this.dtgSuaNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgSuaNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSuaNV.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgSuaNV.Location = new System.Drawing.Point(3, 185);
@@ -480,6 +487,9 @@
             // cbxThemGT
             // 
             this.cbxThemGT.FormattingEnabled = true;
+            this.cbxThemGT.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cbxThemGT.Location = new System.Drawing.Point(457, 38);
             this.cbxThemGT.Name = "cbxThemGT";
             this.cbxThemGT.Size = new System.Drawing.Size(121, 27);
@@ -544,6 +554,7 @@
             // 
             // dtgThemNV
             // 
+            this.dtgThemNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgThemNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgThemNV.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgThemNV.Location = new System.Drawing.Point(3, 196);
@@ -553,12 +564,12 @@
             // 
             // TabThongTin
             // 
+            this.TabThongTin.Controls.Add(this.comboBox1);
             this.TabThongTin.Controls.Add(this.cbxMaPB);
             this.TabThongTin.Controls.Add(this.label9);
             this.TabThongTin.Controls.Add(this.cbxMaCV);
             this.TabThongTin.Controls.Add(this.label7);
             this.TabThongTin.Controls.Add(this.cbxGT);
-            this.TabThongTin.Controls.Add(this.cbxMaNV);
             this.TabThongTin.Controls.Add(this.txtLuong);
             this.TabThongTin.Controls.Add(this.txtQueQuan);
             this.TabThongTin.Controls.Add(this.txtTenNV);
@@ -577,6 +588,14 @@
             this.TabThongTin.TabIndex = 0;
             this.TabThongTin.Text = "Thông Tin NV";
             this.TabThongTin.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(107, 7);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 27);
+            this.comboBox1.TabIndex = 20;
             // 
             // cbxMaPB
             // 
@@ -615,20 +634,13 @@
             // cbxGT
             // 
             this.cbxGT.FormattingEnabled = true;
+            this.cbxGT.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cbxGT.Location = new System.Drawing.Point(446, 42);
             this.cbxGT.Name = "cbxGT";
             this.cbxGT.Size = new System.Drawing.Size(121, 27);
             this.cbxGT.TabIndex = 15;
-            // 
-            // cbxMaNV
-            // 
-            this.cbxMaNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbxMaNV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxMaNV.FormattingEnabled = true;
-            this.cbxMaNV.Location = new System.Drawing.Point(107, 8);
-            this.cbxMaNV.Name = "cbxMaNV";
-            this.cbxMaNV.Size = new System.Drawing.Size(121, 27);
-            this.cbxMaNV.TabIndex = 14;
             // 
             // txtLuong
             // 
@@ -765,10 +777,10 @@
             // 
             // txtTimkiem
             // 
+            this.txtTimkiem.Controls.Add(this.cbxTimKiemMaNV);
             this.txtTimkiem.Controls.Add(this.lblTKTenNV);
             this.txtTimkiem.Controls.Add(this.cbxTKMaCV);
             this.txtTimkiem.Controls.Add(this.lblTKMaCV);
-            this.txtTimkiem.Controls.Add(this.cbxTKMaNV);
             this.txtTimkiem.Controls.Add(this.lblTKMaNV);
             this.txtTimkiem.Controls.Add(this.rBMaCV);
             this.txtTimkiem.Controls.Add(this.rBTenNV);
@@ -797,6 +809,7 @@
             this.cbxTKMaCV.Name = "cbxTKMaCV";
             this.cbxTKMaCV.Size = new System.Drawing.Size(121, 27);
             this.cbxTKMaCV.TabIndex = 28;
+            this.cbxTKMaCV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbxTKMaCV_KeyDown);
             // 
             // lblTKMaCV
             // 
@@ -806,14 +819,6 @@
             this.lblTKMaCV.Size = new System.Drawing.Size(117, 19);
             this.lblTKMaCV.TabIndex = 27;
             this.lblTKMaCV.Text = "Theo Mã chức vụ";
-            // 
-            // cbxTKMaNV
-            // 
-            this.cbxTKMaNV.FormattingEnabled = true;
-            this.cbxTKMaNV.Location = new System.Drawing.Point(398, 54);
-            this.cbxTKMaNV.Name = "cbxTKMaNV";
-            this.cbxTKMaNV.Size = new System.Drawing.Size(121, 27);
-            this.cbxTKMaNV.TabIndex = 26;
             // 
             // lblTKMaNV
             // 
@@ -866,7 +871,16 @@
             this.txtTKTenNV.Name = "txtTKTenNV";
             this.txtTKTenNV.Size = new System.Drawing.Size(194, 26);
             this.txtTKTenNV.TabIndex = 20;
-            this.txtTKTenNV.Enter += new System.EventHandler(this.txtTKTenNV_Enter);
+            this.txtTKTenNV.TextChanged += new System.EventHandler(this.txtTKTenNV_TextChanged);
+            this.txtTKTenNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTKTenNV_KeyDown);
+            // 
+            // cbxTimKiemMaNV
+            // 
+            this.cbxTimKiemMaNV.FormattingEnabled = true;
+            this.cbxTimKiemMaNV.Location = new System.Drawing.Point(398, 55);
+            this.cbxTimKiemMaNV.Name = "cbxTimKiemMaNV";
+            this.cbxTimKiemMaNV.Size = new System.Drawing.Size(121, 27);
+            this.cbxTimKiemMaNV.TabIndex = 30;
             // 
             // frmMain
             // 
@@ -909,7 +923,6 @@
         private System.Windows.Forms.TabPage TabThongTin;
         private System.Windows.Forms.ComboBox cbxMaCV;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbxMaNV;
         private System.Windows.Forms.TextBox txtLuong;
         private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label lblLuong;
@@ -946,7 +959,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button bntXoa;
         private System.Windows.Forms.Button bntRefreshXoa;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox cbxXoaMaNV;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button bntSua;
         private System.Windows.Forms.Button bntRefreshSua;
@@ -969,13 +982,14 @@
         private System.Windows.Forms.Label lblTKTenNV;
         private System.Windows.Forms.ComboBox cbxTKMaCV;
         private System.Windows.Forms.Label lblTKMaCV;
-        private System.Windows.Forms.ComboBox cbxTKMaNV;
         private System.Windows.Forms.Label lblTKMaNV;
         private System.Windows.Forms.RadioButton rBMaCV;
         private System.Windows.Forms.RadioButton rBTenNV;
         private System.Windows.Forms.RadioButton rBMaNV;
         private System.Windows.Forms.DataGridView dtgTimKiem;
         private System.Windows.Forms.Button bntLamRong;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxTimKiemMaNV;
 
     }
 }
