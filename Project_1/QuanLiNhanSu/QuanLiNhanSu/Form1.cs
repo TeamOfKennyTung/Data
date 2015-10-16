@@ -135,6 +135,7 @@ namespace QuanLiNhanSu
             cbxTKMaCV.Enabled = true;
             txtTKTenNV.Enabled = false;
             dtgTimKiem.DataSource = null;
+<<<<<<< HEAD
         }
 
         private void bntSua_Click(object sender, EventArgs e)
@@ -189,6 +190,8 @@ namespace QuanLiNhanSu
             }
             catch (Exception er)
             { MessageBox.Show(er.Message); }
+=======
+>>>>>>> master
         }
 
         private void txtTKTenNV_KeyDown(object sender, KeyEventArgs e)
@@ -253,7 +256,7 @@ namespace QuanLiNhanSu
             try
             {
                 TimKiemNV tk = new TimKiemNV();
-                DataTable dt = tk.TimKiem(cbxTimKiemMaNV.Text, txtTKTenNV.Text, cbxTKMaCV.Text, chose);
+                DataTable dt = tk.TimKiem(cbxTimKiemMaNV.Text.ToString(), txtTKTenNV.Text, cbxTKMaCV.Text, chose);
                 dtgTimKiem.DataSource = dt;
             }
             catch (Exception er)
@@ -268,7 +271,8 @@ namespace QuanLiNhanSu
             }
         }
 
-        private void cbxTimKiemMaNV_KeyDown(object sender, KeyEventArgs e)
+      
+        private void cbxTKMaCV_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
             {
@@ -276,7 +280,11 @@ namespace QuanLiNhanSu
             }
         }
 
+<<<<<<< HEAD
         private void cbxTKMaCV_KeyDown(object sender, KeyEventArgs e)
+>>>>>>> master
+=======
+        private void cbxTimKiemMaNV_KeyDown(object sender, KeyEventArgs e)
 >>>>>>> master
         {
             if (e.KeyData == Keys.Enter)
@@ -284,6 +292,5 @@ namespace QuanLiNhanSu
                 TimKiem();
             }
         }
-        
     }
 }

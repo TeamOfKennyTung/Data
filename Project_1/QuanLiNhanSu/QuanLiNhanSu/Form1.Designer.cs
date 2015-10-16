@@ -106,11 +106,17 @@
             this.rBMaNV = new System.Windows.Forms.RadioButton();
             this.txtTKTenNV = new System.Windows.Forms.TextBox();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.quanLiNhanSuDataSet = new QuanLiNhanSu.QuanLiNhanSuDataSet();
             this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter();
 =======
             this.cbxTimKiemMaNV = new System.Windows.Forms.ComboBox();
+>>>>>>> master
+=======
+            this.quanLiNhanSuDataSet = new QuanLiNhanSu.QuanLiNhanSuDataSet();
+            this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter();
 >>>>>>> master
             this.tabXoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgXoaNV)).BeginInit();
@@ -166,9 +172,14 @@
             // cbxXoaMaNV
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.cbxXoaMaNV.DataSource = this.tblNhanVienBindingSource;
             this.cbxXoaMaNV.DisplayMember = "MaNV";
 =======
+>>>>>>> master
+=======
+            this.cbxXoaMaNV.DataSource = this.tblNhanVienBindingSource;
+            this.cbxXoaMaNV.DisplayMember = "MaNV";
 >>>>>>> master
             this.cbxXoaMaNV.FormattingEnabled = true;
             this.cbxXoaMaNV.Location = new System.Drawing.Point(116, 22);
@@ -382,8 +393,12 @@
             // dtgSuaNV
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dtgSuaNV.AllowUserToAddRows = false;
 =======
+>>>>>>> master
+=======
+            this.dtgSuaNV.AllowUserToAddRows = false;
 >>>>>>> master
             this.dtgSuaNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgSuaNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -576,8 +591,12 @@
             // dtgThemNV
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dtgThemNV.AllowUserToAddRows = false;
 =======
+>>>>>>> master
+=======
+            this.dtgThemNV.AllowUserToAddRows = false;
 >>>>>>> master
             this.dtgThemNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgThemNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -914,6 +933,7 @@
             this.txtTKTenNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTKTenNV_KeyDown);
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // quanLiNhanSuDataSet
             // 
             this.quanLiNhanSuDataSet.DataSetName = "QuanLiNhanSuDataSet";
@@ -935,6 +955,21 @@
             this.cbxTimKiemMaNV.Name = "cbxTimKiemMaNV";
             this.cbxTimKiemMaNV.Size = new System.Drawing.Size(121, 27);
             this.cbxTimKiemMaNV.TabIndex = 30;
+>>>>>>> master
+=======
+            // quanLiNhanSuDataSet
+            // 
+            this.quanLiNhanSuDataSet.DataSetName = "QuanLiNhanSuDataSet";
+            this.quanLiNhanSuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblNhanVienBindingSource
+            // 
+            this.tblNhanVienBindingSource.DataMember = "tblNhanVien";
+            this.tblNhanVienBindingSource.DataSource = this.quanLiNhanSuDataSet;
+            // 
+            // tblNhanVienTableAdapter
+            // 
+            this.tblNhanVienTableAdapter.ClearBeforeFill = true;
 >>>>>>> master
             // 
             // frmMain
@@ -1048,10 +1083,16 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox cbxTimKiemMaNV;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private QuanLiNhanSuDataSet quanLiNhanSuDataSet;
         private System.Windows.Forms.BindingSource tblNhanVienBindingSource;
         private QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
 =======
+>>>>>>> master
+=======
+        private QuanLiNhanSuDataSet quanLiNhanSuDataSet;
+        private System.Windows.Forms.BindingSource tblNhanVienBindingSource;
+        private QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
 >>>>>>> master
 
     }
