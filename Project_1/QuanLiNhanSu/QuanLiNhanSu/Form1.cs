@@ -18,9 +18,10 @@ namespace QuanLiNhanSu
             InitializeComponent();
         }
         NhanVien NV = new NhanVien();
-        int chose;
+        int chose=1;
         private void frmMain_Load(object sender, EventArgs e)
         {
+            this.tblNhanVienTableAdapter.Fill(this.quanLiNhanSuDataSet.tblNhanVien);
             DataTable dt = NV.ShowNhanVien();
             DataTable dt1 = NV.ShowChucVu();
             DataTable dt2 = NV.ShowPhongBan();
@@ -92,14 +93,14 @@ namespace QuanLiNhanSu
         private void dtgSuaNV_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             int dong = e.RowIndex;
-            cbxMaCV.Text = dtgSuaNV.Rows[dong].Cells[0].Value.ToString();
-            txtTenNV.Text = dtgSuaNV.Rows[dong].Cells[1].Value.ToString();
-            dTPNgaySinh.Text = dtgSuaNV.Rows[dong].Cells[2].Value.ToString();
-            cbxGT.Text = dtgSuaNV.Rows[dong].Cells[5].Value.ToString();
-            txtQueQuan.Text = dtgSuaNV.Rows[dong].Cells[4].Value.ToString();
-            txtLuong.Text = dtgSuaNV.Rows[dong].Cells[5].Value.ToString();
-            cbxMaCV.Text = dtgSuaNV.Rows[dong].Cells[6].Value.ToString();
-            cbxMaPB.Text = dtgSuaNV.Rows[dong].Cells[7].Value.ToString();
+            cbxSuaMaNV.Text = dtgSuaNV.Rows[dong].Cells[0].Value.ToString();
+            txtSuaTenNV.Text = dtgSuaNV.Rows[dong].Cells[1].Value.ToString();
+            dTPSuaNS.Text = dtgSuaNV.Rows[dong].Cells[2].Value.ToString();
+            cbxSuaGT.Text = dtgSuaNV.Rows[dong].Cells[5].Value.ToString();
+            txtSuaQQ.Text = dtgSuaNV.Rows[dong].Cells[4].Value.ToString();
+            txtSuaLuong.Text = dtgSuaNV.Rows[dong].Cells[5].Value.ToString();
+            cbxSuaMaCV.Text = dtgSuaNV.Rows[dong].Cells[6].Value.ToString();
+            cbxSuaMaPB.Text = dtgSuaNV.Rows[dong].Cells[7].Value.ToString();
         }
 
         private void bntRefreshXoa_Click(object sender, EventArgs e)
@@ -115,6 +116,7 @@ namespace QuanLiNhanSu
             cbxTimKiemMaNV.Enabled = true;
             cbxTKMaCV.Enabled = false;
             txtTKTenNV.Enabled = false;
+            dtgTimKiem.DataSource = null;
         }
 
         private void rBTenNV_CheckedChanged(object sender, EventArgs e)
@@ -123,6 +125,7 @@ namespace QuanLiNhanSu
             cbxTimKiemMaNV.Enabled=false;
             cbxTKMaCV.Enabled = false;
             txtTKTenNV.Enabled = true;
+            dtgTimKiem.DataSource = null;
         }
 
         private void rBMaCV_CheckedChanged(object sender, EventArgs e)
@@ -131,6 +134,7 @@ namespace QuanLiNhanSu
             cbxTimKiemMaNV.Enabled = false;
             cbxTKMaCV.Enabled = true;
             txtTKTenNV.Enabled = false;
+            dtgTimKiem.DataSource = null;
         }
 
         private void bntSua_Click(object sender, EventArgs e)
@@ -175,7 +179,7 @@ namespace QuanLiNhanSu
             try
             {
                 TimKiemNV tk = new TimKiemNV();
-                DataTable dt = tk.TimKiem(cbxTimKiemMaNV.Text, txtTKTenNV.Text, cbxTKMaCV.Text, chose);
+                DataTable dt = tk.TimKiem(cbxTimKiemMaNV.Text.ToString(), txtTKTenNV.Text, cbxTKMaCV.Text, chose);
                 dtgTimKiem.DataSource = dt;
             }
             catch (Exception er)
@@ -190,14 +194,7 @@ namespace QuanLiNhanSu
             }
         }
 
-        private void cbxTimKiemMaNV_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-            {
-                TimKiem();
-            }
-        }
-
+      
         private void cbxTKMaCV_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
@@ -205,6 +202,13 @@ namespace QuanLiNhanSu
                 TimKiem();
             }
         }
-        
+
+        private void cbxTimKiemMaNV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                TimKiem();
+            }
+        }
     }
 }

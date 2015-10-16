@@ -58,6 +58,7 @@
             this.ChiDan.Name = "ChiDan";
             this.ChiDan.Size = new System.Drawing.Size(61, 20);
             this.ChiDan.Text = "Chỉ dẫn";
+            this.ChiDan.Click += new System.EventHandler(this.ChiDan_Click);
             // 
             // frmMenu
             // 
