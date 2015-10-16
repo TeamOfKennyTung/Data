@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabXoa = new System.Windows.Forms.TabPage();
             this.bntXoa = new System.Windows.Forms.Button();
             this.bntRefreshXoa = new System.Windows.Forms.Button();
@@ -95,6 +96,7 @@
             this.tabTimKiem = new System.Windows.Forms.TabPage();
             this.dtgTimKiem = new System.Windows.Forms.DataGridView();
             this.txtTimkiem = new System.Windows.Forms.GroupBox();
+            this.cbxTimKiemMaNV = new System.Windows.Forms.ComboBox();
             this.lblTKTenNV = new System.Windows.Forms.Label();
             this.cbxTKMaCV = new System.Windows.Forms.ComboBox();
             this.lblTKMaCV = new System.Windows.Forms.Label();
@@ -103,7 +105,9 @@
             this.rBTenNV = new System.Windows.Forms.RadioButton();
             this.rBMaNV = new System.Windows.Forms.RadioButton();
             this.txtTKTenNV = new System.Windows.Forms.TextBox();
-            this.cbxTimKiemMaNV = new System.Windows.Forms.ComboBox();
+            this.quanLiNhanSuDataSet = new QuanLiNhanSu.QuanLiNhanSuDataSet();
+            this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter();
             this.tabXoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgXoaNV)).BeginInit();
             this.tabSua.SuspendLayout();
@@ -116,6 +120,8 @@
             this.tabTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTimKiem)).BeginInit();
             this.txtTimkiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabXoa
@@ -155,6 +161,8 @@
             // 
             // cbxXoaMaNV
             // 
+            this.cbxXoaMaNV.DataSource = this.tblNhanVienBindingSource;
+            this.cbxXoaMaNV.DisplayMember = "MaNV";
             this.cbxXoaMaNV.FormattingEnabled = true;
             this.cbxXoaMaNV.Location = new System.Drawing.Point(116, 22);
             this.cbxXoaMaNV.Name = "cbxXoaMaNV";
@@ -172,6 +180,7 @@
             // 
             // dtgXoaNV
             // 
+            this.dtgXoaNV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgXoaNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgXoaNV.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgXoaNV.Location = new System.Drawing.Point(3, 175);
@@ -365,6 +374,7 @@
             // 
             // dtgSuaNV
             // 
+            this.dtgSuaNV.AllowUserToAddRows = false;
             this.dtgSuaNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgSuaNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSuaNV.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -494,6 +504,7 @@
             this.cbxThemGT.Name = "cbxThemGT";
             this.cbxThemGT.Size = new System.Drawing.Size(121, 27);
             this.cbxThemGT.TabIndex = 23;
+            this.cbxThemGT.Text = "Nam";
             // 
             // txtThemQQ
             // 
@@ -554,6 +565,7 @@
             // 
             // dtgThemNV
             // 
+            this.dtgThemNV.AllowUserToAddRows = false;
             this.dtgThemNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgThemNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgThemNV.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -768,7 +780,10 @@
             // 
             // dtgTimKiem
             // 
+            this.dtgTimKiem.AllowUserToAddRows = false;
+            this.dtgTimKiem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgTimKiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTimKiem.ColumnHeadersVisible = false;
             this.dtgTimKiem.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dtgTimKiem.Location = new System.Drawing.Point(3, 175);
             this.dtgTimKiem.Name = "dtgTimKiem";
@@ -792,6 +807,17 @@
             this.txtTimkiem.TabIndex = 21;
             this.txtTimkiem.TabStop = false;
             this.txtTimkiem.Text = "Tìm kiếm";
+            // 
+            // cbxTimKiemMaNV
+            // 
+            this.cbxTimKiemMaNV.DataSource = this.tblNhanVienBindingSource;
+            this.cbxTimKiemMaNV.DisplayMember = "MaNV";
+            this.cbxTimKiemMaNV.FormattingEnabled = true;
+            this.cbxTimKiemMaNV.Location = new System.Drawing.Point(398, 55);
+            this.cbxTimKiemMaNV.Name = "cbxTimKiemMaNV";
+            this.cbxTimKiemMaNV.Size = new System.Drawing.Size(121, 27);
+            this.cbxTimKiemMaNV.TabIndex = 30;
+            this.cbxTimKiemMaNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbxTimKiemMaNV_KeyDown);
             // 
             // lblTKTenNV
             // 
@@ -874,13 +900,19 @@
             this.txtTKTenNV.TextChanged += new System.EventHandler(this.txtTKTenNV_TextChanged);
             this.txtTKTenNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTKTenNV_KeyDown);
             // 
-            // cbxTimKiemMaNV
+            // quanLiNhanSuDataSet
             // 
-            this.cbxTimKiemMaNV.FormattingEnabled = true;
-            this.cbxTimKiemMaNV.Location = new System.Drawing.Point(398, 55);
-            this.cbxTimKiemMaNV.Name = "cbxTimKiemMaNV";
-            this.cbxTimKiemMaNV.Size = new System.Drawing.Size(121, 27);
-            this.cbxTimKiemMaNV.TabIndex = 30;
+            this.quanLiNhanSuDataSet.DataSetName = "QuanLiNhanSuDataSet";
+            this.quanLiNhanSuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblNhanVienBindingSource
+            // 
+            this.tblNhanVienBindingSource.DataMember = "tblNhanVien";
+            this.tblNhanVienBindingSource.DataSource = this.quanLiNhanSuDataSet;
+            // 
+            // tblNhanVienTableAdapter
+            // 
+            this.tblNhanVienTableAdapter.ClearBeforeFill = true;
             // 
             // frmMain
             // 
@@ -908,6 +940,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgTimKiem)).EndInit();
             this.txtTimkiem.ResumeLayout(false);
             this.txtTimkiem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -990,6 +1024,9 @@
         private System.Windows.Forms.Button bntLamRong;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox cbxTimKiemMaNV;
+        private QuanLiNhanSuDataSet quanLiNhanSuDataSet;
+        private System.Windows.Forms.BindingSource tblNhanVienBindingSource;
+        private QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
 
     }
 }

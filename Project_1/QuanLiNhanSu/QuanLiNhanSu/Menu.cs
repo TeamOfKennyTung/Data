@@ -23,5 +23,10 @@ namespace QuanLiNhanSu
             frm1.Show();
             Hide();
         }
+
+        private void ChiDan_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
