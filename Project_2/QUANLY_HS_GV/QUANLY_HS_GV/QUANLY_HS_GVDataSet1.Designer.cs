@@ -1122,7 +1122,7 @@ SELECT ID_Gv, HoTen, Quequan, GT, CMND, NgaySinh, ChucVu, ID_MonHoc, ID_Lop FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QUANLY_HS_GV.Properties.Settings.Default.QUANLY_HS_GVConnectionString;
+            this._connection.ConnectionString = global::QUANLY_HS_GV.Properties.Settings.Default.QUANLY_HS_GVConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

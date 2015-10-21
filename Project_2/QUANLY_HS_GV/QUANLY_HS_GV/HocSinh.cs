@@ -23,8 +23,10 @@ namespace QUANLY_HS_GV
 
         private void HocSinh_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet.HocSinh' table. You can move, or remove it, as needed.
+            this.hocSinhTableAdapter.Fill(this.qUANLY_HS_GVDataSet.HocSinh);
             // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet1.HocSinh' table. You can move, or remove it, as needed.
-            this.hocSinhTableAdapter1.Fill(this.qUANLY_HS_GVDataSet1.HocSinh);
+            //this.hocSinhTableAdapter1.Fill(this.qUANLY_HS_GVDataSet1.HocSinh);
             // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet.HocSinh' table. You can move, or remove it, as needed.
             //this.hocSinhTableAdapter.Fill(this.qUANLY_HS_GVDataSet.HocSinh);
 
@@ -55,7 +57,8 @@ namespace QUANLY_HS_GV
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=UBUNTU-PC\\SQLEXPRESS;Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+            SqlConnection con = new SqlConnection(Connect.getconnect());
             try
             {
                 con.Open();
@@ -99,7 +102,8 @@ namespace QUANLY_HS_GV
             }
             else
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                SqlConnection con = new SqlConnection(Connect.getconnect());
                 con.Open();
                 SqlCommand com = new SqlCommand("Add_HS", con);
                 com.CommandType = CommandType.StoredProcedure;
@@ -126,18 +130,19 @@ namespace QUANLY_HS_GV
             else
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                SqlConnection con = new SqlConnection(Connect.getconnect());
                 con.Open();
                 SqlCommand com = new SqlCommand("Edit_HS", con);
                 com.CommandType = CommandType.StoredProcedure;
-                com.Parameters.AddWithValue("@idkh", txtIDHs.Text.Trim());
+                com.Parameters.AddWithValue("@id_hs", txtIDHs.Text.Trim());
                 com.Parameters.AddWithValue("@Hoten", txtTenHS.Text.Trim());
                 com.Parameters.AddWithValue("@quequan", txtquequan.Text.Trim());
                 com.Parameters.AddWithValue("@Gt", cboGioitinh.Text.Trim());                
                 com.Parameters.AddWithValue("@Ngaysinh", Convert.ToDateTime(dtNgaysinh.Text.Trim()));
                 com.Parameters.AddWithValue("@Id_lop", cbo_Lop.Text.Trim());
                 com.Parameters.AddWithValue("@Id_monhoc", cbo_Monhoc.Text.Trim());
-                //com.Parameters.AddWithValue("@kq", 1);
+                com.Parameters.AddWithValue("@kq", 1);
                 com.ExecuteNonQuery();
                 com.Dispose();
                 btnShow_Click(sender, e);
@@ -151,7 +156,8 @@ namespace QUANLY_HS_GV
             if (dgvHocsinh.SelectedRows.Count == 0) MessageBox.Show("Chọn ít nhất 1 dòng để xóa!...");
             else for (int i = 0; i < dgvHocsinh.Rows.Count; i++) if (dgvHocsinh.Rows[i].Selected)
                     {
-                        SqlConnection con1 = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                        //SqlConnection con1 = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                        SqlConnection con1 = new SqlConnection(Connect.getconnect());
                         try
                         {
                             con1.Open();
@@ -215,7 +221,8 @@ namespace QUANLY_HS_GV
         {
             if (cboSearch.Text == "Mã học sinh")
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                SqlConnection con = new SqlConnection(Connect.getconnect());
                 SqlDataAdapter sda = new SqlDataAdapter("select *from HocSinh where ID_Hs like '" + txtSearch.Text + "%'", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -224,7 +231,8 @@ namespace QUANLY_HS_GV
             else
                 if (cboSearch.Text == "Họ tên học sinh")
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                    //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(Connect.getconnect());
                     SqlDataAdapter sdap = new SqlDataAdapter("select *from HocSinh where HoTen like '" + txtSearch.Text + "%'", con);
                     DataTable data = new DataTable();
                     sdap.Fill(data);
