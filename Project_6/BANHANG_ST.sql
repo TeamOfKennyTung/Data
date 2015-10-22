@@ -1,4 +1,4 @@
---CREATE DATABASE QLBANHANG_ST
+CREATE DATABASE QLBANHANG_ST
 
 CREATE TABLE HangHoa(
 	ID_HangHoa CHAR(10) NOT NULL,
@@ -77,9 +77,9 @@ values
 ('HD005',N'Hóa Đơn 5','KH005','HH005','NV005')
 
 
-alter table HangHoa add constraint fk_hanghoa_hoadon foreign key (ID_HangHoa) references HoaDon(ID_HangHoa)
-alter table KhachHang add constraint fk_khachhang_hoadon foreign key(ID_KhachHang) references HoaDon(ID_KhachHang)
-alter table NhanVien add constraint fk_nhanvien_hoadon foreign key(ID_NhanVien) references HoaDon(ID_NhanVien)
+alter table HoaDon add constraint fk_hanghoa_hoadon foreign key (ID_HangHoa) references HangHoa(ID_HangHoa)
+alter table HoaDon add constraint fk_khachhang_hoadon foreign key(ID_KhachHang) references KhachHang(ID_KhachHang)
+alter table HoaDon add constraint fk_nhanvien_hoadon foreign key(ID_NhanVien) references NhanVien(ID_NhanVien)
 
 create table tblUser
 (
