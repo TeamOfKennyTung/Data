@@ -10,7 +10,7 @@ namespace QuanLiNhanSu
     {
         public static string getconnect()
         {
-            return (@"Data Source=LUANJR11-PC\LUANJR_SQL;Initial Catalog=QuanLiNhanSu;Integrated Security=True");
+            return (@"Data Source=UBUNTU-PC\\SQLEXPRESS;Initial Catalog=QuanLiNhanSu;Integrated Security=True");
         }
     }
 }

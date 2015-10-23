@@ -35,7 +35,7 @@ namespace QuanLiNhanSu
 
         private void DangNhap_Load(object sender, EventArgs e)
         {
-            connect();
+            //connect();
         }
 
         private void bntOK_Click(object sender, EventArgs e)
