@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLiNhanSu
+namespace QUANLY_HS_GV
 {
-    class ConnectDATA
+    class Connect
     {
         public static string getconnect()
         {
-            return (@"Data Source=UBUNTU-PC\\SQLEXPRESS;Initial Catalog=QuanLiNhanSu;Integrated Security=True");
+            return ("Data Source=UBUNTU-PC\\SQLEXPRESS;Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
         }
     }
 }
