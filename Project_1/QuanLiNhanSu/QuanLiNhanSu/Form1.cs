@@ -167,7 +167,12 @@ namespace QuanLiNhanSu
             if (kq == "0")
                 MessageBox.Show("Không có mã nhân viên hoặc mã nhân viên bị sai");
             else
+            {
                 MessageBox.Show("Xóa thành công");
+                DataTable dt = NV.ShowNhanVien();
+                dtgXoaNV.DataSource = dt;
+                Init();
+            }
         }
 
         private void txtTKTenNV_TextChanged(object sender, EventArgs e)

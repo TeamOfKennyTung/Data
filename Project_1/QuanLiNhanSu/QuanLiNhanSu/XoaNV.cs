@@ -11,13 +11,13 @@ namespace QuanLiNhanSu
     {
         public string XoaNhanVien(string manv)
         {
-            string str = "ThemNhanVien";
+            string str = "XoaNhanVien";
             SqlConnection con = new SqlConnection(ConnectDATA.getconnect());
             con.Open();
             SqlCommand cmd = new SqlCommand(str, con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@manv", manv);
-            cmd.Parameters["@ten"].Direction = ParameterDirection.Input;
+            cmd.Parameters["@manv"].Direction = ParameterDirection.Input;
             SqlParameter para = new SqlParameter("@kq", SqlDbType.Int);
             para.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(para);
