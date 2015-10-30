@@ -121,8 +121,8 @@
             // 
             this.cboSearch.FormattingEnabled = true;
             this.cboSearch.Items.AddRange(new object[] {
-            "ID_Khach",
-            "CMND"});
+            "Mã giáo viên",
+            "Họ tên giáo viên"});
             this.cboSearch.Location = new System.Drawing.Point(167, 296);
             this.cboSearch.Name = "cboSearch";
             this.cboSearch.Size = new System.Drawing.Size(121, 21);
@@ -145,6 +145,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(161, 20);
             this.txtSearch.TabIndex = 120;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // groupBox1
             // 

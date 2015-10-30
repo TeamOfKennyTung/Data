@@ -25,6 +25,8 @@ namespace QUANLY_HS_GV
         {
             // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet1.GiaoVien' table. You can move, or remove it, as needed.
             this.giaoVienTableAdapter.Fill(this.qUANLY_HS_GVDataSet1.GiaoVien);
+            // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet1.GiaoVien' table. You can move, or remove it, as needed.
+            //this.giaoVienTableAdapter.Fill(this.qUANLY_HS_GVDataSet1.GiaoVien);
         }
 
         private int KTTrung(string a)
@@ -55,7 +57,8 @@ namespace QUANLY_HS_GV
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+            //SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+            SqlConnection con = new SqlConnection(Connect.getconnect());
             try
             {
                 con.Open();
@@ -100,7 +103,8 @@ namespace QUANLY_HS_GV
             }
             else
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                SqlConnection con = new SqlConnection(Connect.getconnect());
                 con.Open();
                 SqlCommand com = new SqlCommand("Add_GV", con);
                 com.CommandType = CommandType.StoredProcedure;
@@ -129,10 +133,11 @@ namespace QUANLY_HS_GV
             else
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                SqlConnection con = new SqlConnection(Connect.getconnect());
                 con.Open();
                 SqlCommand com = new SqlCommand("Edit_GV", con);
-                com.Parameters.AddWithValue("@id_gv", txtIDGv.Text.Trim());
+                com.Parameters.AddWithValue("@Id_gv", txtIDGv.Text.Trim());
                 com.Parameters.AddWithValue("@Hoten", txtTenGV.Text.Trim());
                 com.Parameters.AddWithValue("@Quequan", txtQueQuan.Text.Trim());
                 com.Parameters.AddWithValue("@Gt", cboGioitinh.Text.Trim());
@@ -141,7 +146,7 @@ namespace QUANLY_HS_GV
                 com.Parameters.AddWithValue("@Chucvu", txtChucvu.Text.Trim());
                 com.Parameters.AddWithValue("@Id_lop", cbo_Lop.Text.Trim());
                 com.Parameters.AddWithValue("@Id_monhoc", cbo_Monhoc.Text.Trim());
-                com.Parameters.AddWithValue("@kq", 2);
+                com.Parameters.AddWithValue("@kq", 1);
                 com.ExecuteNonQuery();
                 com.Dispose();
                 btnShow_Click(sender, e);
@@ -155,7 +160,8 @@ namespace QUANLY_HS_GV
             if (dgvGiaovien.SelectedRows.Count == 0) MessageBox.Show("Chọn ít nhất 1 dòng để xóa!...");
             else for (int i = 0; i < dgvGiaovien.Rows.Count; i++) if (dgvGiaovien.Rows[i].Selected)
                     {
-                        SqlConnection con1 = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                        //SqlConnection con1 = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                        SqlConnection con1 = new SqlConnection(Connect.getconnect());
                         try
                         {
                             con1.Open();
@@ -215,6 +221,29 @@ namespace QUANLY_HS_GV
                 cbo_Monhoc.Text = dgvGiaovien.CurrentRow.Cells[7].Value.ToString();
                 cbo_Lop.Text = dgvGiaovien.CurrentRow.Cells[8].Value.ToString();
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (cboSearch.Text == "Mã giáo viên")
+            {
+                //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                SqlConnection con = new SqlConnection(Connect.getconnect());
+                SqlDataAdapter sda = new SqlDataAdapter("select *from GiaoVien where ID_Gv like '" + txtSearch.Text + "%'", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dgvGiaovien.DataSource = dt;
+            }
+            else
+                if (cboSearch.Text == "Họ tên giáo viên")
+                {
+                    //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(Connect.getconnect());
+                    SqlDataAdapter sdap = new SqlDataAdapter("select *from GiaoVien where HoTen like '" + txtSearch.Text + "%'", con);
+                    DataTable data = new DataTable();
+                    sdap.Fill(data);
+                    dgvGiaovien.DataSource = data;
+                }
         }
 
     }

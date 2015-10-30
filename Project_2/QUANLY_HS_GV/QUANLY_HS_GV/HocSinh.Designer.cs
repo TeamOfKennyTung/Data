@@ -51,14 +51,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.qUANLY_HS_GVDataSet1 = new QUANLY_HS_GV.QUANLY_HS_GVDataSet();
-            this.hocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hocSinhTableAdapter1 = new QUANLY_HS_GV.QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter();
-            this.txtquequan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtquequan = new System.Windows.Forms.TextBox();
+            this.qUANLY_HS_GVDataSet = new QUANLY_HS_GV.QUANLY_HS_GVDataSet();
+            this.hocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hocSinhTableAdapter = new QUANLY_HS_GV.QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocsinh)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -269,8 +269,8 @@
             // 
             this.cboSearch.FormattingEnabled = true;
             this.cboSearch.Items.AddRange(new object[] {
-            "ID_Khach",
-            "CMND"});
+            "Mã học sinh",
+            "Họ tên học sinh"});
             this.cboSearch.Location = new System.Drawing.Point(179, 224);
             this.cboSearch.Name = "cboSearch";
             this.cboSearch.Size = new System.Drawing.Size(121, 21);
@@ -293,6 +293,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(161, 20);
             this.txtSearch.TabIndex = 130;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // groupBox1
             // 
@@ -319,27 +320,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
             // 
-            // qUANLY_HS_GVDataSet1
-            // 
-            this.qUANLY_HS_GVDataSet1.DataSetName = "QUANLY_HS_GVDataSet";
-            this.qUANLY_HS_GVDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hocSinhBindingSource
-            // 
-            this.hocSinhBindingSource.DataMember = "HocSinh";
-            this.hocSinhBindingSource.DataSource = this.qUANLY_HS_GVDataSet1;
-            // 
-            // hocSinhTableAdapter1
-            // 
-            this.hocSinhTableAdapter1.ClearBeforeFill = true;
-            // 
-            // txtquequan
-            // 
-            this.txtquequan.Location = new System.Drawing.Point(119, 89);
-            this.txtquequan.Name = "txtquequan";
-            this.txtquequan.Size = new System.Drawing.Size(175, 22);
-            this.txtquequan.TabIndex = 102;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -350,6 +330,27 @@
             this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 103;
             this.label2.Text = "Quê quán";
+            // 
+            // txtquequan
+            // 
+            this.txtquequan.Location = new System.Drawing.Point(119, 89);
+            this.txtquequan.Name = "txtquequan";
+            this.txtquequan.Size = new System.Drawing.Size(175, 22);
+            this.txtquequan.TabIndex = 102;
+            // 
+            // qUANLY_HS_GVDataSet
+            // 
+            this.qUANLY_HS_GVDataSet.DataSetName = "QUANLY_HS_GVDataSet";
+            this.qUANLY_HS_GVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hocSinhBindingSource
+            // 
+            this.hocSinhBindingSource.DataMember = "HocSinh";
+            this.hocSinhBindingSource.DataSource = this.qUANLY_HS_GVDataSet;
+            // 
+            // hocSinhTableAdapter
+            // 
+            this.hocSinhTableAdapter.ClearBeforeFill = true;
             // 
             // HocSinh
             // 
@@ -373,7 +374,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocsinh)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -413,10 +414,10 @@
         //private System.Windows.Forms.DataGridViewTextBoxColumn iDMonHocDataGridViewTextBoxColumn;
         //private QUANLY_HS_GVDataSet qUANLY_HS_GVDataSet;
         //private QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
-        private QUANLY_HS_GVDataSet qUANLY_HS_GVDataSet1;
-        private System.Windows.Forms.BindingSource hocSinhBindingSource;
-        private QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtquequan;
+        private QUANLY_HS_GVDataSet qUANLY_HS_GVDataSet;
+        private System.Windows.Forms.BindingSource hocSinhBindingSource;
+        private QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
     }
 }
