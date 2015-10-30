@@ -42,11 +42,7 @@
             treeNode6});
             System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Thông tin liên hệ");
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-=======
             this.txtHD = new System.Windows.Forms.TextBox();
->>>>>>> master
             this.panel2 = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1.SuspendLayout();
@@ -62,16 +58,6 @@
             this.panel1.Size = new System.Drawing.Size(377, 442);
             this.panel1.TabIndex = 0;
             // 
-<<<<<<< HEAD
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(377, 442);
-            this.webBrowser1.TabIndex = 0;
-=======
             // txtHD
             // 
             this.txtHD.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -82,7 +68,6 @@
             this.txtHD.ReadOnly = true;
             this.txtHD.Size = new System.Drawing.Size(377, 442);
             this.txtHD.TabIndex = 0;
->>>>>>> master
             // 
             // panel2
             // 
@@ -125,10 +110,6 @@
             this.treeView1.Size = new System.Drawing.Size(241, 442);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-<<<<<<< HEAD
-            this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
-=======
->>>>>>> master
             // 
             // frmHuongDan
             // 

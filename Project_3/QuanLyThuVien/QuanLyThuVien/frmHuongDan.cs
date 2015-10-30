@@ -55,12 +55,5 @@ namespace QuanLyThuVien
 
         }
 
-<<<<<<< HEAD
-        private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
-        {
-
-        }
-=======
->>>>>>> master
     }
 }
