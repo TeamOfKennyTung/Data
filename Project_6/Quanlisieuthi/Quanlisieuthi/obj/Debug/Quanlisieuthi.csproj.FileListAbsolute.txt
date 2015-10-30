@@ -1,0 +1,2 @@
+C:\Users\Quang1\Documents\Visual Studio 2012\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.exe.config
+C:\Users\Quang1\Documents\GitHub\Data\Project_6\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.exe.config

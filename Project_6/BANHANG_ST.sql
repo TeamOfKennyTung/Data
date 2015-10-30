@@ -1,11 +1,12 @@
---CREATE DATABASE QLBANHANG_ST
+CREATE DATABASE QLBANHANG_ST
 
 CREATE TABLE HangHoa(
 	ID_HangHoa CHAR(10) NOT NULL,
 	TenHang NVARCHAR(50) NOT NULL,
 	GiaHang int,
 	NgayNhap date,
-	HanSd date
+	HanSd date,
+	SoLuong int
 )
 
 CREATE TABLE NhanVien(
@@ -14,7 +15,8 @@ CREATE TABLE NhanVien(
 	Quequan nvarchar(100),
 	GT CHAR(3),
 	CMND int,
-	NgaySinh date
+	NgaySinh date,
+	Luong int
 )
 
 CREATE TABLE KhachHang(
@@ -77,9 +79,9 @@ values
 ('HD005',N'Hóa Đơn 5','KH005','HH005','NV005')
 
 
-alter table HangHoa add constraint fk_hanghoa_hoadon foreign key (ID_HangHoa) references HoaDon(ID_HangHoa)
-alter table KhachHang add constraint fk_khachhang_hoadon foreign key(ID_KhachHang) references HoaDon(ID_KhachHang)
-alter table NhanVien add constraint fk_nhanvien_hoadon foreign key(ID_NhanVien) references HoaDon(ID_NhanVien)
+alter table HoaDon add constraint fk_hanghoa_hoadon foreign key (ID_HangHoa) references HangHoa(ID_HangHoa)
+alter table HoaDon add constraint fk_khachhang_hoadon foreign key(ID_KhachHang) references KhachHang(ID_KhachHang)
+alter table HoaDon add constraint fk_nhanvien_hoadon foreign key(ID_NhanVien) references NhanVien(ID_NhanVien)
 
 create table tblUser
 (
@@ -101,11 +103,11 @@ begin
 	select *from HangHoa
 end
 
-create proc Add_HangHoa(@ID_HangHoa char(10),@TenHang char (50),@GiaHang int,@NgayNhap date,@Hansd date)
+create proc Add_HangHoa(@ID_HangHoa char(10),@TenHang char (50),@GiaHang int,@NgayNhap date,@Hansd date,@SoLuong int)
 as
 begin
-insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd)
-values(@ID_HangHoa,@TenHang,@GiaHang,@NgayNhap,@Hansd)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,Soluong)
+values(@ID_HangHoa,@TenHang,@GiaHang,@NgayNhap,@Hansd,@Soluong)
 end
 
 create proc LoadKhachHang
@@ -136,11 +138,11 @@ begin
 		where ID_NhanVien=@ID_NhanVien	
 end			
 
-create proc Add_NhanVien(@ID_NhanVien char(10),@Hoten nvarchar(50),@QueQuan nvarchar(100),@GT char(3),@CMND int, @NgaySinh date)
+create proc Add_NhanVien(@ID_NhanVien char(10),@Hoten nvarchar(50),@QueQuan nvarchar(100),@GT char(3),@CMND int, @NgaySinh date,@Luong int)
 as
 begin
-	insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh)
-	values(@ID_NhanVien,@Hoten,@QueQuan,@GT,@CMND,@NgaySinh)
+	insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh,Luong)
+	values(@ID_NhanVien,@Hoten,@QueQuan,@GT,@CMND,@NgaySinh,@Luong)
 end
 
 --create proc Edit_NhanVien(@ID_NhanVien char(10),@HoTen char(50),@QueQuan nvarchar(100),@GT char(3),@CMND int,@NgaySinh date)			
