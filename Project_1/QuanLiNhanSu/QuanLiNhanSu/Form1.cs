@@ -135,8 +135,85 @@ namespace QuanLiNhanSu
             cbxTKMaCV.Enabled = true;
             txtTKTenNV.Enabled = false;
             dtgTimKiem.DataSource = null;
+<<<<<<< HEAD
         }
 
+        private void bntSua_Click(object sender, EventArgs e)
+        {
+            SuaNV sua = new SuaNV();
+            string kq=sua.SuaNhanVien(cbxSuaMaNV.Text, txtSuaTenNV.Text, dTPSuaNS.Text, cbxSuaGT.Text, txtSuaQQ.Text, txtSuaLuong.Text, cbxSuaMaCV.Text, cbxSuaMaPB.Text);
+            if (kq == "0")
+                MessageBox.Show("Không có mã nhân viên hoặc mã nhân viên bị sai");
+            else
+                if (kq == "1")
+                    MessageBox.Show("Không có mã công việc hoặc mã công việc bị sai");
+                else
+                    if (kq == "2")
+                        MessageBox.Show("Không có mã phòng ban hoặc mã phòng ban bị sai");
+                    else
+                        MessageBox.Show("Sửa thành công");
+        }
+
+        private void bntRefreshSua_Click(object sender, EventArgs e)
+        {
+            DataTable dt = NV.ShowNhanVien();
+            dtgThemNV.DataSource = dt;
+            Init();
+        }
+
+        private void bntXoa_Click(object sender, EventArgs e)
+        {
+            XoaNV xoa = new XoaNV();
+            string kq=xoa.XoaNhanVien(cbxXoaMaNV.Text);
+            if (kq == "0")
+                MessageBox.Show("Không có mã nhân viên hoặc mã nhân viên bị sai");
+            else
+            {
+                MessageBox.Show("Xóa thành công");
+                DataTable dt = NV.ShowNhanVien();
+                dtgXoaNV.DataSource = dt;
+                Init();
+            }
+        }
+
+        private void txtTKTenNV_TextChanged(object sender, EventArgs e)
+        {
+            dtgTimKiem.DataSource = null;
+        }
+        private void TimKiem()
+        {
+            try
+            {
+                TimKiemNV tk = new TimKiemNV();
+                DataTable dt = tk.TimKiem(cbxTimKiemMaNV.Text.ToString(), txtTKTenNV.Text, cbxTKMaCV.Text, chose);
+                dtgTimKiem.DataSource = dt;
+            }
+            catch (Exception er)
+            { MessageBox.Show(er.Message); }
+=======
+>>>>>>> master
+        }
+
+        private void txtTKTenNV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                TimKiem();
+            }
+        }
+
+      
+        private void cbxTKMaCV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                TimKiem();
+            }
+        }
+
+<<<<<<< HEAD
+        private void cbxTimKiemMaNV_KeyDown(object sender, KeyEventArgs e)
+=======
         private void bntSua_Click(object sender, EventArgs e)
         {
             SuaNV sua = new SuaNV();
@@ -203,7 +280,12 @@ namespace QuanLiNhanSu
             }
         }
 
+<<<<<<< HEAD
+        private void cbxTKMaCV_KeyDown(object sender, KeyEventArgs e)
+>>>>>>> master
+=======
         private void cbxTimKiemMaNV_KeyDown(object sender, KeyEventArgs e)
+>>>>>>> master
         {
             if (e.KeyData == Keys.Enter)
             {
