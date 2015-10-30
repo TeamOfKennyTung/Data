@@ -34,7 +34,7 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.butJoin = new System.Windows.Forms.Button();
             this.butQuit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pAcc = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.butfrmMuonTra = new System.Windows.Forms.Button();
             this.butfrmSach = new System.Windows.Forms.Button();
             this.butfrmDG = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.pAcc.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -100,21 +100,23 @@
             this.butQuit.TabIndex = 5;
             this.butQuit.Text = "Thoát";
             this.butQuit.UseVisualStyleBackColor = true;
+            this.butQuit.Click += new System.EventHandler(this.butQuit_Click);
             // 
-            // panel1
+            // pAcc
             // 
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.butfrmMuonTra);
-            this.panel1.Controls.Add(this.butfrmSach);
-            this.panel1.Controls.Add(this.butfrmDG);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 116);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(334, 169);
-            this.panel1.TabIndex = 6;
+            this.pAcc.Controls.Add(this.linkLabel1);
+            this.pAcc.Controls.Add(this.label5);
+            this.pAcc.Controls.Add(this.label4);
+            this.pAcc.Controls.Add(this.label3);
+            this.pAcc.Controls.Add(this.butfrmMuonTra);
+            this.pAcc.Controls.Add(this.butfrmSach);
+            this.pAcc.Controls.Add(this.butfrmDG);
+            this.pAcc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pAcc.Enabled = false;
+            this.pAcc.Location = new System.Drawing.Point(0, 116);
+            this.pAcc.Name = "pAcc";
+            this.pAcc.Size = new System.Drawing.Size(334, 169);
+            this.pAcc.TabIndex = 6;
             // 
             // linkLabel1
             // 
@@ -193,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 285);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pAcc);
             this.Controls.Add(this.butQuit);
             this.Controls.Add(this.butJoin);
             this.Controls.Add(this.txtPass);
@@ -205,8 +207,8 @@
             this.Name = "frmDangNhap";
             this.ShowIcon = false;
             this.Text = "QuanLyThuVien";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pAcc.ResumeLayout(false);
+            this.pAcc.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +222,7 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button butJoin;
         private System.Windows.Forms.Button butQuit;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pAcc;
         private System.Windows.Forms.Button butfrmMuonTra;
         private System.Windows.Forms.Button butfrmSach;
         private System.Windows.Forms.Button butfrmDG;
