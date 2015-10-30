@@ -140,6 +140,7 @@ namespace QuanLyThuVien
             da.Fill(dt);
             DataView dv = new DataView(dt);
             dataGridView1.DataSource = dv;
+            if (dataGridView1.RowCount <= 0) MessageBox.Show("Nội dung cần tìm không có");
             txtFind.Text = string.Empty;
             conn.DongKetNoi();
         }
