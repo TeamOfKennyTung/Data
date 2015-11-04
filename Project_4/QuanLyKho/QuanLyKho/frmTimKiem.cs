@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyKho
 {
-    public partial class frmNhaCungCap : Form
+    public partial class frmTimKiem : Form
     {
-        public frmNhaCungCap()
+        public frmTimKiem()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyKho
 {
-    public partial class frmPhieuNhap : Form
+    public partial class frmHuongDan : Form
     {
-        public frmPhieuNhap()
+        public frmHuongDan()
         {
             InitializeComponent();
+        }
+
+        private void frmHuongDan_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

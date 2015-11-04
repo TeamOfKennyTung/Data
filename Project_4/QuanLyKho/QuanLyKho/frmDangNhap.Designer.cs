@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(42, 213);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(375, 166);
+            this.panel1.Size = new System.Drawing.Size(369, 166);
             this.panel1.TabIndex = 22;
             // 
             // label6
@@ -69,9 +69,10 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(272, 96);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Phiếu xuất";
+            this.label6.Text = "Thống kê";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // linkLabel1
             // 
@@ -90,9 +91,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(187, 96);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Phiếu nhập";
+            this.label5.Text = "Tìm kiếm";
             // 
             // label4
             // 
@@ -100,19 +101,20 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(102, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 19;
-            this.label4.Text = "Hàng hóa";
+            this.label4.Text = "Xuất hàng";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 96);
+            this.label3.Location = new System.Drawing.Point(19, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Nhà cung cấp";
+            this.label3.Text = "Nhập hàng";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button6
             // 
