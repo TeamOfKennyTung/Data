@@ -51,22 +51,39 @@ namespace QuanLyThuVien
             SqlDataAdapter da = new SqlDataAdapter(str, conn.conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
+            bool check = false;
             foreach (DataRow row in dt.Rows)
             {
                 if (row[0].ToString() == txtUser.Text && row[1].ToString() == txtPass.Text)
                 {
-                    MessageBox.Show("Đăng nhập thành công");
+                    check = true;
                     break;
                 }
                 else
                 {
-                    MessageBox.Show("Tài khoản không hợp lệ");
-                    break;
-                } 
-                
+                    check = false;
+                }
             }
-            txtPass.Text = txtUser.Text = string.Empty;
+            if (check == true)
+            {
+                MessageBox.Show("Đăng nhập thành công");
+                txtPass.ReadOnly = txtUser.ReadOnly = true;
+                pAcc.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản không hợp lệ");
+                txtUser.Text = txtPass.Text = string.Empty;
+            }
             conn.DongKetNoi();
+        }
+
+        private void butQuit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }          
         }
     }
 }

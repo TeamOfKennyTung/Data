@@ -105,9 +105,9 @@
             this.rBTenNV = new System.Windows.Forms.RadioButton();
             this.rBMaNV = new System.Windows.Forms.RadioButton();
             this.txtTKTenNV = new System.Windows.Forms.TextBox();
-            this.quanLiNhanSuDataSet = new QuanLiNhanSu.QuanLiNhanSuDataSet();
+            this.quanLiNhanSuDataSet1 = new QuanLiNhanSu.QuanLiNhanSuDataSet1();
             this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter();
+            this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSet1TableAdapters.tblNhanVienTableAdapter();
             this.tabXoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgXoaNV)).BeginInit();
             this.tabSua.SuspendLayout();
@@ -120,7 +120,7 @@
             this.tabTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTimKiem)).BeginInit();
             this.txtTimkiem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -900,15 +900,15 @@
             this.txtTKTenNV.TextChanged += new System.EventHandler(this.txtTKTenNV_TextChanged);
             this.txtTKTenNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTKTenNV_KeyDown);
             // 
-            // quanLiNhanSuDataSet
+            // quanLiNhanSuDataSet1
             // 
-            this.quanLiNhanSuDataSet.DataSetName = "QuanLiNhanSuDataSet";
-            this.quanLiNhanSuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.quanLiNhanSuDataSet1.DataSetName = "QuanLiNhanSuDataSet1";
+            this.quanLiNhanSuDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblNhanVienBindingSource
             // 
             this.tblNhanVienBindingSource.DataMember = "tblNhanVien";
-            this.tblNhanVienBindingSource.DataSource = this.quanLiNhanSuDataSet;
+            this.tblNhanVienBindingSource.DataSource = this.quanLiNhanSuDataSet1;
             // 
             // tblNhanVienTableAdapter
             // 
@@ -940,7 +940,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgTimKiem)).EndInit();
             this.txtTimkiem.ResumeLayout(false);
             this.txtTimkiem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1024,10 +1024,9 @@
         private System.Windows.Forms.Button bntLamRong;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox cbxTimKiemMaNV;
-        private QuanLiNhanSuDataSet quanLiNhanSuDataSet;
+        private QuanLiNhanSuDataSet1 quanLiNhanSuDataSet1;
         private System.Windows.Forms.BindingSource tblNhanVienBindingSource;
-        private QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
-
+        private QuanLiNhanSuDataSet1TableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
     }
 }
 

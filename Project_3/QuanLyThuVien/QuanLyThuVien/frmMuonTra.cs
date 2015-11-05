@@ -76,10 +76,6 @@ namespace QuanLyThuVien
                 SqlCommand sqlcm = new SqlCommand("DelMT", conn.conn);
                 sqlcm.CommandType = CommandType.StoredProcedure;
                 sqlcm.Parameters.Add("@mapm", txtMPM.Text);
-                sqlcm.Parameters.Add("@madg", txtMDG.Text);
-                sqlcm.Parameters.Add("@mads", txtMDS.Text);
-                sqlcm.Parameters.Add("@ngaymuon", txtNM.Text);
-                sqlcm.Parameters.Add("@ngaytra", txtNT.Text);
                 int check = sqlcm.ExecuteNonQuery();
                 if (check > 0)
                 {
@@ -118,10 +114,8 @@ namespace QuanLyThuVien
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("AddMT", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@mapm", txtMPM.Text);
             sqlcm.Parameters.Add("@madg", txtMDG.Text);
             sqlcm.Parameters.Add("@mads", txtMDS.Text);
-            sqlcm.Parameters.Add("@ngaymuon", txtNM.Text);
             sqlcm.Parameters.Add("@ngaytra", txtNT.Text);
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
@@ -145,8 +139,14 @@ namespace QuanLyThuVien
             da.Fill(dt);
             DataView dv = new DataView(dt);
             dataGridView1.DataSource = dv;
+            if (dataGridView1.RowCount <= 0) MessageBox.Show("Nội dung cần tìm không có");
             txtFind.Text = string.Empty;
             conn.DongKetNoi();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
     }

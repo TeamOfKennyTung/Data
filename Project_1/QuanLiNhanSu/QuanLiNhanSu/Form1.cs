@@ -21,7 +21,8 @@ namespace QuanLiNhanSu
         int chose=1;
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.tblNhanVienTableAdapter.Fill(this.quanLiNhanSuDataSet.tblNhanVien);
+            // TODO: This line of code loads data into the 'quanLiNhanSuDataSet1.tblNhanVien' table. You can move, or remove it, as needed.
+            this.tblNhanVienTableAdapter.Fill(this.quanLiNhanSuDataSet1.tblNhanVien);
             DataTable dt = NV.ShowNhanVien();
             DataTable dt1 = NV.ShowChucVu();
             DataTable dt2 = NV.ShowPhongBan();
@@ -167,20 +168,29 @@ namespace QuanLiNhanSu
             if (kq == "0")
                 MessageBox.Show("Không có mã nhân viên hoặc mã nhân viên bị sai");
             else
+                if (kq == "false")
+                    MessageBox.Show("Không thể xóa nhân viên");
+                else
+            {
                 MessageBox.Show("Xóa thành công");
+                DataTable dt = NV.ShowNhanVien();
+                dtgXoaNV.DataSource = dt;
+                Init();
+            }
         }
 
-        private void txtTKTenNV_TextChanged(object sender, EventArgs e)
-        {
-            dtgTimKiem.DataSource = null;
-        }
+        //private void txtTKTenNV_TextChanged(object sender, EventArgs e)
+        //{
+        //    dtgTimKiem.DataSource = null;
+        //}
         private void TimKiem()
         {
             try
             {
                 TimKiemNV tk = new TimKiemNV();
                 DataTable dt = tk.TimKiem(cbxTimKiemMaNV.Text.ToString(), txtTKTenNV.Text, cbxTKMaCV.Text, chose);
-                dtgTimKiem.DataSource = dt;
+                if (dt.Rows.Count == 0) MessageBox.Show("Không tìm thấy");
+                else dtgTimKiem.DataSource = dt;
             }
             catch (Exception er)
             { MessageBox.Show(er.Message); }
@@ -209,6 +219,11 @@ namespace QuanLiNhanSu
             {
                 TimKiem();
             }
+        }
+
+        private void txtTKTenNV_TextChanged(object sender, EventArgs e)
+        {
+            dtgTimKiem.DataSource = null;
         }
     }
 }

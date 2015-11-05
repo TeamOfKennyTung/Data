@@ -43,7 +43,7 @@
             this.quảnLýToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(400, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -57,33 +57,32 @@
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
-            this.quảnLýToolStripMenuItem.Click += new System.EventHandler(this.quảnLýToolStripMenuItem_Click);
             // 
             // mnuHocsinh
             // 
             this.mnuHocsinh.Name = "mnuHocsinh";
-            this.mnuHocsinh.Size = new System.Drawing.Size(152, 22);
+            this.mnuHocsinh.Size = new System.Drawing.Size(124, 22);
             this.mnuHocsinh.Text = "Học Sinh";
             this.mnuHocsinh.Click += new System.EventHandler(this.mnuHocsinh_Click);
             // 
             // mnuGiaovien
             // 
             this.mnuGiaovien.Name = "mnuGiaovien";
-            this.mnuGiaovien.Size = new System.Drawing.Size(152, 22);
+            this.mnuGiaovien.Size = new System.Drawing.Size(124, 22);
             this.mnuGiaovien.Text = "Giáo Viên";
             this.mnuGiaovien.Click += new System.EventHandler(this.mnuGiaovien_Click);
             // 
             // mnuHelp
             // 
             this.mnuHelp.Name = "mnuHelp";
-            this.mnuHelp.Size = new System.Drawing.Size(152, 22);
+            this.mnuHelp.Size = new System.Drawing.Size(124, 22);
             this.mnuHelp.Text = "Trợ Giúp";
             this.mnuHelp.Click += new System.EventHandler(this.mnuHelp_Click);
             // 
             // mnuThoat
             // 
             this.mnuThoat.Name = "mnuThoat";
-            this.mnuThoat.Size = new System.Drawing.Size(152, 22);
+            this.mnuThoat.Size = new System.Drawing.Size(124, 22);
             this.mnuThoat.Text = "Thoát";
             this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
             // 
@@ -91,7 +90,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackgroundImage = global::QUANLY_HS_GV.Properties.Resources.GD;
+            this.ClientSize = new System.Drawing.Size(400, 299);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";

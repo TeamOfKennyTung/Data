@@ -33,7 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiDan.Designer.cs">
+      <DependentUpon>ChiDan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectDATA.cs" />
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
@@ -71,10 +79,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLiNhanSuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiNhanSuDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SuaNV.cs" />
     <Compile Include="ThemNV.cs" />
     <Compile Include="TimKiemNV.cs" />
     <Compile Include="XoaNV.cs" />
+    <EmbeddedResource Include="ChiDan.resx">
+      <DependentUpon>ChiDan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,17 +125,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ảnh_Icon\marketshare.jpg" />
-    <Content Include="HTMLPage1.html" />
     <None Include="QuanLiNhanSuDataSet.xsc">
       <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
     </None>
     <None Include="QuanLiNhanSuDataSet.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QuanLiNhanSuDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="QuanLiNhanSuDataSet.xss">
       <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSuDataSet1.xsc">
+      <DependentUpon>QuanLiNhanSuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiNhanSuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiNhanSuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiNhanSuDataSet1.xss">
+      <DependentUpon>QuanLiNhanSuDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Resources\marketshare.jpg" />
   </ItemGroup>
