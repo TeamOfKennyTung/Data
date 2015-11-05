@@ -44,8 +44,9 @@
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtMatKhau.Size = new System.Drawing.Size(149, 22);
-            this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.TabIndex = 1;
             this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
             // 
             // label2
             // 
@@ -69,11 +70,13 @@
             // 
             // bntOK
             // 
+            this.bntOK.AutoEllipsis = true;
+            this.bntOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.bntOK.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntOK.Location = new System.Drawing.Point(52, 122);
             this.bntOK.Name = "bntOK";
             this.bntOK.Size = new System.Drawing.Size(75, 23);
-            this.bntOK.TabIndex = 5;
+            this.bntOK.TabIndex = 2;
             this.bntOK.Text = "OK";
             this.bntOK.UseVisualStyleBackColor = true;
             this.bntOK.Click += new System.EventHandler(this.bntOK_Click);
@@ -97,7 +100,7 @@
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTaiKhoan.Size = new System.Drawing.Size(149, 22);
-            this.txtTaiKhoan.TabIndex = 7;
+            this.txtTaiKhoan.TabIndex = 0;
             this.txtTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmDangNhap

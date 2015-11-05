@@ -26,7 +26,9 @@ namespace QuanLiNhanSu
 
         private void ChiDan_Click(object sender, EventArgs e)
         {
-            
+            frmChiDan cd = new frmChiDan();
+            cd.Show();
+            Hide();
         }
     }
 }

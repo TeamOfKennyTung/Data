@@ -33,8 +33,6 @@
             this.bntXoa = new System.Windows.Forms.Button();
             this.bntRefreshXoa = new System.Windows.Forms.Button();
             this.cbxXoaMaNV = new System.Windows.Forms.ComboBox();
-            this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLiNhanSuDataSet = new QuanLiNhanSu.QuanLiNhanSuDataSet();
             this.label18 = new System.Windows.Forms.Label();
             this.dtgXoaNV = new System.Windows.Forms.DataGridView();
             this.tabSua = new System.Windows.Forms.TabPage();
@@ -107,27 +105,10 @@
             this.rBTenNV = new System.Windows.Forms.RadioButton();
             this.rBMaNV = new System.Windows.Forms.RadioButton();
             this.txtTKTenNV = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.quanLiNhanSuDataSet = new QuanLiNhanSu.QuanLiNhanSuDataSet();
+            this.quanLiNhanSuDataSet1 = new QuanLiNhanSu.QuanLiNhanSuDataSet1();
             this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter();
-=======
-            this.cbxTimKiemMaNV = new System.Windows.Forms.ComboBox();
->>>>>>> master
-=======
-            this.quanLiNhanSuDataSet = new QuanLiNhanSu.QuanLiNhanSuDataSet();
-            this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter();
->>>>>>> master
-=======
-            this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter();
-            this.tableAdapterManager1 = new QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.TableAdapterManager();
->>>>>>> origin/master
+            this.tblNhanVienTableAdapter = new QuanLiNhanSu.QuanLiNhanSuDataSet1TableAdapters.tblNhanVienTableAdapter();
             this.tabXoa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgXoaNV)).BeginInit();
             this.tabSua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSuaNV)).BeginInit();
@@ -139,6 +120,8 @@
             this.tabTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTimKiem)).BeginInit();
             this.txtTimkiem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabXoa
@@ -178,31 +161,13 @@
             // 
             // cbxXoaMaNV
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.cbxXoaMaNV.DataSource = this.tblNhanVienBindingSource;
             this.cbxXoaMaNV.DisplayMember = "MaNV";
-=======
->>>>>>> master
-=======
-            this.cbxXoaMaNV.DataSource = this.tblNhanVienBindingSource;
-            this.cbxXoaMaNV.DisplayMember = "MaNV";
->>>>>>> master
             this.cbxXoaMaNV.FormattingEnabled = true;
             this.cbxXoaMaNV.Location = new System.Drawing.Point(116, 22);
             this.cbxXoaMaNV.Name = "cbxXoaMaNV";
             this.cbxXoaMaNV.Size = new System.Drawing.Size(121, 27);
             this.cbxXoaMaNV.TabIndex = 32;
-            // 
-            // tblNhanVienBindingSource
-            // 
-            this.tblNhanVienBindingSource.DataMember = "tblNhanVien";
-            this.tblNhanVienBindingSource.DataSource = this.quanLiNhanSuDataSet;
-            // 
-            // quanLiNhanSuDataSet
-            // 
-            this.quanLiNhanSuDataSet.DataSetName = "QuanLiNhanSuDataSet";
-            this.quanLiNhanSuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label18
             // 
@@ -409,14 +374,7 @@
             // 
             // dtgSuaNV
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.dtgSuaNV.AllowUserToAddRows = false;
-=======
->>>>>>> master
-=======
-            this.dtgSuaNV.AllowUserToAddRows = false;
->>>>>>> master
             this.dtgSuaNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgSuaNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgSuaNV.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -607,14 +565,7 @@
             // 
             // dtgThemNV
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.dtgThemNV.AllowUserToAddRows = false;
-=======
->>>>>>> master
-=======
-            this.dtgThemNV.AllowUserToAddRows = false;
->>>>>>> master
             this.dtgThemNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgThemNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgThemNV.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -949,54 +900,19 @@
             this.txtTKTenNV.TextChanged += new System.EventHandler(this.txtTKTenNV_TextChanged);
             this.txtTKTenNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTKTenNV_KeyDown);
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // quanLiNhanSuDataSet
+            // quanLiNhanSuDataSet1
             // 
-            this.quanLiNhanSuDataSet.DataSetName = "QuanLiNhanSuDataSet";
-            this.quanLiNhanSuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.quanLiNhanSuDataSet1.DataSetName = "QuanLiNhanSuDataSet1";
+            this.quanLiNhanSuDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblNhanVienBindingSource
             // 
             this.tblNhanVienBindingSource.DataMember = "tblNhanVien";
-            this.tblNhanVienBindingSource.DataSource = this.quanLiNhanSuDataSet;
-            // 
-=======
->>>>>>> origin/master
-            // tblNhanVienTableAdapter
-            // 
-            this.tblNhanVienTableAdapter.ClearBeforeFill = true;
-=======
-            // cbxTimKiemMaNV
-            // 
-            this.cbxTimKiemMaNV.FormattingEnabled = true;
-            this.cbxTimKiemMaNV.Location = new System.Drawing.Point(398, 55);
-            this.cbxTimKiemMaNV.Name = "cbxTimKiemMaNV";
-            this.cbxTimKiemMaNV.Size = new System.Drawing.Size(121, 27);
-            this.cbxTimKiemMaNV.TabIndex = 30;
->>>>>>> master
-=======
-            // quanLiNhanSuDataSet
-            // 
-            this.quanLiNhanSuDataSet.DataSetName = "QuanLiNhanSuDataSet";
-            this.quanLiNhanSuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblNhanVienBindingSource
-            // 
-            this.tblNhanVienBindingSource.DataMember = "tblNhanVien";
-            this.tblNhanVienBindingSource.DataSource = this.quanLiNhanSuDataSet;
+            this.tblNhanVienBindingSource.DataSource = this.quanLiNhanSuDataSet1;
             // 
             // tblNhanVienTableAdapter
             // 
             this.tblNhanVienTableAdapter.ClearBeforeFill = true;
->>>>>>> master
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.tblNhanVienTableAdapter = this.tblNhanVienTableAdapter;
-            this.tableAdapterManager1.UpdateOrder = QuanLiNhanSu.QuanLiNhanSuDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // frmMain
             // 
@@ -1009,8 +925,6 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.tabXoa.ResumeLayout(false);
             this.tabXoa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgXoaNV)).EndInit();
             this.tabSua.ResumeLayout(false);
             this.tabSua.PerformLayout();
@@ -1026,6 +940,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgTimKiem)).EndInit();
             this.txtTimkiem.ResumeLayout(false);
             this.txtTimkiem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLiNhanSuDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1108,23 +1024,9 @@
         private System.Windows.Forms.Button bntLamRong;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox cbxTimKiemMaNV;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        private QuanLiNhanSuDataSet quanLiNhanSuDataSet;
+        private QuanLiNhanSuDataSet1 quanLiNhanSuDataSet1;
         private System.Windows.Forms.BindingSource tblNhanVienBindingSource;
-        private QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
-=======
->>>>>>> master
-=======
-        private QuanLiNhanSuDataSet quanLiNhanSuDataSet;
-        private System.Windows.Forms.BindingSource tblNhanVienBindingSource;
-        private QuanLiNhanSuDataSetTableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
-<<<<<<< HEAD
->>>>>>> master
-=======
-        private QuanLiNhanSuDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
->>>>>>> origin/master
-
+        private QuanLiNhanSuDataSet1TableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
     }
 }
 

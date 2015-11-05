@@ -18,7 +18,7 @@ namespace QuanLiNhanSu
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@manv", manv);
             cmd.Parameters.AddWithValue("@ten", tennv);
-            cmd.Parameters.AddWithValue("@ns", ngaysinh);
+            cmd.Parameters.AddWithValue("@ns",Convert.ToDateTime(ngaysinh));
             cmd.Parameters.AddWithValue("@gt", gioitinh);
             cmd.Parameters.AddWithValue("@qq", quequan);
             cmd.Parameters.AddWithValue("@l", luong);
