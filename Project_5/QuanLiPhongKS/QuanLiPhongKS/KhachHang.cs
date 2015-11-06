@@ -22,7 +22,7 @@ namespace QLPhongKS
             ad.Fill(dt);
             return dt;
         }
-        public string SuaKhachHang(string id, string qq, string gt, string cmnd, string sdt, string quoctich)
+        public string SuaKhachHang(string id,string tenkh,string ns, string qq, string gt, string cmnd, string sdt, string quoctich)
         {
             string str = "SuaKhachHang";
             SqlConnection con = new SqlConnection(kn.GetConnect());
@@ -30,6 +30,8 @@ namespace QLPhongKS
             SqlCommand cmd = new SqlCommand(str, con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@idkh", id);
+            cmd.Parameters.AddWithValue("@tenkh", tenkh);
+            cmd.Parameters.AddWithValue("@ns",Convert.ToDateTime(ns));
             cmd.Parameters.AddWithValue("@gt", gt);
             cmd.Parameters.AddWithValue("@qq", qq);
             cmd.Parameters.AddWithValue("@cmnd", cmnd);
