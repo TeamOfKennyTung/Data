@@ -136,18 +136,21 @@ namespace QUANLY_HS_GV
                 //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
                 SqlConnection con = new SqlConnection(Connect.getconnect());
                 con.Open();
-                SqlCommand com = new SqlCommand("Edit_GV", con);
-                com.Parameters.AddWithValue("@Id_gv", txtIDGv.Text.Trim());
+                SqlCommand com = new SqlCommand("dbo.Edit_GV", con);
+                com.CommandType = CommandType.StoredProcedure;
+                com.Parameters.AddWithValue("@ID_gv", txtIDGv.Text.Trim());
                 com.Parameters.AddWithValue("@Hoten", txtTenGV.Text.Trim());
                 com.Parameters.AddWithValue("@Quequan", txtQueQuan.Text.Trim());
                 com.Parameters.AddWithValue("@Gt", cboGioitinh.Text.Trim());
                 com.Parameters.AddWithValue("@CMND", txtCMND.Text.Trim());
                 com.Parameters.AddWithValue("@Ngaysinh", Convert.ToDateTime(dtNgaysinh.Text.Trim()));
                 com.Parameters.AddWithValue("@Chucvu", txtChucvu.Text.Trim());
-                com.Parameters.AddWithValue("@Id_lop", cbo_Lop.Text.Trim());
-                com.Parameters.AddWithValue("@Id_monhoc", cbo_Monhoc.Text.Trim());
+                com.Parameters.AddWithValue("@Id_monhoc", cbo_Lop.Text.Trim());
+                com.Parameters.AddWithValue("@Id_lop", cbo_Monhoc.Text.Trim());
                 com.Parameters.AddWithValue("@kq", 1);
+                //com.Parameters.Add("@kq",SqlDbType.Int).Direction = ParameterDirection.Output;
                 com.ExecuteNonQuery();
+                //int check = Convert.ToInt16(com.Parameters["@kq"].Value);
                 com.Dispose();
                 btnShow_Click(sender, e);
             }

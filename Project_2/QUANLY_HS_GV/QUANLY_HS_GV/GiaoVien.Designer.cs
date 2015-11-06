@@ -195,7 +195,7 @@
             this.lblLop.AutoSize = true;
             this.lblLop.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLop.ForeColor = System.Drawing.Color.Blue;
-            this.lblLop.Location = new System.Drawing.Point(388, 136);
+            this.lblLop.Location = new System.Drawing.Point(389, 132);
             this.lblLop.Name = "lblLop";
             this.lblLop.Size = new System.Drawing.Size(51, 16);
             this.lblLop.TabIndex = 99;
@@ -220,7 +220,7 @@
             this.lblMonhoc.AutoSize = true;
             this.lblMonhoc.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMonhoc.ForeColor = System.Drawing.Color.Blue;
-            this.lblMonhoc.Location = new System.Drawing.Point(386, 102);
+            this.lblMonhoc.Location = new System.Drawing.Point(389, 99);
             this.lblMonhoc.Name = "lblMonhoc";
             this.lblMonhoc.Size = new System.Drawing.Size(78, 16);
             this.lblMonhoc.TabIndex = 97;
@@ -372,7 +372,7 @@
             // 
             this.dgvGiaovien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGiaovien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvGiaovien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvGiaovien.BackgroundColor = System.Drawing.Color.White;
             this.dgvGiaovien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGiaovien.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvGiaovien.Location = new System.Drawing.Point(0, 330);
