@@ -27,3 +27,16 @@ D:\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMuonTra.reso
 D:\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSach.resources
 D:\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
 D:\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDangNhap.resources
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDocGia.resources
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmHuongDan.resources
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMuonTra.resources
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSach.resources
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+C:\Users\UBUNTU\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache

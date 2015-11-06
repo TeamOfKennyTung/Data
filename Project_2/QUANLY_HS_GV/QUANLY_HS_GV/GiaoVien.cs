@@ -102,19 +102,18 @@ namespace QUANLY_HS_GV
                 MessageBox.Show("Dữ Liệu nhập thiếu Hoặc Mã Nhập Đã Bị Trùng! Vui Lòng Nhập Lại...");
             }
             else
-            {
-                //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+            {                
                 SqlConnection con = new SqlConnection(Connect.getconnect());
                 con.Open();
                 SqlCommand com = new SqlCommand("Add_GV", con);
                 com.CommandType = CommandType.StoredProcedure;
-                com.Parameters.AddWithValue("@id_gv", txtIDGv.Text.Trim());
+                com.Parameters.AddWithValue("@Id_gv", txtIDGv.Text.Trim());
                 com.Parameters.AddWithValue("@Hoten", txtTenGV.Text.Trim());
-                com.Parameters.AddWithValue("@Quequan", txtQueQuan.Text.Trim());
+                com.Parameters.AddWithValue("@quequan", txtQueQuan.Text.Trim());
                 com.Parameters.AddWithValue("@Gt", cboGioitinh.Text.Trim());
-                com.Parameters.AddWithValue("@CMND", txtCMND.Text.Trim());
+                com.Parameters.AddWithValue("@cmnd", Convert.ToString(txtCMND.Text.Trim()));
                 com.Parameters.AddWithValue("@Ngaysinh", Convert.ToDateTime(dtNgaysinh.Text.Trim()));
-                com.Parameters.AddWithValue("@Chucvu", txtChucvu.Text.Trim());
+                com.Parameters.AddWithValue("@chucvu", txtChucvu.Text.Trim());
                 com.Parameters.AddWithValue("@Id_lop", cbo_Lop.Text.Trim());
                 com.Parameters.AddWithValue("@Id_monhoc", cbo_Monhoc.Text.Trim());
                 com.ExecuteNonQuery();
