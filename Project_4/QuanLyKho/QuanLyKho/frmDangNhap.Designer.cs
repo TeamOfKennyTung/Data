@@ -34,15 +34,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.butfrmThongKe = new System.Windows.Forms.Button();
+            this.butfrmTimKiem = new System.Windows.Forms.Button();
+            this.butfrmXuat = new System.Windows.Forms.Button();
+            this.butfrmNhap = new System.Windows.Forms.Button();
+            this.butQuit = new System.Windows.Forms.Button();
+            this.butJoin = new System.Windows.Forms.Button();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,10 +54,10 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.butfrmThongKe);
+            this.panel1.Controls.Add(this.butfrmTimKiem);
+            this.panel1.Controls.Add(this.butfrmXuat);
+            this.panel1.Controls.Add(this.butfrmNhap);
             this.panel1.Location = new System.Drawing.Point(42, 213);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(369, 166);
@@ -72,7 +72,6 @@
             this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 21;
             this.label6.Text = "Thống kê";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // linkLabel1
             // 
@@ -84,6 +83,7 @@
             this.linkLabel1.TabIndex = 10;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Hướng dẫn";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label5
             // 
@@ -114,64 +114,68 @@
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 18;
             this.label3.Text = "Nhập hàng";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // button6
+            // butfrmThongKe
             // 
-            this.button6.Location = new System.Drawing.Point(264, 18);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 75);
-            this.button6.TabIndex = 17;
-            this.button6.UseVisualStyleBackColor = true;
+            this.butfrmThongKe.Location = new System.Drawing.Point(264, 18);
+            this.butfrmThongKe.Name = "butfrmThongKe";
+            this.butfrmThongKe.Size = new System.Drawing.Size(75, 75);
+            this.butfrmThongKe.TabIndex = 17;
+            this.butfrmThongKe.UseVisualStyleBackColor = true;
+            this.butfrmThongKe.Click += new System.EventHandler(this.butfrmThongKe_Click);
             // 
-            // button5
+            // butfrmTimKiem
             // 
-            this.button5.Location = new System.Drawing.Point(183, 18);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 75);
-            this.button5.TabIndex = 16;
-            this.button5.UseVisualStyleBackColor = true;
+            this.butfrmTimKiem.Location = new System.Drawing.Point(183, 18);
+            this.butfrmTimKiem.Name = "butfrmTimKiem";
+            this.butfrmTimKiem.Size = new System.Drawing.Size(75, 75);
+            this.butfrmTimKiem.TabIndex = 16;
+            this.butfrmTimKiem.UseVisualStyleBackColor = true;
+            this.butfrmTimKiem.Click += new System.EventHandler(this.butfrmTimKiem_Click);
             // 
-            // button4
+            // butfrmXuat
             // 
-            this.button4.Location = new System.Drawing.Point(102, 18);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 75);
-            this.button4.TabIndex = 15;
-            this.button4.UseVisualStyleBackColor = true;
+            this.butfrmXuat.Location = new System.Drawing.Point(102, 18);
+            this.butfrmXuat.Name = "butfrmXuat";
+            this.butfrmXuat.Size = new System.Drawing.Size(75, 75);
+            this.butfrmXuat.TabIndex = 15;
+            this.butfrmXuat.UseVisualStyleBackColor = true;
+            this.butfrmXuat.Click += new System.EventHandler(this.butfrmXuat_Click);
             // 
-            // button3
+            // butfrmNhap
             // 
-            this.button3.Location = new System.Drawing.Point(21, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 75);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = true;
+            this.butfrmNhap.Location = new System.Drawing.Point(21, 18);
+            this.butfrmNhap.Name = "butfrmNhap";
+            this.butfrmNhap.Size = new System.Drawing.Size(75, 75);
+            this.butfrmNhap.TabIndex = 6;
+            this.butfrmNhap.UseVisualStyleBackColor = true;
+            this.butfrmNhap.Click += new System.EventHandler(this.butfrmNhap_Click);
             // 
-            // button2
+            // butQuit
             // 
-            this.button2.Location = new System.Drawing.Point(306, 130);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 44);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.butQuit.Location = new System.Drawing.Point(306, 130);
+            this.butQuit.Name = "butQuit";
+            this.butQuit.Size = new System.Drawing.Size(75, 44);
+            this.butQuit.TabIndex = 21;
+            this.butQuit.Text = "Thoát";
+            this.butQuit.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // butJoin
             // 
-            this.button1.Location = new System.Drawing.Point(63, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 44);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.butJoin.Location = new System.Drawing.Point(63, 130);
+            this.butJoin.Name = "butJoin";
+            this.butJoin.Size = new System.Drawing.Size(75, 44);
+            this.butJoin.TabIndex = 20;
+            this.butJoin.Text = "Đăng nhập";
+            this.butJoin.UseVisualStyleBackColor = true;
+            this.butJoin.Click += new System.EventHandler(this.butJoin_Click);
             // 
-            // textBox2
+            // txtPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(200, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 20);
-            this.textBox2.TabIndex = 19;
+            this.txtPass.Location = new System.Drawing.Point(200, 73);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(181, 20);
+            this.txtPass.TabIndex = 19;
             // 
             // label2
             // 
@@ -183,12 +187,12 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Mật khẩu";
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 20);
-            this.textBox1.TabIndex = 17;
+            this.txtUser.Location = new System.Drawing.Point(200, 33);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(181, 20);
+            this.txtUser.TabIndex = 17;
             // 
             // label1
             // 
@@ -206,11 +210,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 412);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.butQuit);
+            this.Controls.Add(this.butJoin);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
             this.Text = "QuanLyKho";
@@ -229,15 +233,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button butfrmThongKe;
+        private System.Windows.Forms.Button butfrmTimKiem;
+        private System.Windows.Forms.Button butfrmXuat;
+        private System.Windows.Forms.Button butfrmNhap;
+        private System.Windows.Forms.Button butQuit;
+        private System.Windows.Forms.Button butJoin;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label1;
     }
 }
