@@ -70,11 +70,11 @@ namespace QuanLyThuVien
                 int check = sqlcm.ExecuteNonQuery();
                 if (check > 0)
                 {
-                    MessageBox.Show("Sửa thành công");
+                    MessageBox.Show("Xóa thành công");
                     conn.KhoiTao(dataGridView1, @"select * from tblDauSach");
                     txtGB.Text = txtMDS.Text = txtTenDS.Text = string.Empty;
                 }
-                else MessageBox.Show("Có lỗi, không thể sửa dữ liệu");
+                else MessageBox.Show("Có lỗi, không thể xóa dữ liệu");
                 conn.DongKetNoi();
             }
         }
@@ -89,8 +89,8 @@ namespace QuanLyThuVien
             sqlcm.CommandType = CommandType.Text;
             conn.MoKetNoi();
             int count = (int)sqlcm.ExecuteScalar();
-            count = count + 1;
             conn.DongKetNoi();
+            count = count + 1;
             if (count < 10) txtMDS.Text = "DS000" + count.ToString();
             else if (count < 100 && count >=10) txtMDS.Text = "DS00" + count.ToString();
             else if (count < 1000 && count >=100) txtMDS.Text = "DS0" + count.ToString();
@@ -101,7 +101,6 @@ namespace QuanLyThuVien
         {
             butIns.Visible = true;
             butOK.Visible = false;
-            txtGB.Text = txtMDS.Text = txtTenDS.Text = string.Empty;
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("AddDS", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
@@ -112,6 +111,7 @@ namespace QuanLyThuVien
             {
                 MessageBox.Show("Thêm dữ liệu thành công");
                 conn.KhoiTao(dataGridView1, @"select * from tblDauSach");
+                txtMDS.Text = txtTenDS.Text = txtGB.Text = string.Empty;
             }
             else MessageBox.Show("Có lỗi");
             conn.DongKetNoi();

@@ -16,7 +16,7 @@ namespace QLPhongKS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ThuePhong());
+            Application.Run(new FormKhachHang());
         }
     }
 }

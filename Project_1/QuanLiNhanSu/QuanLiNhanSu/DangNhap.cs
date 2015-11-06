@@ -35,29 +35,42 @@ namespace QuanLiNhanSu
 
         private void DangNhap_Load(object sender, EventArgs e)
         {
-            //connect();
+            connect();
+        }
+        private void DangNhap()
+        {
+            string query = "QuanLiDangNhap";
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@tk", txtTaiKhoan.Text.ToString());
+            cmd.Parameters.AddWithValue("@mk", txtMatKhau.Text.ToString());
+            SqlParameter pa = new SqlParameter("@kq", SqlDbType.Int);
+            pa.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(pa);
+            cmd.ExecuteNonQuery();
+            string kq = pa.Value.ToString();
+            if (kq == "0") MessageBox.Show("Tài khoản không tồn tại");
+            else
+                if (kq == "1") MessageBox.Show("Mật khẩu không đúng");
+                else
+                {
+                    MessageBox.Show("Đăng nhập thành công");
+                    frmMenu menu = new frmMenu();
+                    Hide();
+                    menu.Show();
+                }
         }
 
         private void bntOK_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand();
-            command.Connection = con;
-            command.CommandType = CommandType.Text;
-            command.CommandText = "Select * From tblDangNhap Where (Taikhoan=@user) And (matkhau=@password)";
-            command.Parameters.Add("@user", SqlDbType.NVarChar, 50).Value = txtTaiKhoan.Text;
-            command.Parameters.Add("@password", SqlDbType.NVarChar, 50).Value = txtMatKhau.Text;
-            da.SelectCommand = command;
-            da.Fill(dt);
-            if (dt.Rows.Count > 0)
+            DangNhap();
+        }
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
             {
-                MessageBox.Show("Dang nhap thanh cong");
-                Hide();
-                frmMain main = new frmMain();
-                main.Show();
-            }
-            else
-            {
-                MessageBox.Show("Đăng nhập thất bại");
+                DangNhap();
             }
         }
        
