@@ -128,5 +128,20 @@ namespace Quanlisieuthi
         {
             conn.KhoiTao(dataGridView1, constr);
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex > -1 && e.RowIndex > -1)
+            {
+                txtID.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[0].Value);
+                txtTen.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
+                txtSDT.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[2].Value);
+                txtGT.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[3].Value);
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 }

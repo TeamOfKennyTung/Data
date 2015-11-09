@@ -98,7 +98,7 @@ namespace Quanlisieuthi
 
         private void but_Ban_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn bán hàng hóa trên không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 conn.MoKetNoi();
                 SqlCommand sqlcm = new SqlCommand("Delete_HangHoa", conn.conn);
@@ -147,14 +147,15 @@ namespace Quanlisieuthi
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (but_Nhap.Visible == false) but_Ban.Enabled = but_ThemHang.Enabled = true;
             if (e.ColumnIndex > -1 && e.RowIndex > -1)
             {
                 string temp = Convert.ToString(dataGridView1.CurrentRow.Cells[3].Value);
                 DateTime dt = Convert.ToDateTime(temp);
-                String temp1 =Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value);
+                String temp1 = Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value);
                 DateTime dt1 = Convert.ToDateTime(temp1);
                 txtID.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[0].Value);
                 txtTenHang.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
@@ -163,10 +164,7 @@ namespace Quanlisieuthi
                 txtHanSuDung.Text = dt1.ToShortDateString();
 
             }
-            else
-            {
-                return;
-            }
+           
         }
     }
 }
