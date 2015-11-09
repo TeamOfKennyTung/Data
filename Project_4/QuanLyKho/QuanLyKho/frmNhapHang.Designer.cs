@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.butUpd = new System.Windows.Forms.Button();
+            this.butIns = new System.Windows.Forms.Button();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNgay = new System.Windows.Forms.TextBox();
+            this.txtMaNCC = new System.Windows.Forms.TextBox();
             this.txtTenHH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,11 +50,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.butUpd);
+            this.panel1.Controls.Add(this.butIns);
             this.panel1.Controls.Add(this.txtSoLuong);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtNgay);
+            this.panel1.Controls.Add(this.txtMaNCC);
             this.panel1.Controls.Add(this.txtTenHH);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -64,27 +64,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(443, 203);
             this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button2
+            // butUpd
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(252, 123);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 43);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Nhập thêm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.butUpd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butUpd.Location = new System.Drawing.Point(252, 123);
+            this.butUpd.Name = "butUpd";
+            this.butUpd.Size = new System.Drawing.Size(94, 43);
+            this.butUpd.TabIndex = 17;
+            this.butUpd.Text = "Nhập thêm";
+            this.butUpd.UseVisualStyleBackColor = true;
+            this.butUpd.Click += new System.EventHandler(this.butUpd_Click);
             // 
-            // button1
+            // butIns
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(46, 123);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 43);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Nhập mới";
-            this.button1.UseVisualStyleBackColor = true;
+            this.butIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butIns.Location = new System.Drawing.Point(46, 123);
+            this.butIns.Name = "butIns";
+            this.butIns.Size = new System.Drawing.Size(94, 43);
+            this.butIns.TabIndex = 16;
+            this.butIns.Text = "Nhập mới";
+            this.butIns.UseVisualStyleBackColor = true;
+            this.butIns.Click += new System.EventHandler(this.butIns_Click);
             // 
             // txtSoLuong
             // 
@@ -103,12 +104,12 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Số lượng";
             // 
-            // txtNgay
+            // txtMaNCC
             // 
-            this.txtNgay.Location = new System.Drawing.Point(168, 63);
-            this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Size = new System.Drawing.Size(159, 20);
-            this.txtNgay.TabIndex = 13;
+            this.txtMaNCC.Location = new System.Drawing.Point(168, 63);
+            this.txtMaNCC.Name = "txtMaNCC";
+            this.txtMaNCC.Size = new System.Drawing.Size(159, 20);
+            this.txtMaNCC.TabIndex = 13;
             // 
             // txtTenHH
             // 
@@ -123,9 +124,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(18, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 16);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Ngày nhập";
+            this.label3.Text = "Mã NCC";
             // 
             // label2
             // 
@@ -166,7 +167,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(443, 220);
             this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -180,12 +181,12 @@
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Số lượng";
+            this.Column3.HeaderText = "Mã NCC";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Ngày nhập";
+            this.Column4.HeaderText = "Số lượng";
             this.Column4.Name = "Column4";
             // 
             // frmNhapHang
@@ -197,7 +198,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmNhapHang";
             this.Text = "frmNhapHang";
-            this.Load += new System.EventHandler(this.frmHangHoa_Load);
+            this.Load += new System.EventHandler(this.frmNhapHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -210,14 +211,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNgay;
+        private System.Windows.Forms.TextBox txtMaNCC;
         private System.Windows.Forms.TextBox txtTenHH;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaHH;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butUpd;
+        private System.Windows.Forms.Button butIns;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

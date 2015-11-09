@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.butXuat = new System.Windows.Forms.Button();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNgay = new System.Windows.Forms.TextBox();
+            this.txtMaNCC = new System.Windows.Forms.TextBox();
             this.txtTenHH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaHH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.butXuat = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,7 @@
             this.panel1.Controls.Add(this.butXuat);
             this.panel1.Controls.Add(this.txtSoLuong);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtNgay);
+            this.panel1.Controls.Add(this.txtMaNCC);
             this.panel1.Controls.Add(this.txtTenHH);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -62,6 +62,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(443, 210);
             this.panel1.TabIndex = 0;
+            // 
+            // butXuat
+            // 
+            this.butXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butXuat.Location = new System.Drawing.Point(201, 157);
+            this.butXuat.Name = "butXuat";
+            this.butXuat.Size = new System.Drawing.Size(65, 37);
+            this.butXuat.TabIndex = 24;
+            this.butXuat.Text = "Xuất";
+            this.butXuat.UseVisualStyleBackColor = true;
             // 
             // txtSoLuong
             // 
@@ -80,12 +90,12 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Số lượng";
             // 
-            // txtNgay
+            // txtMaNCC
             // 
-            this.txtNgay.Location = new System.Drawing.Point(201, 94);
-            this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Size = new System.Drawing.Size(159, 20);
-            this.txtNgay.TabIndex = 21;
+            this.txtMaNCC.Location = new System.Drawing.Point(201, 94);
+            this.txtMaNCC.Name = "txtMaNCC";
+            this.txtMaNCC.Size = new System.Drawing.Size(159, 20);
+            this.txtMaNCC.TabIndex = 21;
             // 
             // txtTenHH
             // 
@@ -100,9 +110,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(51, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 16);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Ngày Xuất";
+            this.label3.Text = "Mã NCC";
             // 
             // label2
             // 
@@ -131,16 +141,6 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Mã hàng hóa";
             // 
-            // butXuat
-            // 
-            this.butXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butXuat.Location = new System.Drawing.Point(201, 157);
-            this.butXuat.Name = "butXuat";
-            this.butXuat.Size = new System.Drawing.Size(65, 37);
-            this.butXuat.TabIndex = 24;
-            this.butXuat.Text = "Xuất";
-            this.butXuat.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -166,7 +166,7 @@
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Ngày xuất";
+            this.Column3.HeaderText = "Mã NCC";
             this.Column3.Name = "Column3";
             // 
             // Column4
@@ -196,7 +196,7 @@
         private System.Windows.Forms.Button butXuat;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNgay;
+        private System.Windows.Forms.TextBox txtMaNCC;
         private System.Windows.Forms.TextBox txtTenHH;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
