@@ -4,8 +4,8 @@ CREATE TABLE HangHoa(
 	ID_HangHoa CHAR(10) NOT NULL,
 	TenHang NVARCHAR(50) NOT NULL,
 	GiaHang int,
-	NgayNhap date,
-	HanSd date,
+	NgayNhap datetime,
+	HanSd datetime,
 	SoLuong int
 )
 
@@ -15,7 +15,7 @@ CREATE TABLE NhanVien(
 	Quequan nvarchar(100),
 	GT CHAR(3),
 	CMND int,
-	NgaySinh date,
+	NgaySinh datetime,
 	Luong int
 )
 
@@ -24,7 +24,6 @@ CREATE TABLE KhachHang(
 	Ten_KhachHang NVARCHAR(50),
 	SDT_KhachHang int,
 	GioiTinh_KhachHang NVARCHAR(100)
-	
 )
 
 CREATE TABLE HoaDon(
@@ -33,7 +32,6 @@ CREATE TABLE HoaDon(
 	ID_KhachHang char(10) not null,
 	ID_HangHoa char(10) not null,
 	ID_NhanVien char(10)not null
-	
 )
 
 alter table HangHoa add constraint HH_ID_PK primary key(ID_HangHoa)
@@ -41,42 +39,36 @@ alter table NhanVien add constraint NV_ID_PK primary key(ID_NhanVien)
 alter table KhachHang add constraint KH_ID_PK primary key(ID_KhachHang)
 alter table HoaDon add constraint HD_ID_PK primary key(ID_HoaDon)
 
-insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd)
-values
-('HH001',N'Sữa Tắm Nam','100000','2015-01-01','2017-01-01'),
-('HH002',N'Dầu Gội','50000','2015-03-01','2017-09-02'),
-('HH003',N'Khăn Tắm','20000','2015-01-01','2020-09-02'),
-('HH004',N'Ti Vi','3000000','2014-01-01','2020-03-04'),
-('HH005',N'Quạt Điện','1000000','2015-3-01','2022-02-02'),
-('HH006',N'Ấm Siêu Tốc','500000','2014-04-03','2021-02-02'),
-('HH007',N'Chăn Bông','200000','2013-04-01','2017-02-04'),
-('HH008',N'Màn','100000','2014-01-01','2020-02-01'),
-('HH009',N'Nho Sấy','200000','2015-01-01','2015-06-02'),
-('HH010',N'Dừa Khô','100000','2014-01-01','2015-02-01')
 
-insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh)
-values
-('NV001',N'Đào Quang Tính',N'Hà Nam',N'Nam','12345678','1993-01-03'),
-('NV002',N'Ngô Thành  Trung',N'Thanh Hóa',N'Nam','12435679','1994-02-05'),
-('NV003',N'Phan Ngọc Anh',N'Nghệ An',N'Nam','12534686','1991-01-04'),
-('NV004',N'Phí Vô Thường',N'Hà Tĩnh',N'Nam','11223389','1990-02-03'),
-('NV005',N'Phạm Thị Thúy',N'An Giang',N'Nữ','13456789','1993-01-05')
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH001',N'Sữa Tắm Nam','100000','2015-01-01','2017-01-01',1000)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH002',N'Dầu Gội','50000','2015-03-01','2017-09-02',2000)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH003',N'Khăn Tắm','20000','2015-01-01','2020-09-02',2000)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH004',N'Ti Vi','3000000','2014-01-01','2020-03-04',3000)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH005',N'Quạt Điện','1000000','2015-3-01','2022-02-02',2500)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH006',N'Ấm Siêu Tốc','500000','2014-04-03','2021-02-02',5000)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH007',N'Chăn Bông','200000','2013-04-01','2017-02-04',5000)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH008',N'Màn','100000','2014-01-01','2020-02-01',4000)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH009',N'Nho Sấy','200000','2015-01-01','2015-06-02',5000)
+insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,soluong)values('HH010',N'Dừa Khô','100000','2014-01-01','2015-02-01',2000)
 
-insert into KhachHang(ID_KhachHang,Ten_KhachHang,SDT_KhachHang,GioiTinh_KhachHang)
-values
-('KH001',N'Trần Văn Anh Tuấn','01686976063',N'Nam'),
-('KH002',N'Nguyễn Thị Ánh','0123456789',N'Nữ'),
-('KH003',N'Trần Văn Hóa','0123456978',N'Nam'),
-('KH004','Nguyễn Đình Văn','0985585027',N'Nam'),
-('KH005','Lê Thị Thủy','0988234567',N'Nữ')
 
-insert into HoaDon(ID_HoaDon,Ten_HoaDon,ID_KhachHang,ID_HangHoa,ID_NhanVien)
-values
-('HD001',N'Hóa Đơn 1','KH001','HH001','NV001'),
-('HD002',N'Hóa Đơn 2','KH002','HH002','NV002'),
-('HD003',N'Hóa Đơn 3','KH003','HH003','NV003'),
-('HD004',N'Hóa Đơn 4','KH004','HH004','NV004'),
-('HD005',N'Hóa Đơn 5','KH005','HH005','NV005')
+insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh,luong)values('NV001',N'Đào Quang Tính',N'Hà Nam',N'Nam','12345678','1993-01-03',10000)
+insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh,luong)values('NV002',N'Ngô Thành  Trung',N'Thanh Hóa',N'Nam','12435679','1994-02-05',20000)
+insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh,luong)values('NV003',N'Phan Ngọc Anh',N'Nghệ An',N'Nam','12534686','1991-01-04',40000)
+insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh,luong)values('NV004',N'Phí Vô Thường',N'Hà Tĩnh',N'Nam','11223389','1990-02-03',50000)
+insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh,luong)values('NV005',N'Phạm Thị Thúy',N'An Giang',N'Nữ','13456789','1993-01-05',50000)
+
+insert into KhachHang(ID_KhachHang,Ten_KhachHang,SDT_KhachHang,GioiTinh_KhachHang) values('KH001',N'Trần Văn Anh Tuấn','01686976063',N'Nam')
+insert into KhachHang(ID_KhachHang,Ten_KhachHang,SDT_KhachHang,GioiTinh_KhachHang) values('KH002',N'Nguyễn Thị Ánh','0123456789',N'Nữ')
+insert into KhachHang(ID_KhachHang,Ten_KhachHang,SDT_KhachHang,GioiTinh_KhachHang) values('KH003',N'Trần Văn Hóa','0123456978',N'Nam')
+insert into KhachHang(ID_KhachHang,Ten_KhachHang,SDT_KhachHang,GioiTinh_KhachHang) values('KH004','Nguyễn Đình Văn','0985585027',N'Nam')
+insert into KhachHang(ID_KhachHang,Ten_KhachHang,SDT_KhachHang,GioiTinh_KhachHang) values('KH005','Lê Thị Thủy','0988234567',N'Nữ')
+
+insert into HoaDon(ID_HoaDon,Ten_HoaDon,ID_KhachHang,ID_HangHoa,ID_NhanVien)values('HD001',N'Hóa Đơn 1','KH001','HH001','NV001')
+insert into HoaDon(ID_HoaDon,Ten_HoaDon,ID_KhachHang,ID_HangHoa,ID_NhanVien)values('HD002',N'Hóa Đơn 2','KH002','HH002','NV002')
+insert into HoaDon(ID_HoaDon,Ten_HoaDon,ID_KhachHang,ID_HangHoa,ID_NhanVien)values('HD003',N'Hóa Đơn 3','KH003','HH003','NV003')
+insert into HoaDon(ID_HoaDon,Ten_HoaDon,ID_KhachHang,ID_HangHoa,ID_NhanVien)values('HD004',N'Hóa Đơn 4','KH004','HH004','NV004')
+insert into HoaDon(ID_HoaDon,Ten_HoaDon,ID_KhachHang,ID_HangHoa,ID_NhanVien)values('HD005',N'Hóa Đơn 5','KH005','HH005','NV005')
 
 
 alter table HoaDon add constraint fk_hanghoa_hoadon foreign key (ID_HangHoa) references HangHoa(ID_HangHoa)
@@ -103,12 +95,20 @@ begin
 	select *from HangHoa
 end
 
-create proc Add_HangHoa(@ID_HangHoa char(10),@TenHang char (50),@GiaHang int,@NgayNhap date,@Hansd date,@SoLuong int)
+
+
+create proc Add_HangHoa(@TenHang nvarchar(50), @GiaHang int, @NgayNhap datetime, @HanSd datetime,@soluong int)
 as
+declare @i char(10)
 begin
-insert into HangHoa(ID_HangHoa,TenHang,GiaHang,NgayNhap,HanSd,Soluong)
-values(@ID_HangHoa,@TenHang,@GiaHang,@NgayNhap,@Hansd,@Soluong)
+set @i = (select count(ID_HangHoa) from HangHoa)
+if @i <10 begin insert into HangHoa values ('HH00'+ convert(varchar(4),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd,@soluong) end
+else if @i <100  begin insert into HangHoa values ('HH0'+ convert(varchar(5),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd,@soluong) end
+else if @i <1000 begin insert into HangHoa values ('HH'+ convert(varchar(6),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd,@soluong) end
+--else if @i <10000 begin insert into HangHoa values ('HH'+ convert(varchar(8),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
+--else begin insert into HangHoa values ('HH'+ convert(varchar(6),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
 end
+
 
 create proc LoadKhachHang
 as
@@ -138,20 +138,21 @@ begin
 		where ID_NhanVien=@ID_NhanVien	
 end			
 
-create proc Add_NhanVien(@ID_NhanVien char(10),@Hoten nvarchar(50),@QueQuan nvarchar(100),@GT char(3),@CMND int, @NgaySinh date,@Luong int)
+create proc Add_NhanVien(@ID_NhanVien char(10),@Hoten nvarchar(50),@QueQuan nvarchar(100),@GT char(3),@CMND int, @NgaySinh datetime,@Luong int)
 as
 begin
 	insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh,Luong)
 	values(@ID_NhanVien,@Hoten,@QueQuan,@GT,@CMND,@NgaySinh,@Luong)
 end
 
---create proc Edit_NhanVien(@ID_NhanVien char(10),@HoTen char(50),@QueQuan nvarchar(100),@GT char(3),@CMND int,@NgaySinh date)			
---as
---begin
---	update NhanVien
---	set ID_NhanVien=@ID_NhanVien,HoTen=@Hoten,Quequan=@QueQuan,GT=@GT,NgaySinh=@Ngaysinh,CMND=@CMND,NgaySinh=@NgaySinh
---	where ID_NhanVien=@ID_NhanVien
---end
+create proc Edit_NhanVien(@ID_NhanVien char(10),@HoTen char(50),@QueQuan nvarchar(100),@GT char(3),@CMND int,@NgaySinh datetime)			
+as
+begin
+	update NhanVien
+	set ID_NhanVien=@ID_NhanVien,HoTen=@Hoten,Quequan=@QueQuan,GT=@GT,NgaySinh=@Ngaysinh,CMND=@CMND
+	where ID_NhanVien=@ID_NhanVien
+end
+
 create proc timkienhanghoa(@tim nvarchar(max))
 as
 begin
@@ -164,4 +165,77 @@ as
 begin
 	select *from NhanVien
 	where HoTen like '%'+@tim+ '%' or ID_NhanVien like '%' +@tim+ '%'
+end
+create proc LoadNhanVien
+as 
+begin
+select * from NhanVien
+end
+
+create  proc Edit_HangHoa(@ID_HangHoa char(10), @TenHang nvarchar(50),@GiaHang int, @NgayNhap datetime, @HanSd datetime)
+as  
+begin
+update HangHoa
+set TenHang= @TenHang, GiaHang= @GiaHang, NgayNhap=@NgayNhap,HanSd=@HanSd
+where ID_HangHoa= @ID_HangHoa
+end
+create proc Delete_HangHoa(@ID_HangHoa char(10))
+as 
+begin
+ delete from HangHoa where ID_HangHoa=@ID_HangHoa
+ end
+ 
+ create proc DelDG(@madg varchar(10))
+as
+begin
+delete from tblDocGia where MaDG = @madg
+end
+
+create proc Delete_KhachHang(@ID_KhachHang char(10))
+as
+begin
+delete from KhachHang
+where ID_KhachHang= @ID_KhachHang
+end
+
+create proc Delete_HoaDon(@ID_HoaDon char(10))
+as
+begin
+delete from HoaDon
+where ID_HoaDon= @ID_HoaDon
+end
+
+create proc Add_HoaDon(@ID_HoaDon char (10),@Ten_HoaDon nvarchar(30),@ID_HangHoa char(10),@ID_KhachHang char (10),@ID_NhanVien char (10))
+as
+begin
+insert into HoaDon(ID_HoaDon,Ten_HoaDon,ID_HangHoa,ID_NhanVien,ID_KhachHang)
+values (@ID_HoaDon,@Ten_HoaDon,@ID_HangHoa,@ID_NhanVien,@ID_KhachHang)
+end
+
+create  proc Edit_HoaDon(@ID_HoaDon char(10),@Ten_HoaDon nvarchar(30),@ID_HangHoa char(10),@ID_NhanVien char(10),@ID_KhachHang char(10))
+as
+begin
+update HoaDon
+set ID_HoaDon=@ID_HoaDon,Ten_HoaDon=@Ten_HoaDon,ID_HangHoa=@ID_HangHoa,ID_NhanVien=@ID_NhanVien,ID_KhachHang=@ID_KhachHang
+where ID_HoaDon=@ID_HoaDon
+end
+
+create proc LoadHoaDon
+as
+begin
+select* from HoaDon
+end
+
+create proc timkiemkhachhang(@tim nvarchar(max))
+as
+begin
+	select *from KhachHang
+	where Ten_KhachHang like '%'+@tim+ '%' or ID_KhachHang like '%' +@tim+ '%'
+end
+
+create proc timkiemhoadon(@tim nvarchar(max))
+as
+begin
+select * from HoaDon
+where ID_HoaDon like '%'+ @tim+ '%' or Ten_HoaDon like '%'+@tim+'%'
 end

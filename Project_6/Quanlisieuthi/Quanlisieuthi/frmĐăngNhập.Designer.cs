@@ -30,28 +30,28 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.but_join = new System.Windows.Forms.Button();
+            this.but_out = new System.Windows.Forms.Button();
+            this.pAcc = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.but_KhachHang = new System.Windows.Forms.Button();
+            this.but_NhanVien = new System.Windows.Forms.Button();
+            this.but_HoaDon = new System.Windows.Forms.Button();
+            this.but_HangHoa = new System.Windows.Forms.Button();
+            this.pAcc.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 35);
+            this.label1.Location = new System.Drawing.Point(65, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 16);
             this.label1.TabIndex = 0;
@@ -62,77 +62,86 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 75);
+            this.label2.Location = new System.Drawing.Point(79, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật Khẩu";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(325, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtUser.Location = new System.Drawing.Point(258, 31);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(153, 20);
+            this.txtUser.TabIndex = 2;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
-            // textBox2
+            // txtPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(325, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtPass.Location = new System.Drawing.Point(258, 72);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(153, 20);
+            this.txtPass.TabIndex = 3;
+            this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
-            // button1
+            // but_join
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(35, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Đăng Nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.but_join.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_join.Location = new System.Drawing.Point(56, 125);
+            this.but_join.Name = "but_join";
+            this.but_join.Size = new System.Drawing.Size(115, 30);
+            this.but_join.TabIndex = 4;
+            this.but_join.Text = "Đăng Nhập";
+            this.but_join.UseVisualStyleBackColor = true;
+            this.but_join.Click += new System.EventHandler(this.but_join_Click);
             // 
-            // button2
+            // but_out
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(392, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 39);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.but_out.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.but_out.Location = new System.Drawing.Point(299, 116);
+            this.but_out.Name = "but_out";
+            this.but_out.Size = new System.Drawing.Size(86, 39);
+            this.but_out.TabIndex = 5;
+            this.but_out.Text = "Thoát";
+            this.but_out.UseVisualStyleBackColor = true;
+            this.but_out.Click += new System.EventHandler(this.but_out_Click);
             // 
-            // panel1
+            // pAcc
             // 
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Location = new System.Drawing.Point(35, 177);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(563, 171);
-            this.panel1.TabIndex = 6;
+            this.pAcc.Controls.Add(this.linkLabel1);
+            this.pAcc.Controls.Add(this.label6);
+            this.pAcc.Controls.Add(this.label5);
+            this.pAcc.Controls.Add(this.label4);
+            this.pAcc.Controls.Add(this.label3);
+            this.pAcc.Controls.Add(this.but_KhachHang);
+            this.pAcc.Controls.Add(this.but_NhanVien);
+            this.pAcc.Controls.Add(this.but_HoaDon);
+            this.pAcc.Controls.Add(this.but_HangHoa);
+            this.pAcc.Enabled = false;
+            this.pAcc.Location = new System.Drawing.Point(3, 181);
+            this.pAcc.Name = "pAcc";
+            this.pAcc.Size = new System.Drawing.Size(454, 146);
+            this.pAcc.TabIndex = 6;
+            this.pAcc.Paint += new System.Windows.Forms.PaintEventHandler(this.pAcc_Paint);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(472, 127);
+            this.linkLabel1.Location = new System.Drawing.Point(320, 117);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(62, 13);
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Hướng Dẫn";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(416, 92);
+            this.label6.Location = new System.Drawing.Point(303, 92);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
             this.label6.TabIndex = 7;
@@ -143,7 +152,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(287, 92);
+            this.label5.Location = new System.Drawing.Point(200, 92);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 16);
             this.label5.TabIndex = 6;
@@ -153,7 +162,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(152, 92);
+            this.label4.Location = new System.Drawing.Point(110, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 16);
             this.label4.TabIndex = 5;
@@ -163,62 +172,64 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 92);
+            this.label3.Location = new System.Drawing.Point(8, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Hàng Hóa";
             // 
-            // button6
+            // but_KhachHang
             // 
-            this.button6.Location = new System.Drawing.Point(290, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(82, 39);
-            this.button6.TabIndex = 3;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.but_KhachHang.Location = new System.Drawing.Point(203, 19);
+            this.but_KhachHang.Name = "but_KhachHang";
+            this.but_KhachHang.Size = new System.Drawing.Size(82, 39);
+            this.but_KhachHang.TabIndex = 3;
+            this.but_KhachHang.UseVisualStyleBackColor = true;
+            this.but_KhachHang.Click += new System.EventHandler(this.but_KhachHang_Click);
             // 
-            // button5
+            // but_NhanVien
             // 
-            this.button5.Location = new System.Drawing.Point(418, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(77, 39);
-            this.button5.TabIndex = 2;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.but_NhanVien.Location = new System.Drawing.Point(305, 19);
+            this.but_NhanVien.Name = "but_NhanVien";
+            this.but_NhanVien.Size = new System.Drawing.Size(77, 39);
+            this.but_NhanVien.TabIndex = 2;
+            this.but_NhanVien.UseVisualStyleBackColor = true;
+            this.but_NhanVien.Click += new System.EventHandler(this.but_NhanVien_Click);
             // 
-            // button4
+            // but_HoaDon
             // 
-            this.button4.Location = new System.Drawing.Point(145, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 39);
-            this.button4.TabIndex = 1;
-            this.button4.UseVisualStyleBackColor = true;
+            this.but_HoaDon.Location = new System.Drawing.Point(103, 19);
+            this.but_HoaDon.Name = "but_HoaDon";
+            this.but_HoaDon.Size = new System.Drawing.Size(75, 39);
+            this.but_HoaDon.TabIndex = 1;
+            this.but_HoaDon.UseVisualStyleBackColor = true;
+            this.but_HoaDon.Click += new System.EventHandler(this.but_HoaDon_Click);
             // 
-            // button3
+            // but_HangHoa
             // 
-            this.button3.Location = new System.Drawing.Point(11, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 39);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = true;
+            this.but_HangHoa.Location = new System.Drawing.Point(11, 19);
+            this.but_HangHoa.Name = "but_HangHoa";
+            this.but_HangHoa.Size = new System.Drawing.Size(75, 39);
+            this.but_HangHoa.TabIndex = 0;
+            this.but_HangHoa.UseVisualStyleBackColor = true;
+            this.but_HangHoa.Click += new System.EventHandler(this.but_HangHoa_Click);
             // 
             // frmĐăngNhập
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 370);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(524, 375);
+            this.Controls.Add(this.pAcc);
+            this.Controls.Add(this.but_out);
+            this.Controls.Add(this.but_join);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmĐăngNhập";
             this.Text = "Đăng Nhập";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pAcc.ResumeLayout(false);
+            this.pAcc.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,15 +239,15 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Button but_join;
+        private System.Windows.Forms.Button but_out;
+        private System.Windows.Forms.Panel pAcc;
+        private System.Windows.Forms.Button but_KhachHang;
+        private System.Windows.Forms.Button but_NhanVien;
+        private System.Windows.Forms.Button but_HoaDon;
+        private System.Windows.Forms.Button but_HangHoa;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
