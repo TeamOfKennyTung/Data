@@ -15,14 +15,15 @@ create table tblDocGia
 	GioiTinh nvarchar(3) check (GioiTinh in (N'Nữ', N'Nam'))
 )
 
+delete from tblMuonTra
 
 create table tblMuonTra
 (
 	MaPM varchar(10) primary key,
 	MaDG varchar(10) constraint FK_DG_MT foreign key (MaDG) references tblDocGia(MaDG),
 	MaDS varchar(10) constraint FK_DS_MT foreign key (MaDS) references tblDauSach(MaDS),
-	NgayMuon datetime null check (NgayMuon = getdate()),
-	NgayTra datetime not null check (datediff(day,getdate(),NgayTra) >0)
+	NgayMuon datetime null,
+	NgayTra datetime null
 )
 
 create table tblUser
@@ -54,9 +55,9 @@ insert into tblMuonTra values ('PM0003','DG0003', 'DS0007', getdate(), '10/17/20
 insert into tblMuonTra values ('PM0004','DG0002', 'DS0001', getdate(), '11/13/2015')
 insert into tblMuonTra values ('PM0005','DG0002', 'DS0003', getdate(), '12/25/2015')
 insert into tblMuonTra values ('PM0006','DG0003', 'DS0006', getdate(), '12/31/2015')
-insert into tblMuonTra values ('PM0007','DG0001', 'DS0004', getdate(), '09/25/2015')
-insert into tblMuonTra values ('PM0008','DG0002', 'DS0008', getdate(), '09/30/2015')
-insert into tblMuonTra values ('PM0009','DG0002', 'DS0001', getdate(), '09/15/2015')
+insert into tblMuonTra values ('PM0007','DG0001', 'DS0004', getdate(), '10/25/2015')
+insert into tblMuonTra values ('PM0008','DG0002', 'DS0008', getdate(), '10/30/2015')
+insert into tblMuonTra values ('PM0009','DG0002', 'DS0001', getdate(), '11/15/2015')
 insert into tblMuonTra values ('PM0010','DG0004', 'DS0002', getdate(), '12/08/2015')
 
 insert into tblUser values('nguyenanhdung','nguyenanhdung')
@@ -133,6 +134,7 @@ create proc AddMT(@madg varchar(10), @mads varchar(10), @ngaytra datetime)
 as
 declare @i int
 begin
+set @i = (select count(MaPM) from tblMuonTra)
 if @i <10 begin insert into tblMuonTra values ('PM000'+ convert(varchar(5),@i+1), @madg, @mads, getdate(), @ngaytra) end
 else if @i <100  begin insert into tblMuonTra values ('PM00'+ convert(varchar(6),@i+1), @madg, @mads, getdate(), @ngaytra) end
 else if @i <1000 begin insert into tblMuonTra values ('PM0'+ convert(varchar(7),@i+1), @madg, @mads, getdate(), @ngaytra) end
@@ -143,7 +145,7 @@ end
 create proc UpdMT(@mapm varchar(10), @madg varchar(10), @mads varchar(10), @ngaymuon datetime, @ngaytra datetime)
 as
 begin
-update tblMuonTra set MaDG = @madg, MaDS = @mads, NgayMuon = @ngaymuon, NgayTra = @ngaytra
+update tblMuonTra set MaDG = @madg, MaDS = @mads, NgayMuon = @ngaymuon, NgayTra = @ngaytra where Mapm = @mapm
 end
 
 create proc DelMT(@mapm varchar(10))
