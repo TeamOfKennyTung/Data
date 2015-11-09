@@ -12,7 +12,7 @@ namespace QuanLyThuVien
     public class ConnectData
     {
         public SqlConnection conn = new SqlConnection();
-        public string constr = @"Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=Project_3;Integrated Security=True";
+        public string constr = @"Data Source=UBUNTU-PC\SQLEXPRESS;Initial Catalog=Project_3;Integrated Security=True";
 
         public void MoKetNoi()
         {
