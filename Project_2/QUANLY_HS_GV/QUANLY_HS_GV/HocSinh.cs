@@ -24,7 +24,7 @@ namespace QUANLY_HS_GV
         private void HocSinh_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet.HocSinh' table. You can move, or remove it, as needed.
-            this.hocSinhTableAdapter.Fill(this.qUANLY_HS_GVDataSet.HocSinh);
+            //this.hocSinhTableAdapter.Fill(this.qUANLY_HS_GVDataSet.HocSinh);
             // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet1.HocSinh' table. You can move, or remove it, as needed.
             //this.hocSinhTableAdapter1.Fill(this.qUANLY_HS_GVDataSet1.HocSinh);
             // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet.HocSinh' table. You can move, or remove it, as needed.
