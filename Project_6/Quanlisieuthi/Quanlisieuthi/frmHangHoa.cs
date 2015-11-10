@@ -41,7 +41,7 @@ namespace Quanlisieuthi
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("timkienhanghoa", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@tim", txtFind.Text);
+            sqlcm.Parameters.AddWithValue("@tim", txtFind.Text);
             SqlDataAdapter da = new SqlDataAdapter(sqlcm);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -57,6 +57,7 @@ namespace Quanlisieuthi
             but_OK.Visible = true;
             but_Nhap.Visible = false;
             txtTenHang.Text = txtGiaHang.Text = txtNgayNhap.Text = txtHanSuDung.Text = String.Empty;
+            dataGridView1.Enabled = false;
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand(@"select count(ID_HangHoa) from HangHoa", conn.conn);
             sqlcm.CommandType = CommandType.Text;
@@ -78,13 +79,14 @@ namespace Quanlisieuthi
         {
             but_OK.Visible = false;
             but_Nhap.Visible = true;
+            dataGridView1.Enabled = true;
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("Add_HangHoa", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@TenHang", txtTenHang.Text);
-            sqlcm.Parameters.Add("@GiaHang", txtGiaHang.Text);
-            sqlcm.Parameters.Add("@NgayNhap", txtNgayNhap.Text);
-            sqlcm.Parameters.Add("@HanSd", txtHanSuDung.Text);
+            sqlcm.Parameters.AddWithValue("@TenHang", txtTenHang.Text);
+            sqlcm.Parameters.AddWithValue("@GiaHang", txtGiaHang.Text);
+            sqlcm.Parameters.AddWithValue("@NgayNhap", txtNgayNhap.Text);
+            sqlcm.Parameters.AddWithValue("@HanSd", txtHanSuDung.Text);
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
@@ -98,12 +100,12 @@ namespace Quanlisieuthi
 
         private void but_Ban_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn bán hàng hóa trên không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 conn.MoKetNoi();
                 SqlCommand sqlcm = new SqlCommand("Delete_HangHoa", conn.conn);
                 sqlcm.CommandType = CommandType.StoredProcedure;
-                sqlcm.Parameters.Add("@ID_HangHoa", txtID.Text);
+                sqlcm.Parameters.AddWithValue("@ID_HangHoa", txtID.Text);
                 int check = sqlcm.ExecuteNonQuery();
                 if (check > 0)
                 {
@@ -124,15 +126,16 @@ namespace Quanlisieuthi
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("Edit_HangHoa", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@TenHang", txtTenHang.Text);
-            sqlcm.Parameters.Add("@GiaHang", txtGiaHang.Text);
-            sqlcm.Parameters.Add("@NgayNhap", txtNgayNhap.Text);
-            sqlcm.Parameters.Add("@HanSd", txtHanSuDung.Text);
+            sqlcm.Parameters.AddWithValue("@id_hanghoa", txtID.Text);
+            sqlcm.Parameters.AddWithValue("@TenHang", txtTenHang.Text);
+            sqlcm.Parameters.AddWithValue("@GiaHang", txtGiaHang.Text);
+            sqlcm.Parameters.AddWithValue("@NgayNhap", txtNgayNhap.Text);
+            sqlcm.Parameters.AddWithValue("@HanSd", txtHanSuDung.Text);
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
                 MessageBox.Show("Sửa thành công");
-                conn.KhoiTao(dataGridView1, @"select * from tblDocGia");
+                conn.KhoiTao(dataGridView1, @"select * from HangHoa");
                 txtID.Text = txtTenHang.Text = txtGiaHang.Text = txtNgayNhap.Text = txtHanSuDung.Text = string.Empty;
             }
             else

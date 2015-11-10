@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,11 +52,6 @@
             this.but_OK = new System.Windows.Forms.Button();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.but_Find = new System.Windows.Forms.Button();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,6 +78,45 @@
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ID_HangHoa";
+            this.Column5.HeaderText = "ID_Hàng";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "TenHang";
+            this.Column1.HeaderText = "Tên Hàng";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "GiaHang";
+            this.Column2.HeaderText = "Giá Hàng";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "NgayNhap";
+            this.Column3.HeaderText = "Ngày Nhập";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "HanSd";
+            this.Column4.HeaderText = "Hạn Sử Dụng";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // panel1
             // 
@@ -241,6 +280,7 @@
             this.but_OK.TabIndex = 15;
             this.but_OK.Text = "Xong";
             this.but_OK.UseVisualStyleBackColor = true;
+            this.but_OK.Visible = false;
             this.but_OK.Click += new System.EventHandler(this.but_OK_Click);
             // 
             // txtFind
@@ -261,45 +301,6 @@
             this.but_Find.Text = "Tìm Kiếm ";
             this.but_Find.UseVisualStyleBackColor = true;
             this.but_Find.Click += new System.EventHandler(this.but_Find_Click);
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ID_HangHoa";
-            this.Column5.HeaderText = "ID_Hàng";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "TenHang";
-            this.Column1.HeaderText = "Tên Hàng";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "GiaHang";
-            this.Column2.HeaderText = "Giá Hàng";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "NgayNhap";
-            this.Column3.HeaderText = "Ngày Nhập";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "HanSd";
-            this.Column4.HeaderText = "Hạn Sử Dụng";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // frmHangHoa
             // 

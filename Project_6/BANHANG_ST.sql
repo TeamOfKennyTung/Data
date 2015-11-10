@@ -97,14 +97,14 @@ end
 
 
 
-create proc Add_HangHoa(@TenHang nvarchar(50), @GiaHang int, @NgayNhap datetime, @HanSd datetime,@soluong int)
+create proc Add_HangHoa(@TenHang nvarchar(50), @GiaHang int, @NgayNhap datetime, @HanSd datetime)
 as
 declare @i char(10)
 begin
 set @i = (select count(ID_HangHoa) from HangHoa)
-if @i <10 begin insert into HangHoa values ('HH00'+ convert(varchar(4),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd,@soluong) end
-else if @i <100  begin insert into HangHoa values ('HH0'+ convert(varchar(5),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd,@soluong) end
-else if @i <1000 begin insert into HangHoa values ('HH'+ convert(varchar(6),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd,@soluong) end
+if @i <10 begin insert into HangHoa (ID_HangHoa,TenHang,GiaHang,NgayNhap,Hansd) values ('HH00'+ convert(varchar(4),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
+else if @i <100  begin insert into HangHoa (ID_HangHoa,TenHang,GiaHang,NgayNhap,Hansd) values ('HH0'+ convert(varchar(5),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
+else if @i <1000 begin insert into HangHoa (ID_HangHoa,TenHang,GiaHang,NgayNhap,Hansd) values ('HH'+ convert(varchar(6),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
 --else if @i <10000 begin insert into HangHoa values ('HH'+ convert(varchar(8),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
 --else begin insert into HangHoa values ('HH'+ convert(varchar(6),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
 end
@@ -116,11 +116,10 @@ begin
 	select *from KhachHang
 end
 
-create proc Add_KhachHang(@ID_KhachHang char(10),@Ten_KhachHang nvarchar(50),@SDT_KhachHang int,@GioiTinh_KhachHang char(3))
+create proc Add_KhachHang(@id char(10), @ten nvarchar(50), @sdt int, @gioitinh nvarchar(100))
 as
 begin
-	insert into KhachHang(ID_KhachHang,Ten_KhachHang,SDT_KhachHang,GioiTinh_KhachHang)
-	values(@ID_KhachHang,@Ten_KhachHang,@SDT_KhachHang,@GioiTinh_KhachHang)
+insert into KhachHang values (@id, @ten, @sdt, @gioitinh)
 end
 
 create proc Edit_KhachHang(@ID_KhachHang char(10),@Ten_KhachHang char(20),@SDT_KhachHang int,@GioiTinh_KhachHang char(3))
@@ -138,11 +137,12 @@ begin
 		where ID_NhanVien=@ID_NhanVien	
 end			
 
-create proc Add_NhanVien(@ID_NhanVien char(10),@Hoten nvarchar(50),@QueQuan nvarchar(100),@GT char(3),@CMND int, @NgaySinh datetime,@Luong int)
+
+create proc Add_NhanVien(@ID_NhanVien char(10),@Hoten nvarchar(50),@QueQuan nvarchar(100),@GT char(3),@CMND int, @NgaySinh datetime)
 as
 begin
-	insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh,Luong)
-	values(@ID_NhanVien,@Hoten,@QueQuan,@GT,@CMND,@NgaySinh,@Luong)
+	insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh)
+	values(@ID_NhanVien,@Hoten,@QueQuan,@GT,@CMND,@NgaySinh)
 end
 
 create proc Edit_NhanVien(@ID_NhanVien char(10),@HoTen char(50),@QueQuan nvarchar(100),@GT char(3),@CMND int,@NgaySinh datetime)			
@@ -205,11 +205,10 @@ delete from HoaDon
 where ID_HoaDon= @ID_HoaDon
 end
 
-create proc Add_HoaDon(@ID_HoaDon char (10),@Ten_HoaDon nvarchar(30),@ID_HangHoa char(10),@ID_KhachHang char (10),@ID_NhanVien char (10))
+create proc Add_HoaDon(@id char(10), @ten nvarchar(30), @idkh char(10), @idhh char(10), @idnv char(10))
 as
 begin
-insert into HoaDon(ID_HoaDon,Ten_HoaDon,ID_HangHoa,ID_NhanVien,ID_KhachHang)
-values (@ID_HoaDon,@Ten_HoaDon,@ID_HangHoa,@ID_NhanVien,@ID_KhachHang)
+insert into HoaDon values (@id, @ten, @idkh, @idhh, @idnv)
 end
 
 create  proc Edit_HoaDon(@ID_HoaDon char(10),@Ten_HoaDon nvarchar(30),@ID_HangHoa char(10),@ID_NhanVien char(10),@ID_KhachHang char(10))
