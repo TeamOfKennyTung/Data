@@ -49,16 +49,16 @@ insert into tblDocGia values ('DG0003', N'Nguyễn Anh Dũng', '01/11/1994','Nam
 insert into tblDocGia values ('DG0004', N'Phí Xuân Đạo', '05/08/1994','Nam')
 insert into tblDocGia values ('DG0005', N'Hoàng Đình Đạt', '11/07/1994','Nam')
 
-insert into tblMuonTra values ('PM0001','DG0001', 'DS0002', getdate(), '12/08/2015')
-insert into tblMuonTra values ('PM0002','DG0004', 'DS0005', getdate(), '12/07/2015')
-insert into tblMuonTra values ('PM0003','DG0003', 'DS0007', getdate(), '10/17/2015')
-insert into tblMuonTra values ('PM0004','DG0002', 'DS0001', getdate(), '11/13/2015')
-insert into tblMuonTra values ('PM0005','DG0002', 'DS0003', getdate(), '12/25/2015')
-insert into tblMuonTra values ('PM0006','DG0003', 'DS0006', getdate(), '12/31/2015')
-insert into tblMuonTra values ('PM0007','DG0001', 'DS0004', getdate(), '10/25/2015')
-insert into tblMuonTra values ('PM0008','DG0002', 'DS0008', getdate(), '10/30/2015')
-insert into tblMuonTra values ('PM0009','DG0002', 'DS0001', getdate(), '11/15/2015')
-insert into tblMuonTra values ('PM0010','DG0004', 'DS0002', getdate(), '12/08/2015')
+insert into tblMuonTra values ('PM0001','DG0001', 'DS0002', convert(varchar(10),getdate(),101), '12/08/2015')
+insert into tblMuonTra values ('PM0002','DG0004', 'DS0005', convert(varchar(10),getdate(),101), '12/07/2015')
+insert into tblMuonTra values ('PM0003','DG0003', 'DS0007', convert(varchar(10),getdate(),101), '10/17/2015')
+insert into tblMuonTra values ('PM0004','DG0002', 'DS0001', convert(varchar(10),getdate(),101), '11/13/2015')
+insert into tblMuonTra values ('PM0005','DG0002', 'DS0003', convert(varchar(10),getdate(),101), '12/25/2015')
+insert into tblMuonTra values ('PM0006','DG0003', 'DS0006', convert(varchar(10),getdate(),101), '12/31/2015')
+insert into tblMuonTra values ('PM0007','DG0001', 'DS0004', convert(varchar(10),getdate(),101), '10/25/2015')
+insert into tblMuonTra values ('PM0008','DG0002', 'DS0008', convert(varchar(10),getdate(),101), '10/30/2015')
+insert into tblMuonTra values ('PM0009','DG0002', 'DS0001', convert(varchar(10),getdate(),101), '11/15/2015')
+insert into tblMuonTra values ('PM0010','DG0004', 'DS0002', convert(varchar(10),getdate(),101), '12/08/2015')
 
 insert into tblUser values('nguyenanhdung','nguyenanhdung')
 insert into tblUser values('hoangdingdat','hoangdinhdat')
@@ -135,12 +135,13 @@ as
 declare @i int
 begin
 set @i = (select count(MaPM) from tblMuonTra)
-if @i <10 begin insert into tblMuonTra values ('PM000'+ convert(varchar(5),@i+1), @madg, @mads, getdate(), @ngaytra) end
-else if @i <100  begin insert into tblMuonTra values ('PM00'+ convert(varchar(6),@i+1), @madg, @mads, getdate(), @ngaytra) end
-else if @i <1000 begin insert into tblMuonTra values ('PM0'+ convert(varchar(7),@i+1), @madg, @mads, getdate(), @ngaytra) end
-else if @i <10000 begin insert into tblMuonTra values ('PM'+ convert(varchar(8),@i+1), @madg, @mads, getdate(), @ngaytra) end
-else begin insert into tblMuonTra values ('PM'+ convert(varchar(8),@i+1), @madg, @mads, getdate(), @ngaytra) end
+if @i <10 begin insert into tblMuonTra values ('PM000'+ convert(varchar(5),@i+1), @madg, @mads, convert(varchar(10),getdate(),101), @ngaytra) end
+else if @i <100  begin insert into tblMuonTra values ('PM00'+ convert(varchar(6),@i+1), @madg, @mads,convert(varchar(10),getdate(),101), @ngaytra) end
+else if @i <1000 begin insert into tblMuonTra values ('PM0'+ convert(varchar(7),@i+1), @madg, @mads, convert(varchar(10),getdate(),101), @ngaytra) end
+else if @i <10000 begin insert into tblMuonTra values ('PM'+ convert(varchar(8),@i+1), @madg, @mads, convert(varchar(10),getdate(),101), @ngaytra) end
+else begin insert into tblMuonTra values ('PM'+ convert(varchar(8),@i+1), @madg, @mads, convert(varchar(10),getdate(),101), @ngaytra) end
 end
+
 
 create proc UpdMT(@mapm varchar(10), @madg varchar(10), @mads varchar(10), @ngaymuon datetime, @ngaytra datetime)
 as
@@ -160,3 +161,5 @@ begin
 select * from tblMuonTra where MaPM like '%' + @str + '%' or MaDS like '%' + @str +'%'
 or MaDG like '%' + @str +'%' or convert(nvarchar(50),ngaymuon) like '%' + @str +'%' or convert(nvarchar(50),ngaytra) like '%' + @str +'%'
 end
+
+select convert(varchar(10),getdate(),101)
