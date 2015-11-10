@@ -98,7 +98,7 @@ namespace Quanlisieuthi
 
         private void but_Ban_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn bán hàng hóa trên không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 conn.MoKetNoi();
                 SqlCommand sqlcm = new SqlCommand("Delete_HangHoa", conn.conn);
@@ -124,6 +124,7 @@ namespace Quanlisieuthi
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("Edit_HangHoa", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
+            sqlcm.Parameters.Add("@id_hanghoa", txtID.Text);
             sqlcm.Parameters.Add("@TenHang", txtTenHang.Text);
             sqlcm.Parameters.Add("@GiaHang", txtGiaHang.Text);
             sqlcm.Parameters.Add("@NgayNhap", txtNgayNhap.Text);
@@ -132,7 +133,7 @@ namespace Quanlisieuthi
             if (check > 0)
             {
                 MessageBox.Show("Sửa thành công");
-                conn.KhoiTao(dataGridView1, @"select * from tblDocGia");
+                conn.KhoiTao(dataGridView1, @"select * from HangHoa");
                 txtID.Text = txtTenHang.Text = txtGiaHang.Text = txtNgayNhap.Text = txtHanSuDung.Text = string.Empty;
             }
             else

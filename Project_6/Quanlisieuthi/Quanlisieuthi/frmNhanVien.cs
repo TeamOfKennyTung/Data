@@ -42,41 +42,24 @@ namespace Quanlisieuthi
 
         private void but_Ins_Click(object sender, EventArgs e)
         {
-            conn.MoKetNoi();
-            SqlCommand sqlcm = new SqlCommand("InsNhanVien", conn.conn);
-            sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@hoten", txtHoTen.Text);
-            sqlcm.Parameters.Add("@quequan", txtQueQuan.Text);
-            sqlcm.Parameters.Add("@gioitinh", txtGioiTinh.Text);
-            sqlcm.Parameters.Add("@CMND", txtCMND.Text);
-            sqlcm.Parameters.Add("@ngaysinh", txtNgaySinh.Text);
-            int check = sqlcm.ExecuteNonQuery();
-            if (check > 0)
-            {
-                MessageBox.Show("Sửa thành công");
-                conn.KhoiTao(dataGridView1, @"select * from tblDocGia");
-                txtID.Text = txtHoTen.Text = txtQueQuan.Text = txtGioiTinh.Text = txtCMND.Text = txtGioiTinh.Text = string.Empty;
-            }
-            else
-            {
-                MessageBox.Show("Có lỗi");
-            }
-            conn.DongKetNoi();
+            but_OK.Visible = true;
+            but_Ins.Visible = false;
+            txtID.Text = txtHoTen.Text = txtGioiTinh.Text = txtNgaySinh.Text = txtQueQuan.Text = txtCMND.Text = string.Empty;
         }
 
         private void but_Del_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn đuổi không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 conn.MoKetNoi();
-                SqlCommand sqlcm = new SqlCommand("DelID", conn.conn);
+                SqlCommand sqlcm = new SqlCommand("Delete_NhanVien", conn.conn);
                 sqlcm.CommandType = CommandType.StoredProcedure;
-                sqlcm.Parameters.Add("@ID", txtID.Text);
+                sqlcm.Parameters.Add("@ID_NhanVien", txtID.Text);
                 int check = sqlcm.ExecuteNonQuery();
                 if (check > 0)
                 {
-                    MessageBox.Show("Đã bán thành công");
-                    conn.KhoiTao(dataGridView1, @"select * from tblDocGia");
+                    MessageBox.Show("Đã đuổi thành công");
+                    conn.KhoiTao(dataGridView1, @"select * from NhanVien");
                     txtID.Text = txtHoTen.Text = txtQueQuan.Text = txtGioiTinh.Text = txtCMND.Text = txtGioiTinh.Text = txtFind.Text = string.Empty;
                 }
                 else
@@ -90,9 +73,9 @@ namespace Quanlisieuthi
         private void but_Find_Click(object sender, EventArgs e)
         {
             conn.MoKetNoi();
-            SqlCommand sqlcm = new SqlCommand("FindNV", conn.conn);
+            SqlCommand sqlcm = new SqlCommand("timkiemnhanvien", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@str", txtFind.Text);
+            sqlcm.Parameters.Add("@tim", txtFind.Text);
             SqlDataAdapter da = new SqlDataAdapter(sqlcm);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -106,11 +89,12 @@ namespace Quanlisieuthi
         private void but_Up_Click(object sender, EventArgs e)
         {
             conn.MoKetNoi();
-            SqlCommand sqlcm = new SqlCommand("UpdDG", conn.conn);
+            SqlCommand sqlcm = new SqlCommand("Edit_NhanVien", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
+            sqlcm.Parameters.Add("@id_nhanvien", txtID.Text);
             sqlcm.Parameters.Add("@hoten", txtHoTen.Text);
             sqlcm.Parameters.Add("@quequan", txtQueQuan.Text);
-            sqlcm.Parameters.Add("@ngioitinh", txtGioiTinh.Text);
+            sqlcm.Parameters.Add("@gt", txtGioiTinh.Text);
             sqlcm.Parameters.Add("@CMND", txtCMND.Text);
             sqlcm.Parameters.Add("@ngaysinh", txtNgaySinh.Text);
             int check = sqlcm.ExecuteNonQuery();
@@ -132,18 +116,19 @@ namespace Quanlisieuthi
             but_OK.Visible = false;
             but_Ins.Visible = true;
             conn.MoKetNoi();
-            SqlCommand sqlcm = new SqlCommand("AddDG", conn.conn);
+            SqlCommand sqlcm = new SqlCommand("Add_NhanVien", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
+            sqlcm.Parameters.Add("@id_nhanvien", txtID.Text);
             sqlcm.Parameters.Add("@hoten", txtHoTen.Text);
             sqlcm.Parameters.Add("@quequan", txtQueQuan.Text);
-            sqlcm.Parameters.Add("@ngioitinh", txtGioiTinh.Text);
+            sqlcm.Parameters.Add("@gt", txtGioiTinh.Text);
             sqlcm.Parameters.Add("@CMND", txtCMND.Text);
             sqlcm.Parameters.Add("@ngaysinh", txtNgaySinh.Text);
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
                 MessageBox.Show("Thêm dữ liệu thành công");
-                conn.KhoiTao(dataGridView1, @"select * from tblDocGia");
+                conn.KhoiTao(dataGridView1, @"select * from NhanVien");
                 txtID.Text = txtHoTen.Text = txtQueQuan.Text = txtGioiTinh.Text = txtCMND.Text = txtGioiTinh.Text = string.Empty;
             }
             else MessageBox.Show("Có lỗi");

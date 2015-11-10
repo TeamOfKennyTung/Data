@@ -97,14 +97,14 @@ end
 
 
 
-create proc Add_HangHoa(@TenHang nvarchar(50), @GiaHang int, @NgayNhap datetime, @HanSd datetime,@soluong int)
+create proc Add_HangHoa(@TenHang nvarchar(50), @GiaHang int, @NgayNhap datetime, @HanSd datetime)
 as
 declare @i char(10)
 begin
 set @i = (select count(ID_HangHoa) from HangHoa)
-if @i <10 begin insert into HangHoa values ('HH00'+ convert(varchar(4),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd,@soluong) end
-else if @i <100  begin insert into HangHoa values ('HH0'+ convert(varchar(5),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd,@soluong) end
-else if @i <1000 begin insert into HangHoa values ('HH'+ convert(varchar(6),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd,@soluong) end
+if @i <10 begin insert into HangHoa (ID_HangHoa,TenHang,GiaHang,NgayNhap,Hansd) values ('HH00'+ convert(varchar(4),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
+else if @i <100  begin insert into HangHoa (ID_HangHoa,TenHang,GiaHang,NgayNhap,Hansd) values ('HH0'+ convert(varchar(5),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
+else if @i <1000 begin insert into HangHoa (ID_HangHoa,TenHang,GiaHang,NgayNhap,Hansd) values ('HH'+ convert(varchar(6),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
 --else if @i <10000 begin insert into HangHoa values ('HH'+ convert(varchar(8),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
 --else begin insert into HangHoa values ('HH'+ convert(varchar(6),@i+1), @TenHang, @GiaHang, @NgayNhap, @HanSd) end
 end
@@ -138,11 +138,12 @@ begin
 		where ID_NhanVien=@ID_NhanVien	
 end			
 
-create proc Add_NhanVien(@ID_NhanVien char(10),@Hoten nvarchar(50),@QueQuan nvarchar(100),@GT char(3),@CMND int, @NgaySinh datetime,@Luong int)
+
+create proc Add_NhanVien(@ID_NhanVien char(10),@Hoten nvarchar(50),@QueQuan nvarchar(100),@GT char(3),@CMND int, @NgaySinh datetime)
 as
 begin
-	insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh,Luong)
-	values(@ID_NhanVien,@Hoten,@QueQuan,@GT,@CMND,@NgaySinh,@Luong)
+	insert into NhanVien(ID_NhanVien,HoTen,Quequan,GT,CMND,NgaySinh)
+	values(@ID_NhanVien,@Hoten,@QueQuan,@GT,@CMND,@NgaySinh)
 end
 
 create proc Edit_NhanVien(@ID_NhanVien char(10),@HoTen char(50),@QueQuan nvarchar(100),@GT char(3),@CMND int,@NgaySinh datetime)			
