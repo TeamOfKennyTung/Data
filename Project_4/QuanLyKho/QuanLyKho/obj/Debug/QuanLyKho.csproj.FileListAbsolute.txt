@@ -12,3 +12,6 @@ C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\
 C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
 C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmNhapHang.resources
 C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmXuatHang.resources
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe.config
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.exe
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
