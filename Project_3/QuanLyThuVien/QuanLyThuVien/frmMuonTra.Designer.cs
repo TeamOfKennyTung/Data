@@ -92,7 +92,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(484, 254);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
@@ -137,7 +136,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.butOK);
             this.panel2.Controls.Add(this.butDel);
             this.panel2.Controls.Add(this.butUpd);
             this.panel2.Controls.Add(this.butIns);
@@ -161,7 +159,7 @@
             // butOK
             // 
             this.butOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butOK.Location = new System.Drawing.Point(192, 89);
+            this.butOK.Location = new System.Drawing.Point(13, 150);
             this.butOK.Name = "butOK";
             this.butOK.Size = new System.Drawing.Size(100, 30);
             this.butOK.TabIndex = 14;
@@ -205,6 +203,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.butOK);
             this.panel3.Controls.Add(this.txtFind);
             this.panel3.Controls.Add(this.butFind);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;

@@ -61,7 +61,7 @@ namespace QuanLyKho
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
-                MessageBox.Show("Sửa thành công");
+                MessageBox.Show("Nhập thành công");
                 conn.KhoiTao(dataGridView1, @"select * from tblHangHoa");
                 txtMaHH.Text = txtTenHH.Text = txtMaNCC.Text = txtSoLuong.Text = string.Empty;
             }

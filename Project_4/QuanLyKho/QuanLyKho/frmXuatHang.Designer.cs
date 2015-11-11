@@ -72,6 +72,7 @@
             this.butXuat.TabIndex = 24;
             this.butXuat.Text = "Xuất";
             this.butXuat.UseVisualStyleBackColor = true;
+            this.butXuat.Click += new System.EventHandler(this.butXuat_Click);
             // 
             // txtSoLuong
             // 

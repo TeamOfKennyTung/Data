@@ -126,11 +126,19 @@ namespace Quanlisieuthi
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("Edit_HangHoa", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
+<<<<<<< HEAD
             sqlcm.Parameters.AddWithValue("@id_hanghoa", txtID.Text);
             sqlcm.Parameters.AddWithValue("@TenHang", txtTenHang.Text);
             sqlcm.Parameters.AddWithValue("@GiaHang", txtGiaHang.Text);
             sqlcm.Parameters.AddWithValue("@NgayNhap", txtNgayNhap.Text);
             sqlcm.Parameters.AddWithValue("@HanSd", txtHanSuDung.Text);
+=======
+            sqlcm.Parameters.Add("@id_hanghoa", txtID.Text);
+            sqlcm.Parameters.Add("@TenHang", txtTenHang.Text);
+            sqlcm.Parameters.Add("@GiaHang", txtGiaHang.Text);
+            sqlcm.Parameters.Add("@NgayNhap", txtNgayNhap.Text);
+            sqlcm.Parameters.Add("@HanSd", txtHanSuDung.Text);
+>>>>>>> origin/master
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {

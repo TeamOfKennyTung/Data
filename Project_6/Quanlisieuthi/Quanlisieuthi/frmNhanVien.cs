@@ -19,6 +19,35 @@ namespace Quanlisieuthi
         }
         ConnectData conn = new ConnectData();
         public string constr = @"select * from dbo.NhanVien";
+<<<<<<< HEAD
+=======
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void but_Ins_Click(object sender, EventArgs e)
+        {
+            but_OK.Visible = true;
+            but_Ins.Visible = false;
+            txtID.Text = txtHoTen.Text = txtGioiTinh.Text = txtNgaySinh.Text = txtQueQuan.Text = txtCMND.Text = string.Empty;
+        }
+>>>>>>> origin/master
 
         private void but_Del_Click(object sender, EventArgs e)
         {
@@ -27,7 +56,11 @@ namespace Quanlisieuthi
                 conn.MoKetNoi();
                 SqlCommand sqlcm = new SqlCommand("Delete_NhanVien", conn.conn);
                 sqlcm.CommandType = CommandType.StoredProcedure;
+<<<<<<< HEAD
                 sqlcm.Parameters.AddWithValue("@ID_NhanVien", txtID.Text);
+=======
+                sqlcm.Parameters.Add("@ID_NhanVien", txtID.Text);
+>>>>>>> origin/master
                 int check = sqlcm.ExecuteNonQuery();
                 if (check > 0)
                 {
@@ -48,7 +81,11 @@ namespace Quanlisieuthi
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("timkiemnhanvien", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
+<<<<<<< HEAD
             sqlcm.Parameters.AddWithValue("@tim", txtFind.Text);
+=======
+            sqlcm.Parameters.Add("@tim", txtFind.Text);
+>>>>>>> origin/master
             SqlDataAdapter da = new SqlDataAdapter(sqlcm);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -64,12 +101,21 @@ namespace Quanlisieuthi
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("Edit_NhanVien", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
+<<<<<<< HEAD
             sqlcm.Parameters.AddWithValue("@id_nhanvien", txtID.Text);
             sqlcm.Parameters.AddWithValue("@hoten", txtHoTen.Text);
             sqlcm.Parameters.AddWithValue("@quequan", txtQueQuan.Text);
             sqlcm.Parameters.AddWithValue("@gt", txtGioiTinh.Text);
             sqlcm.Parameters.AddWithValue("@CMND", txtCMND.Text);
             sqlcm.Parameters.AddWithValue("@ngaysinh", txtNgaySinh.Text);
+=======
+            sqlcm.Parameters.Add("@id_nhanvien", txtID.Text);
+            sqlcm.Parameters.Add("@hoten", txtHoTen.Text);
+            sqlcm.Parameters.Add("@quequan", txtQueQuan.Text);
+            sqlcm.Parameters.Add("@gt", txtGioiTinh.Text);
+            sqlcm.Parameters.Add("@CMND", txtCMND.Text);
+            sqlcm.Parameters.Add("@ngaysinh", txtNgaySinh.Text);
+>>>>>>> origin/master
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
@@ -100,12 +146,21 @@ namespace Quanlisieuthi
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("Add_NhanVien", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
+<<<<<<< HEAD
             sqlcm.Parameters.AddWithValue("@id_nhanvien", txtID.Text);
             sqlcm.Parameters.AddWithValue("@hoten", txtHoTen.Text);
             sqlcm.Parameters.AddWithValue("@quequan", txtQueQuan.Text);
             sqlcm.Parameters.AddWithValue("@gt", txtGioiTinh.Text);
             sqlcm.Parameters.AddWithValue("@CMND", txtCMND.Text);
             sqlcm.Parameters.AddWithValue("@ngaysinh", txtNgaySinh.Text);
+=======
+            sqlcm.Parameters.Add("@id_nhanvien", txtID.Text);
+            sqlcm.Parameters.Add("@hoten", txtHoTen.Text);
+            sqlcm.Parameters.Add("@quequan", txtQueQuan.Text);
+            sqlcm.Parameters.Add("@gt", txtGioiTinh.Text);
+            sqlcm.Parameters.Add("@CMND", txtCMND.Text);
+            sqlcm.Parameters.Add("@ngaysinh", txtNgaySinh.Text);
+>>>>>>> origin/master
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {

@@ -26,4 +26,7 @@ D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmKhachHang.re
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.Properties.Resources.resources
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.csproj.GenerateResource.Cache
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.pdb
+<<<<<<< HEAD
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.csprojResolveAssemblyReference.cache
+=======
+>>>>>>> origin/master
