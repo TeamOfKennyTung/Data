@@ -76,3 +76,15 @@ C:\Users\UBUNTU\Desktop\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.Login.r
 C:\Users\UBUNTU\Desktop\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.HocSinh.resources
 C:\Users\UBUNTU\Desktop\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.Properties.Resources.resources
 C:\Users\UBUNTU\Desktop\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.csproj.GenerateResource.Cache
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\bin\Debug\QUANLY_HS_GV.exe.config
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.exe
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.pdb
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\bin\Debug\QUANLY_HS_GV.exe
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\bin\Debug\QUANLY_HS_GV.pdb
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.csprojResolveAssemblyReference.cache
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.frmMain.resources
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.GiaoVien.resources
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.Login.resources
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.HocSinh.resources
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.Properties.Resources.resources
+F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.csproj.GenerateResource.Cache
