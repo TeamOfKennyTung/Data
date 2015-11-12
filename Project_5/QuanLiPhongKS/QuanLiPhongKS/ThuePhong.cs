@@ -11,11 +11,11 @@ using System.Data;
 using System.Data.SqlClient;
 namespace QLPhongKS
 {
-    public partial class ThuePhong : Form
+    public partial class frmThuePhong : Form
     {
         ThuePhongKS tp = new ThuePhongKS();
         private string txtr;
-        public ThuePhong()
+        public frmThuePhong()
         {
             InitializeComponent();
         }
