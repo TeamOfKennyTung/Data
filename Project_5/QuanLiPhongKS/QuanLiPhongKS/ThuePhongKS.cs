@@ -33,9 +33,9 @@ namespace QLPhongKS
         public string ThuePhong(string makh, int sophong, string tgthue, string tgtra, int tiendc)
         {
             KetNoi kn = new KetNoi();
-            string str = "ThemThuePhong";
             SqlConnection con = new SqlConnection(kn.GetConnect());
             con.Open();
+            string str = "ThemThuePhong";
             SqlCommand cmd = new SqlCommand(str, con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@idkhach", makh);

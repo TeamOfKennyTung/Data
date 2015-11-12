@@ -12,13 +12,45 @@ namespace QLPhongKS
         KetNoi kn = new KetNoi();
         public DataTable ShowTrangbi()
         {
-            string str = @"select MaLPhong as [Mã Loại Phòng],ID_TB as [Mã Thiết Bị],SOLUONG as [Số Lượng] from Trangbi_TB";
+            string str = @"select MaLPhong as [Mã Loại Phòng],MaTB as [Mã Thiết Bị],Soluong as [Số Lượng]
+                from tblTrangbiTB";
             SqlConnection con = new SqlConnection(kn.GetConnect());
             DataTable dt = new DataTable();
             SqlDataAdapter ad = new SqlDataAdapter(str, con);
             ad.Fill(dt);
             con.Close();
             return dt;
+        }
+        public DataTable ShowMaTB()
+        {
+            string str = @"select matb as [matb] from tblThietBiPhong";
+            SqlConnection con = new SqlConnection(kn.GetConnect());
+            DataTable dt = new DataTable();
+            SqlDataAdapter ad = new SqlDataAdapter(str, con);
+            ad.Fill(dt);
+            con.Close();
+            return dt;
+        }
+        public DataTable ShowMaLPhong()
+        {
+            string str = @"select MaPLoai as [malphong] from tblLoaiPhong";
+            SqlConnection con = new SqlConnection(kn.GetConnect());
+            DataTable dt = new DataTable();
+            SqlDataAdapter ad = new SqlDataAdapter(str, con);
+            ad.Fill(dt);
+            con.Close();
+            return dt;
+        }
+        public DataTable ShowPhong()
+        {
+            string str = @"select SoPhong as [sophong] from tblPhong";
+            SqlConnection con = new SqlConnection(kn.GetConnect());
+            DataTable dt = new DataTable();
+            SqlDataAdapter ad = new SqlDataAdapter(str, con);
+            ad.Fill(dt);
+            con.Close();
+            return dt;
+
         }
         public string ThemTrangBi(string id_lphong, string idtb, string sl)
         {
@@ -84,7 +116,7 @@ namespace QLPhongKS
             con.Open();
             SqlCommand cmd = new SqlCommand(str, con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@idphong", idlphong);
+            cmd.Parameters.AddWithValue("@sophong", idlphong);
             cmd.Parameters.AddWithValue("@idtb", idtb);
             cmd.Parameters.AddWithValue("@chose", chose);
             DataTable dt = new DataTable();

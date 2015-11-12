@@ -1,6 +1,6 @@
 ﻿namespace QLPhongKS
 {
-    partial class FormTBThietBi
+    partial class frmTBThietBi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.thaoTácToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbxMaTB = new System.Windows.Forms.ComboBox();
             this.cbxSoPhong = new System.Windows.Forms.ComboBox();
             this.lblIDPhong = new System.Windows.Forms.Label();
@@ -43,58 +37,18 @@
             this.lblMaTB = new System.Windows.Forms.Label();
             this.dgvTBTB = new System.Windows.Forms.DataGridView();
             this.grbChonTBTB = new System.Windows.Forms.GroupBox();
+            this.bntSearch = new System.Windows.Forms.Button();
             this.rdbtinhtrang = new System.Windows.Forms.RadioButton();
             this.rdbPhong = new System.Windows.Forms.RadioButton();
             this.bntLuuTBTB = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.bntThem = new System.Windows.Forms.Button();
+            this.bntXoa = new System.Windows.Forms.Button();
+            this.bntSua = new System.Windows.Forms.Button();
+            this.bntTimKiem = new System.Windows.Forms.Button();
+            this.bntBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTBTB)).BeginInit();
             this.grbChonTBTB.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thaoTácToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(693, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // thaoTácToolStripMenuItem
-            // 
-            this.thaoTácToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thêmToolStripMenuItem,
-            this.sửaToolStripMenuItem,
-            this.xóaToolStripMenuItem,
-            this.tìmKiếmToolStripMenuItem});
-            this.thaoTácToolStripMenuItem.Name = "thaoTácToolStripMenuItem";
-            this.thaoTácToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.thaoTácToolStripMenuItem.Text = "Thao Tác";
-            // 
-            // thêmToolStripMenuItem
-            // 
-            this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.thêmToolStripMenuItem.Text = "Thêm";
-            // 
-            // sửaToolStripMenuItem
-            // 
-            this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
-            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sửaToolStripMenuItem.Text = "Sửa";
-            // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.xóaToolStripMenuItem.Text = "Xóa";
-            // 
-            // tìmKiếmToolStripMenuItem
-            // 
-            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
             // 
             // cbxMaTB
             // 
@@ -102,27 +56,7 @@
             this.cbxMaTB.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxMaTB.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMaTB.FormattingEnabled = true;
-            this.cbxMaTB.Items.AddRange(new object[] {
-            "TB01",
-            "TB02",
-            "TB03",
-            "TB04",
-            "TB05",
-            "TB06",
-            "TB07",
-            "TB08",
-            "TB09",
-            "TB10",
-            "TB11",
-            "TB12",
-            "TB13",
-            "TB14",
-            "TB15",
-            "TB16",
-            "TB17",
-            "TB18",
-            "TB19"});
-            this.cbxMaTB.Location = new System.Drawing.Point(105, 63);
+            this.cbxMaTB.Location = new System.Drawing.Point(101, 48);
             this.cbxMaTB.Name = "cbxMaTB";
             this.cbxMaTB.Size = new System.Drawing.Size(121, 23);
             this.cbxMaTB.TabIndex = 50;
@@ -133,27 +67,7 @@
             this.cbxSoPhong.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbxSoPhong.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSoPhong.FormattingEnabled = true;
-            this.cbxSoPhong.Items.AddRange(new object[] {
-            "TB01",
-            "TB02",
-            "TB03",
-            "TB04",
-            "TB05",
-            "TB06",
-            "TB07",
-            "TB08",
-            "TB09",
-            "TB10",
-            "TB11",
-            "TB12",
-            "TB13",
-            "TB14",
-            "TB15",
-            "TB16",
-            "TB17",
-            "TB18",
-            "TB19"});
-            this.cbxSoPhong.Location = new System.Drawing.Point(105, 27);
+            this.cbxSoPhong.Location = new System.Drawing.Point(101, 12);
             this.cbxSoPhong.Name = "cbxSoPhong";
             this.cbxSoPhong.Size = new System.Drawing.Size(121, 23);
             this.cbxSoPhong.TabIndex = 49;
@@ -162,7 +76,7 @@
             // 
             this.lblIDPhong.AutoSize = true;
             this.lblIDPhong.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDPhong.Location = new System.Drawing.Point(13, 30);
+            this.lblIDPhong.Location = new System.Drawing.Point(9, 15);
             this.lblIDPhong.Name = "lblIDPhong";
             this.lblIDPhong.Size = new System.Drawing.Size(57, 15);
             this.lblIDPhong.TabIndex = 48;
@@ -170,7 +84,7 @@
             // 
             // txtSoluongTB
             // 
-            this.txtSoluongTB.Location = new System.Drawing.Point(105, 105);
+            this.txtSoluongTB.Location = new System.Drawing.Point(101, 90);
             this.txtSoluongTB.Multiline = true;
             this.txtSoluongTB.Name = "txtSoluongTB";
             this.txtSoluongTB.Size = new System.Drawing.Size(121, 24);
@@ -180,7 +94,7 @@
             // 
             this.lblSLTB.AutoSize = true;
             this.lblSLTB.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSLTB.Location = new System.Drawing.Point(13, 107);
+            this.lblSLTB.Location = new System.Drawing.Point(9, 92);
             this.lblSLTB.Name = "lblSLTB";
             this.lblSLTB.Size = new System.Drawing.Size(61, 15);
             this.lblSLTB.TabIndex = 46;
@@ -190,7 +104,7 @@
             // 
             this.lblMaTB.AutoSize = true;
             this.lblMaTB.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaTB.Location = new System.Drawing.Point(13, 66);
+            this.lblMaTB.Location = new System.Drawing.Point(9, 51);
             this.lblMaTB.Name = "lblMaTB";
             this.lblMaTB.Size = new System.Drawing.Size(65, 15);
             this.lblMaTB.TabIndex = 45;
@@ -201,34 +115,47 @@
             this.dgvTBTB.AllowUserToAddRows = false;
             this.dgvTBTB.AllowUserToDeleteRows = false;
             this.dgvTBTB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTBTB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTBTB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTBTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTBTB.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvTBTB.Location = new System.Drawing.Point(0, 162);
+            this.dgvTBTB.Location = new System.Drawing.Point(0, 148);
             this.dgvTBTB.Name = "dgvTBTB";
             this.dgvTBTB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTBTB.Size = new System.Drawing.Size(693, 177);
+            this.dgvTBTB.Size = new System.Drawing.Size(693, 191);
             this.dgvTBTB.TabIndex = 51;
+            this.dgvTBTB.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTBTB_RowEnter);
             // 
             // grbChonTBTB
             // 
+            this.grbChonTBTB.Controls.Add(this.bntSearch);
             this.grbChonTBTB.Controls.Add(this.rdbtinhtrang);
             this.grbChonTBTB.Controls.Add(this.rdbPhong);
             this.grbChonTBTB.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbChonTBTB.Location = new System.Drawing.Point(260, 30);
+            this.grbChonTBTB.Location = new System.Drawing.Point(246, 12);
             this.grbChonTBTB.Name = "grbChonTBTB";
-            this.grbChonTBTB.Size = new System.Drawing.Size(138, 89);
+            this.grbChonTBTB.Size = new System.Drawing.Size(138, 115);
             this.grbChonTBTB.TabIndex = 53;
             this.grbChonTBTB.TabStop = false;
             this.grbChonTBTB.Text = "Tìm kiếm";
             this.grbChonTBTB.Visible = false;
+            // 
+            // bntSearch
+            // 
+            this.bntSearch.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntSearch.Location = new System.Drawing.Point(30, 80);
+            this.bntSearch.Name = "bntSearch";
+            this.bntSearch.Size = new System.Drawing.Size(75, 23);
+            this.bntSearch.TabIndex = 59;
+            this.bntSearch.Text = "Search";
+            this.bntSearch.UseVisualStyleBackColor = true;
+            this.bntSearch.Click += new System.EventHandler(this.bntSearch_Click);
             // 
             // rdbtinhtrang
             // 
@@ -241,6 +168,7 @@
             this.rdbtinhtrang.TabStop = true;
             this.rdbtinhtrang.Text = "Theo Mã Thiết Bị";
             this.rdbtinhtrang.UseVisualStyleBackColor = true;
+            this.rdbtinhtrang.CheckedChanged += new System.EventHandler(this.rdbtinhtrang_CheckedChanged);
             // 
             // rdbPhong
             // 
@@ -253,23 +181,85 @@
             this.rdbPhong.TabStop = true;
             this.rdbPhong.Text = "Theo Số Phòng";
             this.rdbPhong.UseVisualStyleBackColor = true;
+            this.rdbPhong.CheckedChanged += new System.EventHandler(this.rdbPhong_CheckedChanged);
             // 
             // bntLuuTBTB
             // 
             this.bntLuuTBTB.Enabled = false;
             this.bntLuuTBTB.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntLuuTBTB.Location = new System.Drawing.Point(441, 27);
+            this.bntLuuTBTB.Location = new System.Drawing.Point(606, 15);
             this.bntLuuTBTB.Name = "bntLuuTBTB";
-            this.bntLuuTBTB.Size = new System.Drawing.Size(75, 56);
+            this.bntLuuTBTB.Size = new System.Drawing.Size(75, 36);
             this.bntLuuTBTB.TabIndex = 54;
             this.bntLuuTBTB.Text = "Lưu";
             this.bntLuuTBTB.UseVisualStyleBackColor = true;
+            this.bntLuuTBTB.Click += new System.EventHandler(this.bntLuuTBTB_Click);
             // 
-            // FormTBThietBi
+            // bntThem
+            // 
+            this.bntThem.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntThem.Location = new System.Drawing.Point(399, 15);
+            this.bntThem.Name = "bntThem";
+            this.bntThem.Size = new System.Drawing.Size(75, 23);
+            this.bntThem.TabIndex = 55;
+            this.bntThem.Text = "Thêm";
+            this.bntThem.UseVisualStyleBackColor = true;
+            this.bntThem.Click += new System.EventHandler(this.bntThem_Click);
+            // 
+            // bntXoa
+            // 
+            this.bntXoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntXoa.Location = new System.Drawing.Point(399, 48);
+            this.bntXoa.Name = "bntXoa";
+            this.bntXoa.Size = new System.Drawing.Size(75, 23);
+            this.bntXoa.TabIndex = 56;
+            this.bntXoa.Text = "Xóa";
+            this.bntXoa.UseVisualStyleBackColor = true;
+            this.bntXoa.Click += new System.EventHandler(this.bntXoa_Click);
+            // 
+            // bntSua
+            // 
+            this.bntSua.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntSua.Location = new System.Drawing.Point(499, 15);
+            this.bntSua.Name = "bntSua";
+            this.bntSua.Size = new System.Drawing.Size(75, 23);
+            this.bntSua.TabIndex = 57;
+            this.bntSua.Text = "Sửa";
+            this.bntSua.UseVisualStyleBackColor = true;
+            this.bntSua.Click += new System.EventHandler(this.bntSua_Click);
+            // 
+            // bntTimKiem
+            // 
+            this.bntTimKiem.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntTimKiem.Location = new System.Drawing.Point(499, 48);
+            this.bntTimKiem.Name = "bntTimKiem";
+            this.bntTimKiem.Size = new System.Drawing.Size(75, 23);
+            this.bntTimKiem.TabIndex = 58;
+            this.bntTimKiem.Text = "Tìm kiếm";
+            this.bntTimKiem.UseVisualStyleBackColor = true;
+            this.bntTimKiem.Click += new System.EventHandler(this.bntTimKiem_Click);
+            // 
+            // bntBack
+            // 
+            this.bntBack.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntBack.Location = new System.Drawing.Point(606, 66);
+            this.bntBack.Name = "bntBack";
+            this.bntBack.Size = new System.Drawing.Size(75, 41);
+            this.bntBack.TabIndex = 59;
+            this.bntBack.Text = "Thoát";
+            this.bntBack.UseVisualStyleBackColor = true;
+            this.bntBack.Click += new System.EventHandler(this.bntBack_Click);
+            // 
+            // frmTBThietBi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 339);
+            this.Controls.Add(this.bntBack);
+            this.Controls.Add(this.bntTimKiem);
+            this.Controls.Add(this.bntSua);
+            this.Controls.Add(this.bntXoa);
+            this.Controls.Add(this.bntThem);
             this.Controls.Add(this.bntLuuTBTB);
             this.Controls.Add(this.grbChonTBTB);
             this.Controls.Add(this.dgvTBTB);
@@ -279,12 +269,9 @@
             this.Controls.Add(this.txtSoluongTB);
             this.Controls.Add(this.lblSLTB);
             this.Controls.Add(this.lblMaTB);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FormTBThietBi";
+            this.Name = "frmTBThietBi";
             this.Text = "FormTBThietBi";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.FormTBThietBi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTBTB)).EndInit();
             this.grbChonTBTB.ResumeLayout(false);
             this.grbChonTBTB.PerformLayout();
@@ -295,12 +282,6 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem thaoTácToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thêmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sửaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
         private System.Windows.Forms.ComboBox cbxMaTB;
         private System.Windows.Forms.ComboBox cbxSoPhong;
         private System.Windows.Forms.Label lblIDPhong;
@@ -312,5 +293,11 @@
         private System.Windows.Forms.RadioButton rdbtinhtrang;
         private System.Windows.Forms.RadioButton rdbPhong;
         private System.Windows.Forms.Button bntLuuTBTB;
+        private System.Windows.Forms.Button bntThem;
+        private System.Windows.Forms.Button bntXoa;
+        private System.Windows.Forms.Button bntSua;
+        private System.Windows.Forms.Button bntTimKiem;
+        private System.Windows.Forms.Button bntSearch;
+        private System.Windows.Forms.Button bntBack;
     }
 }
