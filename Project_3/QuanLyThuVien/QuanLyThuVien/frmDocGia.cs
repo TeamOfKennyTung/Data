@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace QuanLyThuVien
@@ -52,7 +51,7 @@ namespace QuanLyThuVien
                 conn.MoKetNoi();
                 SqlCommand sqlcm = new SqlCommand("DelDG", conn.conn);
                 sqlcm.CommandType = CommandType.StoredProcedure;
-                sqlcm.Parameters.Add("@MaDG", txtMDG.Text);
+                sqlcm.Parameters.AddWithValue("@MaDG", txtMDG.Text);
                 int check = sqlcm.ExecuteNonQuery();
                 if (check > 0)
                 {
@@ -73,10 +72,10 @@ namespace QuanLyThuVien
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("UpdDG", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@MaDG", txtMDG.Text);
-            sqlcm.Parameters.Add("@TenDG", txtTenDG.Text);
-            sqlcm.Parameters.Add("@NgaySinh", txtNS.Text);
-            sqlcm.Parameters.Add("@GioiTinh", txtGT.Text);
+            sqlcm.Parameters.AddWithValue("@MaDG", txtMDG.Text);
+            sqlcm.Parameters.AddWithValue("@TenDG", txtTenDG.Text);
+            sqlcm.Parameters.AddWithValue("@NgaySinh", txtNS.Text);
+            sqlcm.Parameters.AddWithValue("@GioiTinh", txtGT.Text);
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
@@ -115,9 +114,9 @@ namespace QuanLyThuVien
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("AddDG", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@tendg", txtTenDG.Text);
-            sqlcm.Parameters.Add("@ngaysinh", txtNS.Text);
-            sqlcm.Parameters.Add("@gioitinh", txtGT.Text);
+            sqlcm.Parameters.AddWithValue("@tendg", txtTenDG.Text);
+            sqlcm.Parameters.AddWithValue("@ngaysinh", txtNS.Text);
+            sqlcm.Parameters.AddWithValue("@gioitinh", txtGT.Text);
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
@@ -134,7 +133,7 @@ namespace QuanLyThuVien
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("FindDG", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@str", txtFind.Text);
+            sqlcm.Parameters.AddWithValue("@str", txtFind.Text);
             SqlDataAdapter da = new SqlDataAdapter(sqlcm);
             DataTable dt = new DataTable();
             da.Fill(dt);

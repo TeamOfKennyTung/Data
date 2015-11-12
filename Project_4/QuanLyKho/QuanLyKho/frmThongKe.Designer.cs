@@ -28,130 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_xuat = new System.Windows.Forms.Button();
+            this.btn_nhap = new System.Windows.Forms.Button();
+            this.dgv_thongke = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_thongke)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên hàng hóa";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(137, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Ngày";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.btn_xuat);
+            this.panel1.Controls.Add(this.btn_nhap);
             this.panel1.Location = new System.Drawing.Point(34, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(344, 166);
+            this.panel1.Size = new System.Drawing.Size(344, 102);
             this.panel1.TabIndex = 3;
             // 
-            // textBox2
+            // btn_xuat
             // 
-            this.textBox2.Location = new System.Drawing.Point(137, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 3;
+            this.btn_xuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xuat.Location = new System.Drawing.Point(190, 28);
+            this.btn_xuat.Name = "btn_xuat";
+            this.btn_xuat.Size = new System.Drawing.Size(130, 37);
+            this.btn_xuat.TabIndex = 5;
+            this.btn_xuat.Text = "Thống kê xuất";
+            this.btn_xuat.UseVisualStyleBackColor = true;
+            this.btn_xuat.Click += new System.EventHandler(this.btn_xuat_Click);
             // 
-            // button1
+            // btn_nhap
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(122, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Thống kê";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_nhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhap.Location = new System.Drawing.Point(20, 28);
+            this.btn_nhap.Name = "btn_nhap";
+            this.btn_nhap.Size = new System.Drawing.Size(130, 37);
+            this.btn_nhap.TabIndex = 4;
+            this.btn_nhap.Text = "Thống kê nhập";
+            this.btn_nhap.UseVisualStyleBackColor = true;
+            this.btn_nhap.Click += new System.EventHandler(this.btn_nhap_Click);
             // 
-            // dataGridView1
+            // dgv_thongke
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(34, 202);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(344, 173);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Ngày";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên hàng hóa";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số lượng";
-            this.Column3.Name = "Column3";
+            this.dgv_thongke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_thongke.Location = new System.Drawing.Point(34, 137);
+            this.dgv_thongke.Name = "dgv_thongke";
+            this.dgv_thongke.Size = new System.Drawing.Size(344, 238);
+            this.dgv_thongke.TabIndex = 4;
             // 
             // frmThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 387);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_thongke);
             this.Controls.Add(this.panel1);
             this.Name = "frmThongKe";
             this.Text = "frmThongKe";
+            this.Load += new System.EventHandler(this.frmThongKe_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_thongke)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btn_nhap;
+        private System.Windows.Forms.DataGridView dgv_thongke;
+        private System.Windows.Forms.Button btn_xuat;
     }
 }

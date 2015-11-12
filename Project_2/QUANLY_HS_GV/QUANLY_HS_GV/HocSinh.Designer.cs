@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label4 = new System.Windows.Forms.Label();
             this.cbo_Monhoc = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtNgaysinh = new System.Windows.Forms.DateTimePicker();
             this.lblNgaysinh = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvHocsinh = new System.Windows.Forms.DataGridView();
-            this.cbo_Lop = new System.Windows.Forms.ComboBox();
             this.cboGioitinh = new System.Windows.Forms.ComboBox();
             this.txtTenHS = new System.Windows.Forms.TextBox();
             this.txtIDHs = new System.Windows.Forms.TextBox();
@@ -51,6 +49,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbo_Lop = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtquequan = new System.Windows.Forms.TextBox();
             this.qUANLY_HS_GVDataSet = new QUANLY_HS_GV.QUANLY_HS_GVDataSet();
@@ -62,17 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(388, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 16);
-            this.label4.TabIndex = 99;
-            this.label4.Text = "ID_Lớp";
-            // 
             // cbo_Monhoc
             // 
             this.cbo_Monhoc.FormattingEnabled = true;
@@ -82,7 +71,7 @@
             "MH03",
             "MH04",
             "MH05"});
-            this.cbo_Monhoc.Location = new System.Drawing.Point(488, 56);
+            this.cbo_Monhoc.Location = new System.Drawing.Point(488, 101);
             this.cbo_Monhoc.Name = "cbo_Monhoc";
             this.cbo_Monhoc.Size = new System.Drawing.Size(121, 24);
             this.cbo_Monhoc.TabIndex = 98;
@@ -92,7 +81,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(386, 62);
+            this.label3.Location = new System.Drawing.Point(386, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 16);
             this.label3.TabIndex = 97;
@@ -132,7 +121,7 @@
             // 
             this.dgvHocsinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHocsinh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvHocsinh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvHocsinh.BackgroundColor = System.Drawing.Color.White;
             this.dgvHocsinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHocsinh.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvHocsinh.Location = new System.Drawing.Point(0, 264);
@@ -142,27 +131,13 @@
             this.dgvHocsinh.TabIndex = 132;
             this.dgvHocsinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocsinh_CellClick);
             // 
-            // cbo_Lop
-            // 
-            this.cbo_Lop.FormattingEnabled = true;
-            this.cbo_Lop.Items.AddRange(new object[] {
-            "LOP01",
-            "LOP02",
-            "LOP03",
-            "LOP04",
-            "LOP05"});
-            this.cbo_Lop.Location = new System.Drawing.Point(488, 89);
-            this.cbo_Lop.Name = "cbo_Lop";
-            this.cbo_Lop.Size = new System.Drawing.Size(121, 24);
-            this.cbo_Lop.TabIndex = 100;
-            // 
             // cboGioitinh
             // 
             this.cboGioitinh.FormattingEnabled = true;
             this.cboGioitinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cboGioitinh.Location = new System.Drawing.Point(119, 122);
+            this.cboGioitinh.Location = new System.Drawing.Point(119, 127);
             this.cboGioitinh.Name = "cboGioitinh";
             this.cboGioitinh.Size = new System.Drawing.Size(121, 24);
             this.cboGioitinh.TabIndex = 91;
@@ -297,10 +272,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.cbo_Lop);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtquequan);
-            this.groupBox1.Controls.Add(this.cbo_Lop);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cbo_Monhoc);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dtNgaysinh);
@@ -319,6 +294,31 @@
             this.groupBox1.TabIndex = 126;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(386, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.TabIndex = 106;
+            this.label4.Text = "ID_Lớp";
+            // 
+            // cbo_Lop
+            // 
+            this.cbo_Lop.FormattingEnabled = true;
+            this.cbo_Lop.Items.AddRange(new object[] {
+            "LOP01",
+            "LOP02",
+            "LOP03",
+            "LOP04",
+            "LOP05"});
+            this.cbo_Lop.Location = new System.Drawing.Point(488, 60);
+            this.cbo_Lop.Name = "cbo_Lop";
+            this.cbo_Lop.Size = new System.Drawing.Size(121, 24);
+            this.cbo_Lop.TabIndex = 105;
             // 
             // label2
             // 
@@ -383,14 +383,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbo_Monhoc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtNgaysinh;
         private System.Windows.Forms.Label lblNgaysinh;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvHocsinh;
-        private System.Windows.Forms.ComboBox cbo_Lop;
         private System.Windows.Forms.ComboBox cboGioitinh;
         private System.Windows.Forms.TextBox txtTenHS;
         private System.Windows.Forms.TextBox txtIDHs;
@@ -419,5 +417,7 @@
         private QUANLY_HS_GVDataSet qUANLY_HS_GVDataSet;
         private System.Windows.Forms.BindingSource hocSinhBindingSource;
         private QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
+        private System.Windows.Forms.ComboBox cbo_Lop;
+        private System.Windows.Forms.Label label4;
     }
 }

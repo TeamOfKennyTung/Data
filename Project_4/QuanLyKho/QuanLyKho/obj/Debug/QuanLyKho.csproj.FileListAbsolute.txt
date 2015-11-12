@@ -1,1 +1,28 @@
 c:\users\hp\documents\visual studio 2012\Projects\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe.config
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.pdb
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmDangNhap.resources
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmHuongDan.resources
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmThongKe.resources
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmTimKiem.resources
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.Cache
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.exe
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmNhapHang.resources
+C:\Users\HP\Documents\Visual Studio 2012\Projects\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmXuatHang.resources
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe.config
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.exe
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.pdb
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmDangNhap.resources
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmHuongDan.resources
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmNhapHang.resources
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmThongKe.resources
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmTimKiem.resources
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmXuatHang.resources
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
+F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.Cache

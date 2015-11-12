@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKho
 {
-    partial class frmNhapXuat
+    partial class frmNhapHang
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.butUpd = new System.Windows.Forms.Button();
+            this.butIns = new System.Windows.Forms.Button();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMaNCC = new System.Windows.Forms.TextBox();
+            this.txtTenHH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaHH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,48 +50,49 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.butUpd);
+            this.panel1.Controls.Add(this.butIns);
+            this.panel1.Controls.Add(this.txtSoLuong);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtMaNCC);
+            this.panel1.Controls.Add(this.txtTenHH);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtMaHH);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(22, 22);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(443, 203);
+            this.panel1.Size = new System.Drawing.Size(404, 203);
             this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button2
+            // butUpd
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(252, 123);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 43);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Xuất";
-            this.button2.UseVisualStyleBackColor = true;
+            this.butUpd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butUpd.Location = new System.Drawing.Point(252, 123);
+            this.butUpd.Name = "butUpd";
+            this.butUpd.Size = new System.Drawing.Size(94, 43);
+            this.butUpd.TabIndex = 17;
+            this.butUpd.Text = "Nhập thêm";
+            this.butUpd.UseVisualStyleBackColor = true;
+            this.butUpd.Click += new System.EventHandler(this.butUpd_Click);
             // 
-            // button1
+            // butIns
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(46, 123);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 43);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.butIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butIns.Location = new System.Drawing.Point(46, 123);
+            this.butIns.Name = "butIns";
+            this.butIns.Size = new System.Drawing.Size(94, 43);
+            this.butIns.TabIndex = 16;
+            this.butIns.Text = "Nhập mới";
+            this.butIns.UseVisualStyleBackColor = true;
+            this.butIns.Click += new System.EventHandler(this.butIns_Click);
             // 
-            // textBox4
+            // txtSoLuong
             // 
-            this.textBox4.Location = new System.Drawing.Point(168, 89);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(159, 20);
-            this.textBox4.TabIndex = 15;
+            this.txtSoLuong.Location = new System.Drawing.Point(168, 89);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(159, 20);
+            this.txtSoLuong.TabIndex = 15;
             // 
             // label4
             // 
@@ -99,23 +100,23 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(18, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 16);
+            this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Mã NCC";
+            this.label4.Text = "Số lượng";
             // 
-            // textBox3
+            // txtMaNCC
             // 
-            this.textBox3.Location = new System.Drawing.Point(168, 63);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(159, 20);
-            this.textBox3.TabIndex = 13;
+            this.txtMaNCC.Location = new System.Drawing.Point(168, 63);
+            this.txtMaNCC.Name = "txtMaNCC";
+            this.txtMaNCC.Size = new System.Drawing.Size(159, 20);
+            this.txtMaNCC.TabIndex = 13;
             // 
-            // textBox2
+            // txtTenHH
             // 
-            this.textBox2.Location = new System.Drawing.Point(168, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 20);
-            this.textBox2.TabIndex = 12;
+            this.txtTenHH.Location = new System.Drawing.Point(168, 35);
+            this.txtTenHH.Name = "txtTenHH";
+            this.txtTenHH.Size = new System.Drawing.Size(159, 20);
+            this.txtTenHH.TabIndex = 12;
             // 
             // label3
             // 
@@ -123,9 +124,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(18, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 16);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Số lượng";
+            this.label3.Text = "Mã NCC";
             // 
             // label2
             // 
@@ -137,12 +138,12 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Tên hàng hóa";
             // 
-            // textBox1
+            // txtMaHH
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtMaHH.Location = new System.Drawing.Point(168, 7);
+            this.txtMaHH.Name = "txtMaHH";
+            this.txtMaHH.Size = new System.Drawing.Size(159, 20);
+            this.txtMaHH.TabIndex = 9;
             // 
             // label1
             // 
@@ -156,6 +157,10 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -163,41 +168,49 @@
             this.Column3,
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(22, 231);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 220);
-            this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(404, 220);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Mã hàng hóa";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Tên hàng hóa";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Số lượng";
+            this.Column3.HeaderText = "Mã NCC";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Mã Ncc";
+            this.Column4.HeaderText = "Số lượng";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
-            // frmNhapXuat
+            // frmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 464);
+            this.ClientSize = new System.Drawing.Size(433, 464);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Name = "frmNhapXuat";
-            this.Text = "frmNhapXuat";
-            this.Load += new System.EventHandler(this.frmHangHoa_Load);
+            this.Name = "frmNhapHang";
+            this.Text = "frmNhapHang";
+            this.Load += new System.EventHandler(this.frmNhapHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -208,16 +221,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMaNCC;
+        private System.Windows.Forms.TextBox txtTenHH;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaHH;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butUpd;
+        private System.Windows.Forms.Button butIns;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

@@ -45,9 +45,9 @@ namespace QuanLyThuVien
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("UpdDS", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@mads", txtMDS.Text);
-            sqlcm.Parameters.Add("@tends", txtTenDS.Text);
-            sqlcm.Parameters.Add("@giaban", txtGB.Text);
+            sqlcm.Parameters.AddWithValue("@mads", txtMDS.Text);
+            sqlcm.Parameters.AddWithValue("@tends", txtTenDS.Text);
+            sqlcm.Parameters.AddWithValue("@giaban", txtGB.Text);
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
@@ -66,7 +66,7 @@ namespace QuanLyThuVien
                 conn.MoKetNoi();
                 SqlCommand sqlcm = new SqlCommand("DelDS", conn.conn);
                 sqlcm.CommandType = CommandType.StoredProcedure;
-                sqlcm.Parameters.Add("@mads", txtMDS.Text);
+                sqlcm.Parameters.AddWithValue("@mads", txtMDS.Text);
                 int check = sqlcm.ExecuteNonQuery();
                 if (check > 0)
                 {
@@ -104,8 +104,8 @@ namespace QuanLyThuVien
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("AddDS", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@tends", txtTenDS.Text);
-            sqlcm.Parameters.Add("@giaban", txtGB.Text);
+            sqlcm.Parameters.AddWithValue("@tends", txtTenDS.Text);
+            sqlcm.Parameters.AddWithValue("@giaban", txtGB.Text);
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
@@ -122,7 +122,7 @@ namespace QuanLyThuVien
             conn.MoKetNoi();
             SqlCommand sqlcm = new SqlCommand("FindDS", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@str", txtFind.Text);
+            sqlcm.Parameters.AddWithValue("@str", txtFind.Text);
             SqlDataAdapter da = new SqlDataAdapter(sqlcm);
             DataTable dt = new DataTable();
             da.Fill(dt);

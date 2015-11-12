@@ -24,7 +24,7 @@ namespace QUANLY_HS_GV
         private void HocSinh_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet.HocSinh' table. You can move, or remove it, as needed.
-            this.hocSinhTableAdapter.Fill(this.qUANLY_HS_GVDataSet.HocSinh);
+            //this.hocSinhTableAdapter.Fill(this.qUANLY_HS_GVDataSet.HocSinh);
             // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet1.HocSinh' table. You can move, or remove it, as needed.
             //this.hocSinhTableAdapter1.Fill(this.qUANLY_HS_GVDataSet1.HocSinh);
             // TODO: This line of code loads data into the 'qUANLY_HS_GVDataSet.HocSinh' table. You can move, or remove it, as needed.
@@ -50,8 +50,8 @@ namespace QUANLY_HS_GV
             txtTenHS.Text = "";        
             cboGioitinh.Text = "";
             dtNgaysinh.Text = "";
-            cbo_Monhoc.Text = "";
             cbo_Lop.Text = "";
+            cbo_Monhoc.Text = "";
         }
 
 
@@ -133,7 +133,7 @@ namespace QUANLY_HS_GV
                 //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
                 SqlConnection con = new SqlConnection(Connect.getconnect());
                 con.Open();
-                SqlCommand com = new SqlCommand("Edit_HS", con);
+                SqlCommand com = new SqlCommand("dbo.Edit_HS", con);
                 com.CommandType = CommandType.StoredProcedure;
                 com.Parameters.AddWithValue("@id_hs", txtIDHs.Text.Trim());
                 com.Parameters.AddWithValue("@Hoten", txtTenHS.Text.Trim());
