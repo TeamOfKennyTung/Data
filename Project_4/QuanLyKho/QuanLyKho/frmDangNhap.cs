@@ -75,6 +75,11 @@ namespace QuanLyKho
             conn.DongKetNoi();
         }
 
+        private void butQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         
         
 

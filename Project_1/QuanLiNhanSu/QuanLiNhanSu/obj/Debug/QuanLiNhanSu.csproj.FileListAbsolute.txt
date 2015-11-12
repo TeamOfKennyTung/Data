@@ -11,3 +11,6 @@ C:\Users\UBUNTU\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\De
 C:\Users\UBUNTU\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.csproj.GenerateResource.Cache
 C:\Users\UBUNTU\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.exe
 C:\Users\UBUNTU\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.pdb
+F:\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe.config
+F:\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.exe
+F:\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.pdb
