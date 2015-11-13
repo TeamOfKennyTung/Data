@@ -17,7 +17,6 @@ D:\Project_6\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.exe.config
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.exe
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.exe
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.pdb
-D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.csprojResolveAssemblyReference.cache
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmHuongDan.resources
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmNhanVien.resources
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmĐăngNhập.resources
@@ -27,3 +26,7 @@ D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmKhachHang.re
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.Properties.Resources.resources
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.csproj.GenerateResource.Cache
 D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.pdb
+<<<<<<< HEAD
+D:\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.csprojResolveAssemblyReference.cache
+=======
+>>>>>>> origin/master

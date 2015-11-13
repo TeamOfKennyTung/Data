@@ -19,47 +19,22 @@ namespace Quanlisieuthi
         }
         ConnectData conn = new ConnectData();
         public string constr = @"select * from dbo.HoaDon";
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void but_Ins_Click(object sender, EventArgs e)
-        {
-            but_OK.Visible = true;
-            but_Ins.Visible = false;
-            txtHoaDon.Text = txtKhachHang.Text = txtHangHoa.Text = txtNhanVien.Text = String.Empty;
-            conn.MoKetNoi();
-            SqlCommand sqlcm = new SqlCommand(@"select count(MaDG) from tblDocGia", conn.conn);
-            sqlcm.CommandType = CommandType.Text;
-            int count = (int)sqlcm.ExecuteScalar();
-            conn.DongKetNoi();
-            count = count + 1;
-            if (count < 10) txtID.Text = "HD000" + count.ToString();
-            else if (count < 100 && count >= 10) txtID.Text = "HD00" + count.ToString();
-            else if (count < 1000 && count >= 100) txtID.Text = "HD0" + count.ToString();
-            else txtID.Text = "HD" + count.ToString();
-        }
 
         private void but_Up_Click(object sender, EventArgs e)
         {
             conn.MoKetNoi();
-            SqlCommand sqlcm = new SqlCommand("UpdDG", conn.conn);
+            SqlCommand sqlcm = new SqlCommand("Edit_HoaDon", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@hoadon", txtHoaDon.Text);
-            sqlcm.Parameters.Add("@khachhang", txtKhachHang.Text);
-            sqlcm.Parameters.Add("@hanghoa", txtHangHoa.Text);
-            sqlcm.Parameters.Add("@nhanvien", txtNhanVien.Text);
+            sqlcm.Parameters.AddWithValue("@id_hoadon", txtID.Text);
+            sqlcm.Parameters.AddWithValue("@ten_hoadon", txtHoaDon.Text);
+            sqlcm.Parameters.AddWithValue("@id_hanghoa", txtHangHoa.Text);
+            sqlcm.Parameters.AddWithValue("@id_nhanvien", txtNhanVien.Text);
+            sqlcm.Parameters.AddWithValue("@id_khachhang", txtKhachHang.Text);
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
                 MessageBox.Show("Sửa thành công");
-                conn.KhoiTao(dataGridView1, @"select * from tblDocGia");
+                conn.KhoiTao(dataGridView1, @"select * from HoaDon");
                 txtID.Text = txtHoaDon.Text = txtKhachHang.Text = txtHangHoa.Text = txtNhanVien.Text = String.Empty;
             }
             else
@@ -74,9 +49,9 @@ namespace Quanlisieuthi
             if (MessageBox.Show("Bạn có muốn xóa hóa đơn không ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 conn.MoKetNoi();
-                SqlCommand sqlcm = new SqlCommand("DelID", conn.conn);
+                SqlCommand sqlcm = new SqlCommand("Delete_HoaDon", conn.conn);
                 sqlcm.CommandType = CommandType.StoredProcedure;
-                sqlcm.Parameters.Add("@ID", txtID.Text);
+                sqlcm.Parameters.AddWithValue("@ID_HoaDon", txtID.Text);
                 int check = sqlcm.ExecuteNonQuery();
                 if (check > 0)
                 {
@@ -95,9 +70,9 @@ namespace Quanlisieuthi
         private void TimKiem_Click(object sender, EventArgs e)
         {
             conn.MoKetNoi();
-            SqlCommand sqlcm = new SqlCommand("FindHD", conn.conn);
+            SqlCommand sqlcm = new SqlCommand("timkiemhoadon", conn.conn);
             sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@str", txtFind.Text);
+            sqlcm.Parameters.AddWithValue("@tim", txtFind.Text);
             SqlDataAdapter da = new SqlDataAdapter(sqlcm);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -108,28 +83,15 @@ namespace Quanlisieuthi
             conn.DongKetNoi();
         }
 
-        private void but_OK_Click(object sender, EventArgs e)
+        private void but_Ins_Click(object sender, EventArgs e)
         {
-            but_OK.Visible = false;
-            but_Ins.Visible = true;
-            conn.MoKetNoi();
-            SqlCommand sqlcm = new SqlCommand("AddDG", conn.conn);
-            sqlcm.CommandType = CommandType.StoredProcedure;
-            sqlcm.Parameters.Add("@hoadon", txtHoaDon.Text);
-            sqlcm.Parameters.Add("@khachhang", txtKhachHang.Text);
-            sqlcm.Parameters.Add("@hanghoa", txtHangHoa.Text);
-            sqlcm.Parameters.Add("@nhanvien", txtNhanVien.Text);
-            int check = sqlcm.ExecuteNonQuery();
-            if (check > 0)
-            {
-                MessageBox.Show("Thêm dữ liệu thành công");
-                conn.KhoiTao(dataGridView1, @"select * from tblDocGia");
-                txtID.Text = txtHoaDon.Text = txtKhachHang.Text = txtHangHoa.Text = txtNhanVien.Text = txtFind.Text = string.Empty;
-            }
-            else MessageBox.Show("Có lỗi");
-            conn.DongKetNoi();
+            but_OK.Visible = true;
+            but_Ins.Visible = false;
+            txtHoaDon.Text = txtKhachHang.Text = txtHangHoa.Text = txtNhanVien.Text = txtID.Text = String.Empty;
+            dataGridView1.Enabled = false;
         }
 
+       
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             conn.KhoiTao(dataGridView1, constr);
@@ -146,6 +108,30 @@ namespace Quanlisieuthi
                 txtNhanVien.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value);
             }
             else { return; }
+        }
+
+        private void but_OK_Click(object sender, EventArgs e)
+        {
+            but_OK.Visible = false;
+            but_Ins.Visible = true;
+            dataGridView1.Enabled = true;
+            conn.MoKetNoi();
+            SqlCommand sqlcm = new SqlCommand("Add_HoaDon", conn.conn);
+            sqlcm.CommandType = CommandType.StoredProcedure;
+            sqlcm.Parameters.AddWithValue("@id", txtID.Text);
+            sqlcm.Parameters.AddWithValue("@ten", txtHoaDon.Text);
+            sqlcm.Parameters.AddWithValue("@idkh", txtKhachHang.Text);
+            sqlcm.Parameters.AddWithValue("@idhh", txtHangHoa.Text);
+            sqlcm.Parameters.AddWithValue("@idnv", txtNhanVien.Text);
+            int check = sqlcm.ExecuteNonQuery();
+            if (check > 0)
+            {
+                MessageBox.Show("Thêm dữ liệu thành công");
+                conn.KhoiTao(dataGridView1, @"select * from HoaDon");
+                txtNhanVien.Text = txtID.Text = txtHoaDon.Text = txtHangHoa.Text = txtKhachHang.Text = string.Empty;
+            }
+            else MessageBox.Show("Có lỗi");
+            conn.DongKetNoi();
         }
     }
 }

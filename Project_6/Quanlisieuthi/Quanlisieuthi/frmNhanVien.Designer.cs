@@ -196,7 +196,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(186, 20);
             this.txtID.TabIndex = 9;
-            this.txtID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -217,7 +216,6 @@
             this.label1.Size = new System.Drawing.Size(98, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "ID_NhanVien";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -237,6 +235,7 @@
             this.but_OK.TabIndex = 3;
             this.but_OK.Text = "Xong";
             this.but_OK.UseVisualStyleBackColor = true;
+            this.but_OK.Visible = false;
             this.but_OK.Click += new System.EventHandler(this.but_OK_Click);
             // 
             // but_Find
@@ -278,7 +277,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(642, 154);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 

@@ -132,7 +132,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(175, 20);
             this.txtID.TabIndex = 12;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // label4
             // 
@@ -193,6 +192,7 @@
             this.but_OK.TabIndex = 2;
             this.but_OK.Text = "Xong";
             this.but_OK.UseVisualStyleBackColor = true;
+            this.but_OK.Visible = false;
             this.but_OK.Click += new System.EventHandler(this.but_OK_Click);
             // 
             // txtFind

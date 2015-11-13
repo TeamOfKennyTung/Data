@@ -1,6 +1,6 @@
 ﻿namespace QLPhongKS
 {
-    partial class FormKhachHang
+    partial class frmKhachHang
     {
         /// <summary>
         /// Required designer variable.
@@ -364,7 +364,7 @@
             this.lblCanhBao.Text = "Cảnh báo";
             this.lblCanhBao.Visible = false;
             // 
-            // FormKhachHang
+            // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -391,7 +391,7 @@
             this.Controls.Add(this.lblQueQuan);
             this.Controls.Add(this.lblTenKH);
             this.Controls.Add(this.lblIDKHang);
-            this.Name = "FormKhachHang";
+            this.Name = "frmKhachHang";
             this.Text = "Khách Hàng";
             this.Load += new System.EventHandler(this.FormKhachHang_Load);
             this.grbTK.ResumeLayout(false);

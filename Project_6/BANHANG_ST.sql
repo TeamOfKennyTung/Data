@@ -116,11 +116,10 @@ begin
 	select *from KhachHang
 end
 
-create proc Add_KhachHang(@ID_KhachHang char(10),@Ten_KhachHang nvarchar(50),@SDT_KhachHang int,@GioiTinh_KhachHang char(3))
+create proc Add_KhachHang(@id char(10), @ten nvarchar(50), @sdt int, @gioitinh nvarchar(100))
 as
 begin
-	insert into KhachHang(ID_KhachHang,Ten_KhachHang,SDT_KhachHang,GioiTinh_KhachHang)
-	values(@ID_KhachHang,@Ten_KhachHang,@SDT_KhachHang,@GioiTinh_KhachHang)
+insert into KhachHang values (@id, @ten, @sdt, @gioitinh)
 end
 
 create proc Edit_KhachHang(@ID_KhachHang char(10),@Ten_KhachHang char(20),@SDT_KhachHang int,@GioiTinh_KhachHang char(3))
@@ -206,11 +205,10 @@ delete from HoaDon
 where ID_HoaDon= @ID_HoaDon
 end
 
-create proc Add_HoaDon(@ID_HoaDon char (10),@Ten_HoaDon nvarchar(30),@ID_HangHoa char(10),@ID_KhachHang char (10),@ID_NhanVien char (10))
+create proc Add_HoaDon(@id char(10), @ten nvarchar(30), @idkh char(10), @idhh char(10), @idnv char(10))
 as
 begin
-insert into HoaDon(ID_HoaDon,Ten_HoaDon,ID_HangHoa,ID_NhanVien,ID_KhachHang)
-values (@ID_HoaDon,@Ten_HoaDon,@ID_HangHoa,@ID_NhanVien,@ID_KhachHang)
+insert into HoaDon values (@id, @ten, @idkh, @idhh, @idnv)
 end
 
 create  proc Edit_HoaDon(@ID_HoaDon char(10),@Ten_HoaDon nvarchar(30),@ID_HangHoa char(10),@ID_NhanVien char(10),@ID_KhachHang char(10))

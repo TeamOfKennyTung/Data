@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLPhongKS
 {
-    public partial class FormKhachHang : Form
+    public partial class frmKhachHang : Form
     {
-        public FormKhachHang()
+        public frmKhachHang()
         {
             InitializeComponent();
         }

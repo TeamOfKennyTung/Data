@@ -1,6 +1,6 @@
 ﻿namespace QLPhongKS
 {
-    partial class ThuePhong
+    partial class frmThuePhong
     {
         /// <summary>
         /// Required designer variable.
@@ -48,11 +48,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblTiendc = new System.Windows.Forms.Label();
             this.txtTienThue = new System.Windows.Forms.TextBox();
+            this.lblBaoLoi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dTPTGKT = new System.Windows.Forms.DateTimePicker();
             this.dTPTGBD = new System.Windows.Forms.DateTimePicker();
-            this.lblBaoLoi = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dTPNS = new System.Windows.Forms.DateTimePicker();
             this.lblBaoLoicmnd = new System.Windows.Forms.Label();
@@ -267,6 +267,16 @@
             this.txtTienThue.TabIndex = 79;
             this.txtTienThue.TextChanged += new System.EventHandler(this.txtTienThue_TextChanged);
             // 
+            // lblBaoLoi
+            // 
+            this.lblBaoLoi.AutoSize = true;
+            this.lblBaoLoi.Location = new System.Drawing.Point(15, 124);
+            this.lblBaoLoi.Name = "lblBaoLoi";
+            this.lblBaoLoi.Size = new System.Drawing.Size(55, 13);
+            this.lblBaoLoi.TabIndex = 74;
+            this.lblBaoLoi.Text = "thong bao";
+            this.lblBaoLoi.Visible = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -298,16 +308,6 @@
             this.dTPTGBD.Name = "dTPTGBD";
             this.dTPTGBD.Size = new System.Drawing.Size(200, 20);
             this.dTPTGBD.TabIndex = 0;
-            // 
-            // lblBaoLoi
-            // 
-            this.lblBaoLoi.AutoSize = true;
-            this.lblBaoLoi.Location = new System.Drawing.Point(15, 124);
-            this.lblBaoLoi.Name = "lblBaoLoi";
-            this.lblBaoLoi.Size = new System.Drawing.Size(55, 13);
-            this.lblBaoLoi.TabIndex = 74;
-            this.lblBaoLoi.Text = "thong bao";
-            this.lblBaoLoi.Visible = false;
             // 
             // label4
             // 
@@ -346,7 +346,7 @@
             this.lblBaoLoiSDT.Text = "thong bao";
             this.lblBaoLoiSDT.Visible = false;
             // 
-            // ThuePhong
+            // frmThuePhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -372,7 +372,7 @@
             this.Controls.Add(this.lblGT);
             this.Controls.Add(this.lblQueQuan);
             this.Controls.Add(this.lblTenKH);
-            this.Name = "ThuePhong";
+            this.Name = "frmThuePhong";
             this.Text = "ThuePhong";
             this.Load += new System.EventHandler(this.ThuePhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgThuePhong)).EndInit();
