@@ -46,13 +46,17 @@
             this.lblIDPhong = new System.Windows.Forms.Label();
             this.dgvPhong = new System.Windows.Forms.DataGridView();
             this.grbChon = new System.Windows.Forms.GroupBox();
+            this.bntSearch = new System.Windows.Forms.Button();
             this.rdbHientrang = new System.Windows.Forms.RadioButton();
             this.rdbtinhtrang = new System.Windows.Forms.RadioButton();
             this.rdbLPhong = new System.Windows.Forms.RadioButton();
             this.rdbPhong = new System.Windows.Forms.RadioButton();
             this.bntSave = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.bntTim = new System.Windows.Forms.Button();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+>>>>>>> LuanJR-11
             this.lblBaoLoi = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
@@ -78,7 +82,11 @@
             this.themToolStripMenuItem.Name = "themToolStripMenuItem";
             this.themToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.themToolStripMenuItem.Text = "Thêm";
+<<<<<<< HEAD
             this.themToolStripMenuItem.Click += new System.EventHandler(this.themToolStripMenuItem_Click);
+=======
+            this.themToolStripMenuItem.Click += new System.EventHandler(this.themToolStripMenuItem_Click_1);
+>>>>>>> LuanJR-11
             // 
             // sửaToolStripMenuItem
             // 
@@ -233,7 +241,11 @@
             // 
             // grbChon
             // 
+<<<<<<< HEAD
             this.grbChon.Controls.Add(this.bntTim);
+=======
+            this.grbChon.Controls.Add(this.bntSearch);
+>>>>>>> LuanJR-11
             this.grbChon.Controls.Add(this.rdbHientrang);
             this.grbChon.Controls.Add(this.rdbtinhtrang);
             this.grbChon.Controls.Add(this.rdbLPhong);
@@ -241,11 +253,25 @@
             this.grbChon.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbChon.Location = new System.Drawing.Point(523, 27);
             this.grbChon.Name = "grbChon";
+<<<<<<< HEAD
             this.grbChon.Size = new System.Drawing.Size(160, 159);
+=======
+            this.grbChon.Size = new System.Drawing.Size(171, 159);
+>>>>>>> LuanJR-11
             this.grbChon.TabIndex = 42;
             this.grbChon.TabStop = false;
             this.grbChon.Text = "Tìm kiếm";
             this.grbChon.Visible = false;
+            // 
+            // bntSearch
+            // 
+            this.bntSearch.Location = new System.Drawing.Point(34, 122);
+            this.bntSearch.Name = "bntSearch";
+            this.bntSearch.Size = new System.Drawing.Size(75, 23);
+            this.bntSearch.TabIndex = 29;
+            this.bntSearch.Text = "Search";
+            this.bntSearch.UseVisualStyleBackColor = true;
+            this.bntSearch.Click += new System.EventHandler(this.bntSearch_Click);
             // 
             // rdbHientrang
             // 
@@ -301,12 +327,17 @@
             // 
             // bntSave
             // 
+<<<<<<< HEAD
             this.bntSave.Location = new System.Drawing.Point(267, 105);
+=======
+            this.bntSave.Location = new System.Drawing.Point(267, 114);
+>>>>>>> LuanJR-11
             this.bntSave.Name = "bntSave";
             this.bntSave.Size = new System.Drawing.Size(75, 38);
             this.bntSave.TabIndex = 43;
             this.bntSave.Text = "Save";
             this.bntSave.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             this.bntSave.Click += new System.EventHandler(this.bntSave_Click);
             // 
             // bntTim
@@ -325,10 +356,14 @@
             this.backToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
+=======
+            this.bntSave.Click += new System.EventHandler(this.bntSave_Click_1);
+>>>>>>> LuanJR-11
             // 
             // lblBaoLoi
             // 
             this.lblBaoLoi.AutoSize = true;
+<<<<<<< HEAD
             this.lblBaoLoi.BackColor = System.Drawing.Color.White;
             this.lblBaoLoi.ForeColor = System.Drawing.Color.Red;
             this.lblBaoLoi.Location = new System.Drawing.Point(12, 130);
@@ -336,6 +371,14 @@
             this.lblBaoLoi.Size = new System.Drawing.Size(39, 13);
             this.lblBaoLoi.TabIndex = 44;
             this.lblBaoLoi.Text = "Báo lỗi";
+=======
+            this.lblBaoLoi.ForeColor = System.Drawing.Color.Red;
+            this.lblBaoLoi.Location = new System.Drawing.Point(21, 139);
+            this.lblBaoLoi.Name = "lblBaoLoi";
+            this.lblBaoLoi.Size = new System.Drawing.Size(38, 13);
+            this.lblBaoLoi.TabIndex = 44;
+            this.lblBaoLoi.Text = "báo lỗi";
+>>>>>>> LuanJR-11
             this.lblBaoLoi.Visible = false;
             // 
             // frmPhong
@@ -395,8 +438,12 @@
         private System.Windows.Forms.RadioButton rdbtinhtrang;
         private System.Windows.Forms.RadioButton rdbLPhong;
         private System.Windows.Forms.RadioButton rdbPhong;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Button bntTim;
+=======
+        private System.Windows.Forms.Button bntSearch;
+>>>>>>> LuanJR-11
         private System.Windows.Forms.Button bntSave;
         private System.Windows.Forms.Label lblBaoLoi;
     }
