@@ -20,6 +20,16 @@ namespace QLPhongKS
             ad.Fill(dt);
             return dt;
         }
+        public DataTable ShowMaLPhong()
+        {
+            string str = @"select MaPLoai as [malphong] from tblLoaiPhong";
+            SqlConnection con = new SqlConnection(kn.GetConnect());
+            DataTable dt = new DataTable();
+            SqlDataAdapter ad = new SqlDataAdapter(str, con);
+            ad.Fill(dt);
+            con.Close();
+            return dt;
+        }
         public string ThemPhong(string maloai, string tinhtrang, string hientrang, string sodt)
         {
             string str = "ThemPhong";
@@ -62,7 +72,7 @@ namespace QLPhongKS
             return kq;
         }
 
-        public string Timkiem(int idphong)
+        public string XoaPhong(int idphong)
         {
             string str = "XoaPhong";
             SqlConnection con = new SqlConnection(kn.GetConnect());
@@ -95,6 +105,11 @@ namespace QLPhongKS
             DataTable dt = new DataTable();
             ad.Fill(dt);
             return dt;
+        }
+
+        internal string XoaPhong(string p)
+        {
+            throw new NotImplementedException();
         }
     }
 }
