@@ -159,6 +159,7 @@
             this.butQuit.TabIndex = 21;
             this.butQuit.Text = "Thoát";
             this.butQuit.UseVisualStyleBackColor = true;
+            this.butQuit.Click += new System.EventHandler(this.butQuit_Click);
             // 
             // butJoin
             // 

@@ -39,17 +39,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaHH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_Hanghoa = new System.Windows.Forms.DataGridView();
+            this.btn_Clear = new System.Windows.Forms.Button();
+            this.btn_Load = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Hanghoa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_Load);
+            this.panel1.Controls.Add(this.btn_Clear);
             this.panel1.Controls.Add(this.butUpd);
             this.panel1.Controls.Add(this.butIns);
             this.panel1.Controls.Add(this.txtSoLuong);
@@ -68,9 +68,9 @@
             // butUpd
             // 
             this.butUpd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butUpd.Location = new System.Drawing.Point(252, 123);
+            this.butUpd.Location = new System.Drawing.Point(197, 123);
             this.butUpd.Name = "butUpd";
-            this.butUpd.Size = new System.Drawing.Size(94, 43);
+            this.butUpd.Size = new System.Drawing.Size(98, 43);
             this.butUpd.TabIndex = 17;
             this.butUpd.Text = "Nhập thêm";
             this.butUpd.UseVisualStyleBackColor = true;
@@ -79,9 +79,9 @@
             // butIns
             // 
             this.butIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butIns.Location = new System.Drawing.Point(46, 123);
+            this.butIns.Location = new System.Drawing.Point(93, 123);
             this.butIns.Name = "butIns";
-            this.butIns.Size = new System.Drawing.Size(94, 43);
+            this.butIns.Size = new System.Drawing.Size(98, 43);
             this.butIns.TabIndex = 16;
             this.butIns.Text = "Nhập mới";
             this.butIns.UseVisualStyleBackColor = true;
@@ -155,65 +155,58 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Mã hàng hóa";
             // 
-            // dataGridView1
+            // dgv_Hanghoa
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(22, 231);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(404, 220);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dgv_Hanghoa.AllowUserToAddRows = false;
+            this.dgv_Hanghoa.AllowUserToDeleteRows = false;
+            this.dgv_Hanghoa.AllowUserToResizeColumns = false;
+            this.dgv_Hanghoa.AllowUserToResizeRows = false;
+            this.dgv_Hanghoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Hanghoa.Location = new System.Drawing.Point(22, 231);
+            this.dgv_Hanghoa.MultiSelect = false;
+            this.dgv_Hanghoa.Name = "dgv_Hanghoa";
+            this.dgv_Hanghoa.ReadOnly = true;
+            this.dgv_Hanghoa.RowHeadersVisible = false;
+            this.dgv_Hanghoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Hanghoa.Size = new System.Drawing.Size(404, 220);
+            this.dgv_Hanghoa.TabIndex = 0;
+            this.dgv_Hanghoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // Column1
+            // btn_Clear
             // 
-            this.Column1.HeaderText = "Mã hàng hóa";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.btn_Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Clear.Location = new System.Drawing.Point(301, 123);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(98, 43);
+            this.btn_Clear.TabIndex = 18;
+            this.btn_Clear.Text = "Clear";
+            this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
-            // Column2
+            // btn_Load
             // 
-            this.Column2.HeaderText = "Tên hàng hóa";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Mã NCC";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Số lượng";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.btn_Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Load.Location = new System.Drawing.Point(3, 123);
+            this.btn_Load.Name = "btn_Load";
+            this.btn_Load.Size = new System.Drawing.Size(79, 43);
+            this.btn_Load.TabIndex = 19;
+            this.btn_Load.Text = "Load";
+            this.btn_Load.UseVisualStyleBackColor = true;
+            this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
             // 
             // frmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 464);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_Hanghoa);
             this.Controls.Add(this.panel1);
             this.Name = "frmNhapHang";
             this.Text = "frmNhapHang";
             this.Load += new System.EventHandler(this.frmNhapHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Hanghoa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -231,11 +224,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button butUpd;
         private System.Windows.Forms.Button butIns;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridView dgv_Hanghoa;
+        private System.Windows.Forms.Button btn_Clear;
+        private System.Windows.Forms.Button btn_Load;
 
     }
 }
