@@ -26,3 +26,17 @@ F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmTi
 F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmXuatHang.resources
 F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
 F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.Cache
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe.config
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.exe
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmDangNhap.resources
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmHuongDan.resources
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmNhapHang.resources
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmThongKe.resources
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmTimKiem.resources
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmXuatHang.resources
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.Cache
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe
+C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.pdb

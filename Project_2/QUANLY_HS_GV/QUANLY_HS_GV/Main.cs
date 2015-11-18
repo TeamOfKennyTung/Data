@@ -36,8 +36,15 @@ namespace QUANLY_HS_GV
 
         private void mnuHelp_Click(object sender, EventArgs e)
         {
-            Login tg = new Login();
-            tg.Show();
+            //Login tg = new Login();
+            //tg.Show();
+        }
+
+        private void mnuhelp_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog mo = new OpenFileDialog();
+            mo.ShowDialog();
+            mo.Filter = "mht file|*.mht";
         }
     }
 }

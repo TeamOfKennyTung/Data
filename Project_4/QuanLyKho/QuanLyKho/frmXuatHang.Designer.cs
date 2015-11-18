@@ -38,17 +38,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaHH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_Xuat = new System.Windows.Forms.DataGridView();
+            this.btn_Thongtin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Xuat)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_Thongtin);
             this.panel1.Controls.Add(this.butXuat);
             this.panel1.Controls.Add(this.txtSoLuong);
             this.panel1.Controls.Add(this.label4);
@@ -66,7 +64,7 @@
             // butXuat
             // 
             this.butXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butXuat.Location = new System.Drawing.Point(201, 157);
+            this.butXuat.Location = new System.Drawing.Point(277, 157);
             this.butXuat.Name = "butXuat";
             this.butXuat.Size = new System.Drawing.Size(65, 37);
             this.butXuat.TabIndex = 24;
@@ -142,51 +140,38 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Mã hàng hóa";
             // 
-            // dataGridView1
+            // dgv_Xuat
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(48, 230);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 220);
-            this.dataGridView1.TabIndex = 11;
+            this.dgv_Xuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Xuat.Location = new System.Drawing.Point(48, 230);
+            this.dgv_Xuat.Name = "dgv_Xuat";
+            this.dgv_Xuat.Size = new System.Drawing.Size(443, 220);
+            this.dgv_Xuat.TabIndex = 11;
+            this.dgv_Xuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Xuat_CellContentClick);
             // 
-            // Column1
+            // btn_Thongtin
             // 
-            this.Column1.HeaderText = "Mã hàng hóa";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên hàng hóa";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Mã NCC";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Số lượng";
-            this.Column4.Name = "Column4";
+            this.btn_Thongtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Thongtin.Location = new System.Drawing.Point(98, 157);
+            this.btn_Thongtin.Name = "btn_Thongtin";
+            this.btn_Thongtin.Size = new System.Drawing.Size(95, 37);
+            this.btn_Thongtin.TabIndex = 25;
+            this.btn_Thongtin.Text = "Thông tin";
+            this.btn_Thongtin.UseVisualStyleBackColor = true;
+            this.btn_Thongtin.Click += new System.EventHandler(this.btn_Thongtin_Click);
             // 
             // frmXuatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 477);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_Xuat);
             this.Controls.Add(this.panel1);
             this.Name = "frmXuatHang";
             this.Text = "frmXuatHang";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Xuat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,10 +188,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaHH;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridView dgv_Xuat;
+        private System.Windows.Forms.Button btn_Thongtin;
     }
 }

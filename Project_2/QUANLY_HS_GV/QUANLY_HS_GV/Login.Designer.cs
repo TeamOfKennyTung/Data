@@ -38,17 +38,19 @@
             // 
             // txtMatkhau
             // 
-            this.txtMatkhau.Location = new System.Drawing.Point(145, 63);
+            this.txtMatkhau.Location = new System.Drawing.Point(218, 78);
+            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(179, 20);
+            this.txtMatkhau.Size = new System.Drawing.Size(266, 22);
             this.txtMatkhau.TabIndex = 7;
             this.txtMatkhau.UseSystemPasswordChar = true;
             // 
             // txtTaikhoan
             // 
-            this.txtTaikhoan.Location = new System.Drawing.Point(145, 30);
+            this.txtTaikhoan.Location = new System.Drawing.Point(218, 37);
+            this.txtTaikhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTaikhoan.Name = "txtTaikhoan";
-            this.txtTaikhoan.Size = new System.Drawing.Size(179, 20);
+            this.txtTaikhoan.Size = new System.Drawing.Size(266, 22);
             this.txtTaikhoan.TabIndex = 6;
             // 
             // label2
@@ -56,7 +58,8 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(12, 67);
+            this.label2.Location = new System.Drawing.Point(18, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 5;
@@ -67,7 +70,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(12, 35);
+            this.label1.Location = new System.Drawing.Point(18, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 16);
             this.label1.TabIndex = 4;
@@ -77,9 +81,10 @@
             // 
             this.btnOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnOk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnOk.Location = new System.Drawing.Point(93, 108);
+            this.btnOk.Location = new System.Drawing.Point(140, 133);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(85, 32);
+            this.btnOk.Size = new System.Drawing.Size(128, 39);
             this.btnOk.TabIndex = 8;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -89,9 +94,10 @@
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnThoat.Location = new System.Drawing.Point(218, 108);
+            this.btnThoat.Location = new System.Drawing.Point(327, 133);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(85, 32);
+            this.btnThoat.Size = new System.Drawing.Size(128, 39);
             this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "Cancel";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -99,18 +105,20 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 156);
+            this.ClientSize = new System.Drawing.Size(560, 192);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.txtTaikhoan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng Nhập";
+            this.Text = "Đăng Nhập Hệ Thống";
             this.ResumeLayout(false);
             this.PerformLayout();
 

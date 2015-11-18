@@ -218,6 +218,7 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyKho";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
