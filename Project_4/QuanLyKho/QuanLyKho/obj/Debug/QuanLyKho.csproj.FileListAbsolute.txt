@@ -26,6 +26,10 @@ F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmTi
 F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.frmXuatHang.resources
 F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.Properties.Resources.resources
 F:\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.Cache
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe.config
 C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.exe
 C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
@@ -40,3 +44,11 @@ C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.Prop
 C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.Cache
 C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe
 C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.pdb
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/master
+C:\Users\HP\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe.config
+C:\Users\HP\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.exe
+C:\Users\HP\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
+>>>>>>> origin/master

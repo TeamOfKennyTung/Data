@@ -41,12 +41,21 @@
             this.txtMaHH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Hanghoa = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
+=======
+            this.btn_Clear = new System.Windows.Forms.Button();
+            this.btn_Load = new System.Windows.Forms.Button();
+>>>>>>> origin/master
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Hanghoa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+<<<<<<< HEAD
+=======
+            this.panel1.Controls.Add(this.btn_Load);
+>>>>>>> origin/master
             this.panel1.Controls.Add(this.btn_Clear);
             this.panel1.Controls.Add(this.butUpd);
             this.panel1.Controls.Add(this.butIns);
@@ -77,7 +86,11 @@
             // butUpd
             // 
             this.butUpd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.butUpd.Location = new System.Drawing.Point(168, 123);
+=======
+            this.butUpd.Location = new System.Drawing.Point(197, 123);
+>>>>>>> origin/master
             this.butUpd.Name = "butUpd";
             this.butUpd.Size = new System.Drawing.Size(98, 43);
             this.butUpd.TabIndex = 17;
@@ -88,7 +101,11 @@
             // butIns
             // 
             this.butIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.butIns.Location = new System.Drawing.Point(23, 123);
+=======
+            this.butIns.Location = new System.Drawing.Point(93, 123);
+>>>>>>> origin/master
             this.butIns.Name = "butIns";
             this.butIns.Size = new System.Drawing.Size(98, 43);
             this.butIns.TabIndex = 16;
@@ -180,6 +197,31 @@
             this.dgv_Hanghoa.Size = new System.Drawing.Size(404, 220);
             this.dgv_Hanghoa.TabIndex = 0;
             this.dgv_Hanghoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+<<<<<<< HEAD
+=======
+            // 
+            // btn_Clear
+            // 
+            this.btn_Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Clear.Location = new System.Drawing.Point(301, 123);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(98, 43);
+            this.btn_Clear.TabIndex = 18;
+            this.btn_Clear.Text = "Clear";
+            this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
+            // 
+            // btn_Load
+            // 
+            this.btn_Load.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Load.Location = new System.Drawing.Point(3, 123);
+            this.btn_Load.Name = "btn_Load";
+            this.btn_Load.Size = new System.Drawing.Size(79, 43);
+            this.btn_Load.TabIndex = 19;
+            this.btn_Load.Text = "Load";
+            this.btn_Load.UseVisualStyleBackColor = true;
+            this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
+>>>>>>> origin/master
             // 
             // frmNhapHang
             // 
@@ -213,6 +255,10 @@
         private System.Windows.Forms.Button butIns;
         private System.Windows.Forms.DataGridView dgv_Hanghoa;
         private System.Windows.Forms.Button btn_Clear;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Button btn_Load;
+>>>>>>> origin/master
 
     }
 }
