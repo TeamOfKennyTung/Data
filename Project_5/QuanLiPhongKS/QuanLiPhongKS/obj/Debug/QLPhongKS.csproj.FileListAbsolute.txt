@@ -24,3 +24,4 @@ D:\File_GitHub\Data\Project_5\QuanLiPhongKS\QuanLiPhongKS\obj\Debug\QLPhongKS.fr
 D:\File_GitHub\Data\Project_5\QuanLiPhongKS\QuanLiPhongKS\obj\Debug\QLPhongKS.frmKhachHang.resources
 D:\File_GitHub\Data\Project_5\QuanLiPhongKS\QuanLiPhongKS\obj\Debug\QLPhongKS.frmTBThietBi.resources
 D:\File_GitHub\Data\Project_5\QuanLiPhongKS\QuanLiPhongKS\obj\Debug\QLPhongKS.frmThuePhong.resources
+D:\File_GitHub\Data\Project_5\QuanLiPhongKS\QuanLiPhongKS\obj\Debug\QLPhongKS.frmSuDungDV.resources

@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmSuDungDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuDungDV.Designer.cs">
+      <DependentUpon>frmSuDungDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLiPhongKSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SuDungDV.cs" />
     <Compile Include="ThuePhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +93,9 @@
     </Compile>
     <Compile Include="ThuePhongKS.cs" />
     <Compile Include="TrangBiTB.cs" />
+    <EmbeddedResource Include="frmSuDungDV.resx">
+      <DependentUpon>frmSuDungDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>

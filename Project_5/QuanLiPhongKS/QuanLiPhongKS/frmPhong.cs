@@ -19,7 +19,6 @@ namespace QLPhongKS
         PhongKS phong=new PhongKS();
         DataTable dt;
         int chose,loai;
-<<<<<<< HEAD
         private void frmPhong_Load(object sender, EventArgs e)
         {
             dt = phong.ShowPhong();
@@ -48,8 +47,6 @@ namespace QLPhongKS
             cbxIDPhong.Enabled = false;
             loai = 1;
         }
-=======
->>>>>>> LuanJR-11
         private void Init()
         {
             cbxHienTrang.Text = ""; cbxIDPhong.Text = ""; cbxMaLPhong.Text = ""; cbxTinhTrang.Text = "";
@@ -65,16 +62,12 @@ namespace QLPhongKS
             cbxIDPhong.Enabled = false; cbxHienTrang.Enabled = false; cbxMaLPhong.Enabled = false; cbxTinhTrang.Enabled = false;
             txtSoDT.Enabled = false;
         }
-<<<<<<< HEAD
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dgvPhong.DataSource = dt;
             cbxIDPhong.Enabled = false;
             loai = 2;
         }
-=======
-       
->>>>>>> LuanJR-11
         private void Them()
         {
             string kq = phong.ThemPhong(cbxMaLPhong.Text, cbxTinhTrang.Text, cbxHienTrang.Text, txtSoDT.Text);
@@ -129,10 +122,7 @@ namespace QLPhongKS
             else
                 MessageBox.Show("Không tìm thấy");
         }
-<<<<<<< HEAD
-        private void bntSave_Click(object sender, EventArgs e)
-=======
-       
+     
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
@@ -141,7 +131,6 @@ namespace QLPhongKS
         }
 
         private void bntSave_Click_1(object sender, EventArgs e)
->>>>>>> LuanJR-11
         {
             if (loai == 1)
                 Them();
@@ -152,8 +141,6 @@ namespace QLPhongKS
                     if (loai == 3)
                         Xoa();
         }
-<<<<<<< HEAD
-
         private void txtSoDT_TextChanged(object sender, EventArgs e)
         {
             string tmp = txtSoDT.Text;
@@ -173,14 +160,6 @@ namespace QLPhongKS
             }
         }
 
-        private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            An();
-            cbxIDPhong.Enabled = true;
-            loai = 3;
-            dgvPhong.DataSource = null;
-        }
-
         private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
         {
             grbChon.Visible = true;
@@ -188,65 +167,6 @@ namespace QLPhongKS
             An();
             bntSave.Enabled = false;
         }
-
-=======
-
-        private void frmPhong_Load(object sender, EventArgs e)
-        {
-            dt = phong.ShowPhong();
-            dgvPhong.DataSource = dt;
-            cbxIDPhong.DataSource = dt;
-            cbxIDPhong.DisplayMember = "Số Phòng";
-            DataTable dt1 = phong.ShowMaLPhong();
-            cbxMaLPhong.DataSource = dt1;
-            cbxMaLPhong.DisplayMember = "malphong";
-        }
-
-        private void dgvPhong_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            int dong = e.RowIndex;
-            cbxIDPhong.Text = dgvPhong.Rows[dong].Cells[0].Value.ToString();
-            cbxMaLPhong.Text = dgvPhong.Rows[dong].Cells[1].Value.ToString();
-            cbxTinhTrang.Text = dgvPhong.Rows[dong].Cells[2].Value.ToString();
-            cbxHienTrang.Text = dgvPhong.Rows[dong].Cells[3].Value.ToString();
-            txtSoDT.Text = dgvPhong.Rows[dong].Cells[4].Value.ToString();
-        }
-
-        private void themToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            dgvPhong.DataSource = null;
-            Init();
-            cbxIDPhong.Enabled = false;
-            loai = 1;
-        }
-
-        private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dgvPhong.DataSource = dt;
-            cbxIDPhong.Enabled = false;
-            loai = 2;
-        }
-
-        private void txtSoDT_TextChanged(object sender, EventArgs e)
-        {
-            string tmp = txtSoDT.Text;
-            bool ok = true;
-            foreach (char c in tmp)
-                if (c > '9' || c < '0') ok = false;
-            if (ok == false)
-            {
-                bntSave.Enabled= false;
-                lblBaoLoi.Visible = true;
-                lblBaoLoi.Text = "Phải nhập số ở đây";
-            }
-            else
-            {
-                bntSave.Enabled = true;
-                lblBaoLoi.Visible = false;
-            }
-        }
-
->>>>>>> LuanJR-11
         private void rdbPhong_CheckedChanged(object sender, EventArgs e)
         {
             chose = 1;
@@ -275,27 +195,11 @@ namespace QLPhongKS
             cbxHienTrang.Enabled = true;
         }
 
-<<<<<<< HEAD
         private void bntTim_Click(object sender, EventArgs e)
         {
             TimKiem();
             bntSave.Enabled = false;
         }
-
-        private void backToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            menu.Show();
-            Hide();
-=======
-        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            grbChon.Visible = true;
-            dgvPhong.DataSource = null;
-            An();
-            bntSave.Enabled = false;
-        }
-
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             An();
@@ -307,7 +211,6 @@ namespace QLPhongKS
         private void bntSearch_Click(object sender, EventArgs e)
         {
             TimKiem();
->>>>>>> LuanJR-11
         }
     }
 }
