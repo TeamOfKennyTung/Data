@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace QUANLY_HS_GV
 {
@@ -33,18 +34,22 @@ namespace QUANLY_HS_GV
         {
             Application.Exit();
         }
-
-        private void mnuHelp_Click(object sender, EventArgs e)
-        {
-            //Login tg = new Login();
-            //tg.Show();
-        }
-
-        private void mnuhelp_Click_1(object sender, EventArgs e)
+        
+        private void btn_Help_Click(object sender, EventArgs e)
         {
             OpenFileDialog mo = new OpenFileDialog();
-            mo.ShowDialog();
-            mo.Filter = "mht file|*.mht";
+            mo.Filter = "mht file| *.mht";
+            if (mo.ShowDialog() == DialogResult.OK)
+            {
+                //MessageBox.Show(mo.SafeFileName);
+                mo.ShowDialog();
+            }
+        }
+
+        private void mnuHelp_Click_2(object sender, EventArgs e)
+        {
+            frmUse use = new frmUse();
+            use.ShowDialog();
         }
     }
 }

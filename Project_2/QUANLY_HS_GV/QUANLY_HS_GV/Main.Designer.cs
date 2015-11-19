@@ -33,7 +33,8 @@
             this.mnuHocsinh = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGiaovien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuhelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýToolStripMenuItem,
-            this.mnuhelp});
+            this.toolStripMenuItem1,
+            this.mnuHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(400, 24);
@@ -79,12 +81,17 @@
             this.mnuThoat.Text = "Thoát";
             this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
             // 
-            // mnuhelp
+            // toolStripMenuItem1
             // 
-            this.mnuhelp.Name = "mnuhelp";
-            this.mnuhelp.Size = new System.Drawing.Size(64, 20);
-            this.mnuhelp.Text = "Trợ giúp";
-            this.mnuhelp.Click += new System.EventHandler(this.mnuhelp_Click_1);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            // 
+            // mnuHelp
+            // 
+            this.mnuHelp.Name = "mnuHelp";
+            this.mnuHelp.Size = new System.Drawing.Size(44, 20);
+            this.mnuHelp.Text = "Help";
+            this.mnuHelp.Click += new System.EventHandler(this.mnuHelp_Click_2);
             // 
             // frmMain
             // 
@@ -111,7 +118,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuHocsinh;
         private System.Windows.Forms.ToolStripMenuItem mnuGiaovien;
         private System.Windows.Forms.ToolStripMenuItem mnuThoat;
-        private System.Windows.Forms.ToolStripMenuItem mnuhelp;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mnuHelp;
     }
 }
 
