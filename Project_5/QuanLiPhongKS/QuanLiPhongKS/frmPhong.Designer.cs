@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.themToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cbxHienTrang = new System.Windows.Forms.ComboBox();
             this.cbxTinhTrang = new System.Windows.Forms.ComboBox();
             this.cbxMaLPhong = new System.Windows.Forms.ComboBox();
@@ -52,11 +53,6 @@
             this.rdbLPhong = new System.Windows.Forms.RadioButton();
             this.rdbPhong = new System.Windows.Forms.RadioButton();
             this.bntSave = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-            this.bntTim = new System.Windows.Forms.Button();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-=======
->>>>>>> LuanJR-11
             this.lblBaoLoi = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
@@ -82,11 +78,6 @@
             this.themToolStripMenuItem.Name = "themToolStripMenuItem";
             this.themToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.themToolStripMenuItem.Text = "Thêm";
-<<<<<<< HEAD
-            this.themToolStripMenuItem.Click += new System.EventHandler(this.themToolStripMenuItem_Click);
-=======
-            this.themToolStripMenuItem.Click += new System.EventHandler(this.themToolStripMenuItem_Click_1);
->>>>>>> LuanJR-11
             // 
             // sửaToolStripMenuItem
             // 
@@ -108,6 +99,13 @@
             this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm Kiếm";
             this.tìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // cbxHienTrang
             // 
@@ -222,14 +220,14 @@
             // 
             this.dgvPhong.AllowUserToAddRows = false;
             this.dgvPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhong.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvPhong.Location = new System.Drawing.Point(0, 192);
@@ -241,11 +239,7 @@
             // 
             // grbChon
             // 
-<<<<<<< HEAD
-            this.grbChon.Controls.Add(this.bntTim);
-=======
             this.grbChon.Controls.Add(this.bntSearch);
->>>>>>> LuanJR-11
             this.grbChon.Controls.Add(this.rdbHientrang);
             this.grbChon.Controls.Add(this.rdbtinhtrang);
             this.grbChon.Controls.Add(this.rdbLPhong);
@@ -253,11 +247,7 @@
             this.grbChon.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbChon.Location = new System.Drawing.Point(523, 27);
             this.grbChon.Name = "grbChon";
-<<<<<<< HEAD
-            this.grbChon.Size = new System.Drawing.Size(160, 159);
-=======
             this.grbChon.Size = new System.Drawing.Size(171, 159);
->>>>>>> LuanJR-11
             this.grbChon.TabIndex = 42;
             this.grbChon.TabStop = false;
             this.grbChon.Text = "Tìm kiếm";
@@ -327,58 +317,24 @@
             // 
             // bntSave
             // 
-<<<<<<< HEAD
-            this.bntSave.Location = new System.Drawing.Point(267, 105);
-=======
             this.bntSave.Location = new System.Drawing.Point(267, 114);
->>>>>>> LuanJR-11
             this.bntSave.Name = "bntSave";
             this.bntSave.Size = new System.Drawing.Size(75, 38);
             this.bntSave.TabIndex = 43;
             this.bntSave.Text = "Save";
             this.bntSave.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
-            this.bntSave.Click += new System.EventHandler(this.bntSave_Click);
-            // 
-            // bntTim
-            // 
-            this.bntTim.Location = new System.Drawing.Point(11, 115);
-            this.bntTim.Name = "bntTim";
-            this.bntTim.Size = new System.Drawing.Size(75, 38);
-            this.bntTim.TabIndex = 45;
-            this.bntTim.Text = "Search";
-            this.bntTim.UseVisualStyleBackColor = true;
-            this.bntTim.Click += new System.EventHandler(this.bntTim_Click);
-            // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.backToolStripMenuItem.Text = "Back";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
-=======
             this.bntSave.Click += new System.EventHandler(this.bntSave_Click_1);
->>>>>>> LuanJR-11
             // 
             // lblBaoLoi
             // 
             this.lblBaoLoi.AutoSize = true;
-<<<<<<< HEAD
             this.lblBaoLoi.BackColor = System.Drawing.Color.White;
-            this.lblBaoLoi.ForeColor = System.Drawing.Color.Red;
-            this.lblBaoLoi.Location = new System.Drawing.Point(12, 130);
-            this.lblBaoLoi.Name = "lblBaoLoi";
-            this.lblBaoLoi.Size = new System.Drawing.Size(39, 13);
-            this.lblBaoLoi.TabIndex = 44;
-            this.lblBaoLoi.Text = "Báo lỗi";
-=======
             this.lblBaoLoi.ForeColor = System.Drawing.Color.Red;
             this.lblBaoLoi.Location = new System.Drawing.Point(21, 139);
             this.lblBaoLoi.Name = "lblBaoLoi";
             this.lblBaoLoi.Size = new System.Drawing.Size(38, 13);
             this.lblBaoLoi.TabIndex = 44;
             this.lblBaoLoi.Text = "báo lỗi";
->>>>>>> LuanJR-11
             this.lblBaoLoi.Visible = false;
             // 
             // frmPhong
@@ -438,12 +394,8 @@
         private System.Windows.Forms.RadioButton rdbtinhtrang;
         private System.Windows.Forms.RadioButton rdbLPhong;
         private System.Windows.Forms.RadioButton rdbPhong;
-<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
-        private System.Windows.Forms.Button bntTim;
-=======
         private System.Windows.Forms.Button bntSearch;
->>>>>>> LuanJR-11
         private System.Windows.Forms.Button bntSave;
         private System.Windows.Forms.Label lblBaoLoi;
     }
