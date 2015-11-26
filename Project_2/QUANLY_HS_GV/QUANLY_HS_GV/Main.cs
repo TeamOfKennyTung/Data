@@ -54,6 +54,10 @@ namespace QUANLY_HS_GV
             {
                 //MessageBox.Show(mo.SafeFileName);
                 mo.ShowDialog();
+                mo.Title = "Open Help";
+                mo.InitialDirectory = "F:";
+                mo.FileName="";
+
             }
         }
     }
