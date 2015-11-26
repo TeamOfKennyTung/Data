@@ -48,8 +48,13 @@ namespace QUANLY_HS_GV
 
         private void mnuHelp_Click_2(object sender, EventArgs e)
         {
-            frmUse use = new frmUse();
-            use.ShowDialog();
+            OpenFileDialog mo = new OpenFileDialog();
+            mo.Filter = "mht file| *.mht";
+            if (mo.ShowDialog() == DialogResult.OK)
+            {
+                //MessageBox.Show(mo.SafeFileName);
+                mo.ShowDialog();
+            }
         }
     }
 }

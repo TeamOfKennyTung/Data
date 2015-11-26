@@ -88,4 +88,3 @@ F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS
 F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.HocSinh.resources
 F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.Properties.Resources.resources
 F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.csproj.GenerateResource.Cache
-F:\Documents\GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.frmUse.resources
