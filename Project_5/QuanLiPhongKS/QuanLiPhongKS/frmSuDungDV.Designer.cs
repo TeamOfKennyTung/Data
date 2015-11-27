@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtPtgdung = new System.Windows.Forms.DateTimePicker();
             this.cbxIDDV = new System.Windows.Forms.ComboBox();
             this.cbxIDPhong = new System.Windows.Forms.ComboBox();
@@ -175,6 +175,7 @@
             this.rdbNgaySD.TabStop = true;
             this.rdbNgaySD.Text = "Theo Ngày SD";
             this.rdbNgaySD.UseVisualStyleBackColor = true;
+            this.rdbNgaySD.CheckedChanged += new System.EventHandler(this.rdbNgaySD_CheckedChanged);
             // 
             // rdbDichVu
             // 
@@ -187,6 +188,7 @@
             this.rdbDichVu.TabStop = true;
             this.rdbDichVu.Text = "Theo Mã Dịch Vụ";
             this.rdbDichVu.UseVisualStyleBackColor = true;
+            this.rdbDichVu.CheckedChanged += new System.EventHandler(this.rdbDichVu_CheckedChanged);
             // 
             // rbrPhong
             // 
@@ -199,6 +201,7 @@
             this.rbrPhong.TabStop = true;
             this.rbrPhong.Text = "Theo Phòng";
             this.rbrPhong.UseVisualStyleBackColor = true;
+            this.rbrPhong.CheckedChanged += new System.EventHandler(this.rbrPhong_CheckedChanged);
             // 
             // bntTimKiem
             // 
@@ -209,6 +212,7 @@
             this.bntTimKiem.TabIndex = 53;
             this.bntTimKiem.Text = "Tìm Kiếm";
             this.bntTimKiem.UseVisualStyleBackColor = true;
+            this.bntTimKiem.Click += new System.EventHandler(this.bntTimKiem_Click);
             // 
             // bntCapNhat
             // 
@@ -219,6 +223,7 @@
             this.bntCapNhat.TabIndex = 52;
             this.bntCapNhat.Text = "Cập nhật";
             this.bntCapNhat.UseVisualStyleBackColor = true;
+            this.bntCapNhat.Click += new System.EventHandler(this.bntCapNhat_Click);
             // 
             // bntThoatPhong
             // 
@@ -232,6 +237,7 @@
             this.bntThoatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bntThoatPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bntThoatPhong.UseVisualStyleBackColor = true;
+            this.bntThoatPhong.Click += new System.EventHandler(this.bntThoatPhong_Click);
             // 
             // bntXoaDV
             // 
@@ -242,6 +248,7 @@
             this.bntXoaDV.TabIndex = 50;
             this.bntXoaDV.Text = "Xóa";
             this.bntXoaDV.UseVisualStyleBackColor = true;
+            this.bntXoaDV.Click += new System.EventHandler(this.bntXoaDV_Click);
             // 
             // bntLuuDV
             // 
@@ -252,6 +259,7 @@
             this.bntLuuDV.TabIndex = 49;
             this.bntLuuDV.Text = "Lưu";
             this.bntLuuDV.UseVisualStyleBackColor = true;
+            this.bntLuuDV.Click += new System.EventHandler(this.bntLuuDV_Click);
             // 
             // bntThemDV
             // 
@@ -262,20 +270,21 @@
             this.bntThemDV.TabIndex = 48;
             this.bntThemDV.Text = "Thêm";
             this.bntThemDV.UseVisualStyleBackColor = true;
+            this.bntThemDV.Click += new System.EventHandler(this.bntThemDV_Click);
             // 
             // dgvSDungDV
             // 
             this.dgvSDungDV.AllowUserToAddRows = false;
             this.dgvSDungDV.AllowUserToDeleteRows = false;
             this.dgvSDungDV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSDungDV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSDungDV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvSDungDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSDungDV.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSDungDV.Location = new System.Drawing.Point(0, 199);
@@ -283,6 +292,7 @@
             this.dgvSDungDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSDungDV.Size = new System.Drawing.Size(626, 182);
             this.dgvSDungDV.TabIndex = 55;
+            this.dgvSDungDV.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSDungDV_RowEnter);
             // 
             // frmSuDungDV
             // 
@@ -307,6 +317,7 @@
             this.Controls.Add(this.lblMaTB);
             this.Name = "frmSuDungDV";
             this.Text = "frmSuDungDV";
+            this.Load += new System.EventHandler(this.frmSuDungDV_Load);
             this.grbChon.ResumeLayout(false);
             this.grbChon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSDungDV)).EndInit();

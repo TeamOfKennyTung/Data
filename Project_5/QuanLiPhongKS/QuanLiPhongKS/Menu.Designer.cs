@@ -67,11 +67,12 @@
             this.sửDụngDịchVụToolStripMenuItem.Name = "sửDụngDịchVụToolStripMenuItem";
             this.sửDụngDịchVụToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
             this.sửDụngDịchVụToolStripMenuItem.Text = "Sử dụng dịch vụ";
+            this.sửDụngDịchVụToolStripMenuItem.Click += new System.EventHandler(this.sửDụngDịchVụToolStripMenuItem_Click);
             // 
             // thêmDịchVụToolStripMenuItem
             // 
             this.thêmDịchVụToolStripMenuItem.Name = "thêmDịchVụToolStripMenuItem";
-            this.thêmDịchVụToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.thêmDịchVụToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.thêmDịchVụToolStripMenuItem.Text = "Thêm dịch vụ";
             // 
             // kháchHàngToolStripMenuItem
