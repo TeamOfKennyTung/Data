@@ -45,6 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connect.cs" />
+    <Compile Include="huongdan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="huongdan.Designer.cs">
+      <DependentUpon>huongdan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,16 +77,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QUANLY_HS_GVDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QUANLY_HS_GVDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QUANLY_HS_GVDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QUANLY_HS_GVDataSet1.xsd</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="huongdan.resx">
+      <DependentUpon>huongdan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,28 +116,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QUANLY_HS_GVDataSet.xsc">
-      <DependentUpon>QUANLY_HS_GVDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QUANLY_HS_GVDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QUANLY_HS_GVDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QUANLY_HS_GVDataSet.xss">
-      <DependentUpon>QUANLY_HS_GVDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QUANLY_HS_GVDataSet1.xsc">
-      <DependentUpon>QUANLY_HS_GVDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QUANLY_HS_GVDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QUANLY_HS_GVDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QUANLY_HS_GVDataSet1.xss">
-      <DependentUpon>QUANLY_HS_GVDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Resources\GD.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

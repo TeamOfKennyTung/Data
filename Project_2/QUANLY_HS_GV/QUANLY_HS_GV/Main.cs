@@ -18,47 +18,30 @@ namespace QUANLY_HS_GV
             InitializeComponent();
         }
 
-        private void mnuHocsinh_Click(object sender, EventArgs e)
+        private void btnthoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnhuongdan_Click(object sender, EventArgs e)
+        {
+            huongdan hd = new huongdan();
+            hd.ShowDialog();
+        }
+
+        private void btnhocsinh_Click(object sender, EventArgs e)
         {
             HocSinh hs = new HocSinh();
-            hs.Show();
+            hs.ShowDialog();
         }
 
-        private void mnuGiaovien_Click(object sender, EventArgs e)
+        private void btngiaovien_Click(object sender, EventArgs e)
         {
             GiaoVien gv = new GiaoVien();
-            gv.Show();
+            gv.ShowDialog();
         }
-
-        private void mnuThoat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
-        
-        private void btn_Help_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog mo = new OpenFileDialog();
-            mo.Filter = "mht file| *.mht";
-            if (mo.ShowDialog() == DialogResult.OK)
-            {
-                //MessageBox.Show(mo.SafeFileName);
-                mo.ShowDialog();
-            }
-        }
-
-        private void mnuHelp_Click_2(object sender, EventArgs e)
-        {
-            OpenFileDialog mo = new OpenFileDialog();
-            mo.Filter = "mht file| *.mht";
-            if (mo.ShowDialog() == DialogResult.OK)
-            {
-                //MessageBox.Show(mo.SafeFileName);
-                mo.ShowDialog();
-                mo.Title = "Open Help";
-                mo.InitialDirectory = "F:";
-                mo.FileName="";
-
-            }
-        }
-    }
 }
