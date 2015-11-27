@@ -44,5 +44,12 @@ namespace QLPhongKS
             thue.Show();
             Hide();
         }
+
+        private void sửDụngDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSuDungDV sddv = new frmSuDungDV();
+            sddv.Show();
+            Hide();
+        }
     }
 }
