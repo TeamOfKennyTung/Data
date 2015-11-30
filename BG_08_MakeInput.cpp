@@ -39,7 +39,11 @@ void BubbleSort(int a[])
 	}	
 }
 
+<<<<<<< HEAD
 //Luan da vao de sua lan 2
+=======
+//Luan eat shit
+>>>>>>> origin/BigNose
 int main()
 {
 	FILE *f,*g;
