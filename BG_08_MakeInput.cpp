@@ -39,7 +39,7 @@ void BubbleSort(int a[])
 	}	
 }
 
-
+//Luan da vao de sua lan 2
 int main()
 {
 	FILE *f,*g;
