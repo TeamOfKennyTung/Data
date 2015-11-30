@@ -14,3 +14,5 @@ C:\Users\UBUNTU\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\De
 F:\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\bin\Debug\QuanLiNhanSu.exe.config
 F:\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.exe
 F:\Documents\GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.pdb
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.exe
+D:\File_GitHub\Data\Project_1\QuanLiNhanSu\QuanLiNhanSu\obj\Debug\QuanLiNhanSu.pdb
