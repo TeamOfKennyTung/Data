@@ -238,3 +238,63 @@ begin
 select * from HoaDon
 where ID_HoaDon like '%'+ @tim+ '%' or Ten_HoaDon like '%'+@tim+'%'
 end
+
+alter table HangHoa drop column NgayNhap
+alter table HangHoa drop column HanSd
+
+create table PhieuXuat
+(
+	MaPhieu varchar(10) primary key,
+	ID_HangHoa char(10) constraint FK_PX_HH foreign key references HangHoa(ID_HangHoa),
+	SoLuong int,
+	NgayBan datetime
+)
+
+create table PhieuNhap
+(
+	MaPhieu varchar(10) primary key,
+	ID_HangHoa char(10) constraint FK_PN_HH foreign key references HangHoa(ID_HangHoa),
+	SoLuong int,
+	GiaBan int,
+	NgayNhap datetime
+)
+
+create proc BanHang (@tenhang nvarchar(50), @soluong int, @ngayban datetime)
+as
+declare @i int, @id char(10)
+begin
+set @i = (select count(MaPhieu) from PhieuXuat)
+set @id = (select ID_HangHoa from HangHoa where TenHang = @tenhang)
+update HangHoa set SoLuong = SoLuong - @soluong where TenHang = @tenhang
+insert into PhieuXuat values (convert(varchar(10),@i+1),@id, @soluong, @ngayban)
+end
+
+drop proc NhapHang
+
+create proc NhapHang (@tenhang nvarchar(50), @soluong int, @giaban int, @ngaynhap datetime)
+as
+declare @i int, @id int, @id1 char(10), @id2 char(10)
+begin
+set @i = (select count(MaPhieu) from PhieuNhap)
+set @id = (select count(ID_HangHoa) from HangHoa where TenHang = @tenhang)
+set @id1 = (select count(ID_HangHoa) from HangHoa)
+set @id2 = (select Id_HangHoa from HangHoa where TenHang = @tenhang)
+if (@id  = 0)
+begin
+insert into HangHoa values('HH' + convert(varchar(10), @id1+1), @tenhang, @giaban, @soluong)
+insert into PhieuNhap values(convert(varchar(10), + @i+1),'HH' + convert(varchar(10), @id1+1), @soluong, @giaban, @ngaynhap)
+end
+else
+begin
+update HangHoa set SoLuong = SoLuong + @soluong, GiaBan = @giaban where TenHang = @tenhang
+insert into PhieuNhap values(convert(varchar(10), + @i+1), @id2, @soluong, @giaban, @ngaynhap)
+end
+end
+
+create proc LuuLuong(@ngaybatdau datetime, @ngayketthuc datetime)
+as
+begin
+select  c.TenHang, Isnull(sum(b.soluong),0) as Nhap, isnull(sum(a.soluong),0) as Xuat, c.SoLuong as ConLai from HangHoa c left join PhieuNhap b on b.id_hanghoa = c.id_hanghoa left join PhieuXuat a on a.id_hanghoa=c.id_hanghoa
+where (b.ngaynhap between @ngaybatdau and @ngayketthuc) or (a.ngayban between @ngaybatdau and @ngayketthuc)
+group by c.TenHang, c.SoLuong
+end
