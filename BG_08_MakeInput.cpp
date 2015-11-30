@@ -24,7 +24,11 @@ void QuickSort(int a[],int left, int right)
 	if(left<j) QuickSort(a,left,j);
 	if(i<right) QuickSort(a,i,right);
 }
+<<<<<<< HEAD
 //lusnjt22
+=======
+//DAi ca luan da vao day
+>>>>>>> 3a2305f76439e9653b68cdf9fcdf7af990ded418
 void BubbleSort(int a[])
 {
 	for(int i=99999;i<200000;i++)
@@ -38,7 +42,6 @@ void BubbleSort(int a[])
 		}
 	}	
 }
-
 
 int main()
 {
@@ -71,4 +74,5 @@ int main()
 //	}
 //	for(int i=10000; i<200002; i++)
 //	printf("%d ",a[i]);
+	//I'm Luan's Father
 }
