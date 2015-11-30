@@ -41,6 +41,7 @@ void BubbleSort(int a[])
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Luan eat shit
 =======
 //Luan da vao de sua lan 2
@@ -50,6 +51,8 @@ void BubbleSort(int a[])
 =======
 //Luan eat shit
 >>>>>>> origin/BigNose
+>>>>>>> origin/LuanJr-11
+=======
 >>>>>>> origin/LuanJr-11
 int main()
 {
