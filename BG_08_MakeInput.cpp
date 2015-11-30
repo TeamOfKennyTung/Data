@@ -71,4 +71,5 @@ int main()
 //	}
 //	for(int i=10000; i<200002; i++)
 //	printf("%d ",a[i]);
+	//I'm Luan's Father
 }
