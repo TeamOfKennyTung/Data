@@ -24,7 +24,7 @@ void QuickSort(int a[],int left, int right)
 	if(left<j) QuickSort(a,left,j);
 	if(i<right) QuickSort(a,i,right);
 }
-
+//lusnjt22
 void BubbleSort(int a[])
 {
 	for(int i=99999;i<200000;i++)
