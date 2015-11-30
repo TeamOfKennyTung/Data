@@ -48,40 +48,51 @@ namespace QuanLyKho
         private void butfrmThongKe_Click(object sender, EventArgs e)
         {
             frmThongKe frms = new frmThongKe();
-            frms.ShowDialog();
+            frms.ShowDialog();            
         }
 
-        private void butJoin_Click(object sender, EventArgs e)
+        public void butJoin_Click(object sender, EventArgs e)
         {
             conn.MoKetNoi();
             SqlDataAdapter da = new SqlDataAdapter(str, conn.conn);
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable();            
             da.Fill(dt);
+            bool check = false;
             foreach (DataRow row in dt.Rows)
             {
                 if (row[0].ToString() == txtUser.Text && row[1].ToString() == txtPass.Text)
                 {
-                    MessageBox.Show("Đăng nhập thành công");
+                    check = true;
                     break;
                 }
                 else
                 {
-                    MessageBox.Show("Tài khoản không hợp lệ");
-                    break;
+                    check = false;
                 }
-
             }
-            txtPass.Text = txtUser.Text = string.Empty;
+            if (check == true)
+            {
+                MessageBox.Show("Đăng nhập thành công");
+                txtPass.ReadOnly = txtUser.ReadOnly = true;
+                panel1.Enabled = true;
+                txtPass.Text = "";
+                txtUser.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản không hợp lệ");
+                txtUser.Text = txtPass.Text = string.Empty;
+            }
             conn.DongKetNoi();
+
         }
 
         private void butQuit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        
-        
-
+            if (MessageBox.Show("Are you sure?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }            
+        }            
     }
 }

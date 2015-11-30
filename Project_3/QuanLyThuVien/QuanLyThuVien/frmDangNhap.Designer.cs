@@ -111,7 +111,6 @@
             this.pAcc.Controls.Add(this.butfrmMuonTra);
             this.pAcc.Controls.Add(this.butfrmSach);
             this.pAcc.Controls.Add(this.butfrmDG);
-            this.pAcc.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pAcc.Enabled = false;
             this.pAcc.Location = new System.Drawing.Point(0, 116);
             this.pAcc.Name = "pAcc";

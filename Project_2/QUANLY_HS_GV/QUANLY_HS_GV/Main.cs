@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace QUANLY_HS_GV
 {
@@ -17,27 +18,30 @@ namespace QUANLY_HS_GV
             InitializeComponent();
         }
 
-        private void mnuHocsinh_Click(object sender, EventArgs e)
+        private void btnthoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnhuongdan_Click(object sender, EventArgs e)
+        {
+            huongdan hd = new huongdan();
+            hd.ShowDialog();
+        }
+
+        private void btnhocsinh_Click(object sender, EventArgs e)
         {
             HocSinh hs = new HocSinh();
-            hs.Show();
+            hs.ShowDialog();
         }
 
-        private void mnuGiaovien_Click(object sender, EventArgs e)
+        private void btngiaovien_Click(object sender, EventArgs e)
         {
             GiaoVien gv = new GiaoVien();
-            gv.Show();
+            gv.ShowDialog();
         }
-
-        private void mnuThoat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
-
-        private void mnuHelp_Click(object sender, EventArgs e)
-        {
-            Login tg = new Login();
-            tg.Show();
-        }
-    }
 }

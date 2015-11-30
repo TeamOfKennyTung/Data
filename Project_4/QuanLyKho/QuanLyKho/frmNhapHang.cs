@@ -100,23 +100,23 @@ namespace QuanLyKho
         /*Hien thi du lieu cua bang Hang hoa len Form*/
         private void btn_Load_Click(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection(consql);
-            SqlCommand com = new SqlCommand();
-            com.CommandText = "LoadHangHoa";
-            com.CommandType = CommandType.StoredProcedure;
-            com.Connection = cn;
-            SqlDataAdapter adap = new SqlDataAdapter(com);
-            DataTable dt = new DataTable();
-            adap.Fill(dt);
-            if (dt.Rows.Count > 0)
-            {
-                dgv_Hanghoa.DataSource = dt;
-            }
-            else
-            {
-                MessageBox.Show("Data is empty!");
-            }
-            conn.DongKetNoi();
+            //SqlConnection cn = new SqlConnection(consql);
+            //SqlCommand com = new SqlCommand();
+            //com.CommandText = "LoadHangHoa";
+            //com.CommandType = CommandType.StoredProcedure;
+            //com.Connection = cn;
+            //SqlDataAdapter adap = new SqlDataAdapter(com);
+            //DataTable dt = new DataTable();
+            //adap.Fill(dt);
+            //if (dt.Rows.Count > 0)
+            //{
+            //    dgv_Hanghoa.DataSource = dt;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Data is empty!");
+            //}
+            //conn.DongKetNoi();
         }
 
     }

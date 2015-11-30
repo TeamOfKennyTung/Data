@@ -26,3 +26,16 @@ D:\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMuonTra.reso
 D:\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSach.resources
 D:\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
 D:\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDangNhap.resources
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDocGia.resources
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmHuongDan.resources
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMuonTra.resources
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSach.resources
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+F:\Documents\GitHub\Data\Project_3\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache

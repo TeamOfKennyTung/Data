@@ -57,13 +57,6 @@
             this.lblGiaovien = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvGiaovien = new System.Windows.Forms.DataGridView();
-            this.qUANLY_HS_GVDataSet1 = new QUANLY_HS_GV.QUANLY_HS_GVDataSet1();
-            this.giaoVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.giaoVienTableAdapter = new QUANLY_HS_GV.QUANLY_HS_GVDataSet1TableAdapters.GiaoVienTableAdapter();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGiaovien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.giaoVienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEdit
@@ -382,20 +375,6 @@
             this.dgvGiaovien.TabIndex = 122;
             this.dgvGiaovien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaovien_CellClick);
             // 
-            // qUANLY_HS_GVDataSet1
-            // 
-            this.qUANLY_HS_GVDataSet1.DataSetName = "QUANLY_HS_GVDataSet1";
-            this.qUANLY_HS_GVDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // giaoVienBindingSource
-            // 
-            this.giaoVienBindingSource.DataMember = "GiaoVien";
-            this.giaoVienBindingSource.DataSource = this.qUANLY_HS_GVDataSet1;
-            // 
-            // giaoVienTableAdapter
-            // 
-            this.giaoVienTableAdapter.ClearBeforeFill = true;
-            // 
             // GiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,9 +396,6 @@
             this.Load += new System.EventHandler(this.GiaoVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGiaovien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.giaoVienBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,8 +431,8 @@
         private System.Windows.Forms.Label lblLop;
         private System.Windows.Forms.ComboBox cbo_Monhoc;
         private System.Windows.Forms.Label lblMonhoc;
-        private QUANLY_HS_GVDataSet1 qUANLY_HS_GVDataSet1;
-        private System.Windows.Forms.BindingSource giaoVienBindingSource;
-        private QUANLY_HS_GVDataSet1TableAdapters.GiaoVienTableAdapter giaoVienTableAdapter;
+        //private QUANLY_HS_GVDataSet1 qUANLY_HS_GVDataSet1;
+        //private System.Windows.Forms.BindingSource giaoVienBindingSource;
+        //private QUANLY_HS_GVDataSet1TableAdapters.GiaoVienTableAdapter giaoVienTableAdapter;
     }
 }

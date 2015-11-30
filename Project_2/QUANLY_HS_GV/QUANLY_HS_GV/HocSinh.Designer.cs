@@ -53,13 +53,6 @@
             this.cbo_Lop = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtquequan = new System.Windows.Forms.TextBox();
-            this.qUANLY_HS_GVDataSet = new QUANLY_HS_GV.QUANLY_HS_GVDataSet();
-            this.hocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hocSinhTableAdapter = new QUANLY_HS_GV.QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHocsinh)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbo_Monhoc
@@ -338,22 +331,6 @@
             this.txtquequan.Size = new System.Drawing.Size(175, 22);
             this.txtquequan.TabIndex = 102;
             // 
-            // qUANLY_HS_GVDataSet
-            // 
-            this.qUANLY_HS_GVDataSet.DataSetName = "QUANLY_HS_GVDataSet";
-            this.qUANLY_HS_GVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hocSinhBindingSource
-            // 
-            this.hocSinhBindingSource.DataMember = "HocSinh";
-            this.hocSinhBindingSource.DataSource = this.qUANLY_HS_GVDataSet;
-            // 
-            // hocSinhTableAdapter
-            // 
-            this.hocSinhTableAdapter.ClearBeforeFill = true;
-            // 
-            // HocSinh
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 494);
@@ -374,8 +351,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocsinh)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qUANLY_HS_GVDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hocSinhBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,20 +378,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox1;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn iDHsDataGridViewTextBoxColumn;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn quequanDataGridViewTextBoxColumn;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn gTDataGridViewTextBoxColumn;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn iDLopDataGridViewTextBoxColumn;
-        //private System.Windows.Forms.DataGridViewTextBoxColumn iDMonHocDataGridViewTextBoxColumn;
-        //private QUANLY_HS_GVDataSet qUANLY_HS_GVDataSet;
-        //private QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtquequan;
-        private QUANLY_HS_GVDataSet qUANLY_HS_GVDataSet;
-        private System.Windows.Forms.BindingSource hocSinhBindingSource;
-        private QUANLY_HS_GVDataSetTableAdapters.HocSinhTableAdapter hocSinhTableAdapter;
         private System.Windows.Forms.ComboBox cbo_Lop;
         private System.Windows.Forms.Label label4;
     }
