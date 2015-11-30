@@ -39,7 +39,7 @@ void BubbleSort(int a[])
 	}	
 }
 
-
+//Luan eat shit
 int main()
 {
 	FILE *f,*g;
