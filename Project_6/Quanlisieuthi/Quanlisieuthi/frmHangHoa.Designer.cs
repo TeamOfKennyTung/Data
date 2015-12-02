@@ -32,26 +32,22 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.but_ThemHang = new System.Windows.Forms.Button();
             this.but_Ban = new System.Windows.Forms.Button();
             this.but_Nhap = new System.Windows.Forms.Button();
-            this.txtHanSuDung = new System.Windows.Forms.TextBox();
             this.txtNgayNhap = new System.Windows.Forms.TextBox();
             this.txtGiaHang = new System.Windows.Forms.TextBox();
             this.txtTenHang = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.but_OK = new System.Windows.Forms.Button();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.but_Find = new System.Windows.Forms.Button();
+            this.butTK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,7 +62,6 @@
             this.Column5,
             this.Column1,
             this.Column2,
-            this.Column3,
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(155, 315);
             this.dataGridView1.MultiSelect = false;
@@ -97,39 +92,29 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "GiaHang";
-            this.Column2.HeaderText = "Giá Hàng";
+            this.Column2.DataPropertyName = "GiaBan";
+            this.Column2.HeaderText = "Giá Bán";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "NgayNhap";
-            this.Column3.HeaderText = "Ngày Nhập";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "HanSd";
-            this.Column4.HeaderText = "Hạn Sử Dụng";
+            this.Column4.DataPropertyName = "SoLuong";
+            this.Column4.HeaderText = "Số Lượng";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.butTK);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.but_ThemHang);
             this.panel1.Controls.Add(this.but_Ban);
             this.panel1.Controls.Add(this.but_Nhap);
-            this.panel1.Controls.Add(this.txtHanSuDung);
             this.panel1.Controls.Add(this.txtNgayNhap);
             this.panel1.Controls.Add(this.txtGiaHang);
             this.panel1.Controls.Add(this.txtTenHang);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -137,7 +122,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(443, 203);
             this.panel1.TabIndex = 14;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtID
             // 
@@ -145,7 +129,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(173, 20);
             this.txtID.TabIndex = 24;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // label5
             // 
@@ -157,23 +140,11 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "ID_HangHoa";
             // 
-            // but_ThemHang
-            // 
-            this.but_ThemHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.but_ThemHang.ForeColor = System.Drawing.Color.Red;
-            this.but_ThemHang.Location = new System.Drawing.Point(273, 155);
-            this.but_ThemHang.Name = "but_ThemHang";
-            this.but_ThemHang.Size = new System.Drawing.Size(92, 45);
-            this.but_ThemHang.TabIndex = 22;
-            this.but_ThemHang.Text = "Sửa Hàng";
-            this.but_ThemHang.UseVisualStyleBackColor = true;
-            this.but_ThemHang.Click += new System.EventHandler(this.but_ThemHang_Click);
-            // 
             // but_Ban
             // 
             this.but_Ban.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.but_Ban.ForeColor = System.Drawing.Color.Red;
-            this.but_Ban.Location = new System.Drawing.Point(162, 155);
+            this.but_Ban.Location = new System.Drawing.Point(181, 155);
             this.but_Ban.Name = "but_Ban";
             this.but_Ban.Size = new System.Drawing.Size(83, 45);
             this.but_Ban.TabIndex = 21;
@@ -192,13 +163,6 @@
             this.but_Nhap.Text = "Nhập hàng";
             this.but_Nhap.UseVisualStyleBackColor = true;
             this.but_Nhap.Click += new System.EventHandler(this.but_Nhap_Click);
-            // 
-            // txtHanSuDung
-            // 
-            this.txtHanSuDung.Location = new System.Drawing.Point(144, 115);
-            this.txtHanSuDung.Name = "txtHanSuDung";
-            this.txtHanSuDung.Size = new System.Drawing.Size(173, 20);
-            this.txtHanSuDung.TabIndex = 19;
             // 
             // txtNgayNhap
             // 
@@ -221,25 +185,15 @@
             this.txtTenHang.Size = new System.Drawing.Size(173, 20);
             this.txtTenHang.TabIndex = 16;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 119);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 16);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Hạn Sử Dụng";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(36, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Ngày Nhập";
+            this.label3.Text = "Số Lượng";
             // 
             // label2
             // 
@@ -247,9 +201,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(36, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Giá Hàng";
+            this.label2.Text = "Giá Bán";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
@@ -264,24 +218,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.but_OK);
             this.panel2.Controls.Add(this.txtFind);
             this.panel2.Controls.Add(this.but_Find);
             this.panel2.Location = new System.Drawing.Point(155, 221);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(443, 57);
             this.panel2.TabIndex = 15;
-            // 
-            // but_OK
-            // 
-            this.but_OK.Location = new System.Drawing.Point(352, 17);
-            this.but_OK.Name = "but_OK";
-            this.but_OK.Size = new System.Drawing.Size(75, 26);
-            this.but_OK.TabIndex = 15;
-            this.but_OK.Text = "Xong";
-            this.but_OK.UseVisualStyleBackColor = true;
-            this.but_OK.Visible = false;
-            this.but_OK.Click += new System.EventHandler(this.but_OK_Click);
             // 
             // txtFind
             // 
@@ -301,6 +243,18 @@
             this.but_Find.Text = "Tìm Kiếm ";
             this.but_Find.UseVisualStyleBackColor = true;
             this.but_Find.Click += new System.EventHandler(this.but_Find_Click);
+            // 
+            // butTK
+            // 
+            this.butTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butTK.ForeColor = System.Drawing.Color.Red;
+            this.butTK.Location = new System.Drawing.Point(336, 155);
+            this.butTK.Name = "butTK";
+            this.butTK.Size = new System.Drawing.Size(83, 45);
+            this.butTK.TabIndex = 25;
+            this.butTK.Text = "Thống kê";
+            this.butTK.UseVisualStyleBackColor = true;
+            this.butTK.Click += new System.EventHandler(this.butTK_Click);
             // 
             // frmHangHoa
             // 
@@ -326,28 +280,24 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button but_ThemHang;
         private System.Windows.Forms.Button but_Ban;
         private System.Windows.Forms.Button but_Nhap;
-        private System.Windows.Forms.TextBox txtHanSuDung;
         private System.Windows.Forms.TextBox txtNgayNhap;
         private System.Windows.Forms.TextBox txtGiaHang;
         private System.Windows.Forms.TextBox txtTenHang;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtFind;
         private System.Windows.Forms.Button but_Find;
-        private System.Windows.Forms.Button but_OK;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button butTK;
 
     }
 }
