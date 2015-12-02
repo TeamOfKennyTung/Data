@@ -45,6 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectData.cs" />
+    <Compile Include="frmBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanHang.Designer.cs">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHuongDan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +62,30 @@
     </Compile>
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapHang.Designer.cs">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTKBH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTKBH.Designer.cs">
+      <DependentUpon>frmTKBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTKNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTKNH.Designer.cs">
+      <DependentUpon>frmTKNH.cs</DependentUpon>
     </Compile>
     <Compile Include="frmĐăngNhập.cs">
       <SubType>Form</SubType>
@@ -83,11 +113,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBanHang.resx">
+      <DependentUpon>frmBanHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHuongDan.resx">
       <DependentUpon>frmHuongDan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapHang.resx">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTKBH.resx">
+      <DependentUpon>frmTKBH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTKNH.resx">
+      <DependentUpon>frmTKNH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmĐăngNhập.resx">
       <DependentUpon>frmĐăngNhập.cs</DependentUpon>
