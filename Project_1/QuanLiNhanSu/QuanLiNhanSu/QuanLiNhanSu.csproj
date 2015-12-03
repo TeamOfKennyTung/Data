@@ -74,16 +74,6 @@
     <Compile Include="NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLiNhanSuDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLiNhanSuDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiNhanSuDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SuaNV.cs" />
     <Compile Include="ThemNV.cs" />
     <Compile Include="TimKiemNV.cs" />
@@ -125,28 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ảnh_Icon\marketshare.jpg" />
-    <None Include="QuanLiNhanSuDataSet.xsc">
-      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLiNhanSuDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLiNhanSuDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="QuanLiNhanSuDataSet.xss">
-      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLiNhanSuDataSet1.xsc">
-      <DependentUpon>QuanLiNhanSuDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLiNhanSuDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLiNhanSuDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLiNhanSuDataSet1.xss">
-      <DependentUpon>QuanLiNhanSuDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Resources\marketshare.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
