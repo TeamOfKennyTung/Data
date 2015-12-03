@@ -13,7 +13,7 @@ namespace QuanLyKho
     public class ConnectData
     {
         public SqlConnection conn = new SqlConnection();
-        public string constr = @"Data Source=UBUNTU;Initial Catalog=Project_4;Integrated Security=True";
+        public string constr = @"Data Source=HP-PC;Initial Catalog=Project_4;Integrated Security=True";
 
         public void MoKetNoi()
         {
