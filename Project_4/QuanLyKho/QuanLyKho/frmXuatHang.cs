@@ -19,7 +19,7 @@ namespace QuanLyKho
         }
 
         ConnectData conn = new ConnectData();
-        public string str = @"Data Source=UBUNTU;Initial Catalog=Project_4;Integrated Security=True";
+        public string str = @"Data Source=HP-PC;Initial Catalog=Project_4;Integrated Security=True";
         public string constr = @"select * from tblHangHoa";
 
         private void frmNhapHang_Load(object sender, EventArgs e)
