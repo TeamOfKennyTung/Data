@@ -105,3 +105,6 @@ D:\File_GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.L
 D:\File_GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.HocSinh.resources
 D:\File_GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.Properties.Resources.resources
 D:\File_GitHub\Data\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.csproj.GenerateResource.Cache
+C:\Users\Quang1\Desktop\Data-master\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\bin\Debug\QUANLY_HS_GV.exe.config
+C:\Users\Quang1\Desktop\Data-master\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.exe
+C:\Users\Quang1\Desktop\Data-master\Project_2\QUANLY_HS_GV\QUANLY_HS_GV\obj\Debug\QUANLY_HS_GV.pdb
