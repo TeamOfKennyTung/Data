@@ -40,3 +40,6 @@ C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.Prop
 C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.GenerateResource.Cache
 C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe
 C:\Users\UbuntuBg\Desktop\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.pdb
+C:\Users\HP\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\bin\Debug\QuanLyKho.exe.config
+C:\Users\HP\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.exe
+C:\Users\HP\Documents\GitHub\Data\Project_4\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb

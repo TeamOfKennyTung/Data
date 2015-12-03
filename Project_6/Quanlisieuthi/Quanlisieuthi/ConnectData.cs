@@ -12,7 +12,7 @@ namespace Quanlisieuthi
     public class ConnectData
     {
         public SqlConnection conn = new SqlConnection();
-        public string constr = @"Data Source=Admin-PC\SQLEXPRESS;Initial Catalog=QLBANHANG_ST;Integrated Security=True";
+        public string constr = @"Data Source=(local);Initial Catalog=QLBANHANG_ST;Integrated Security=True";
 
         public void MoKetNoi()
         {
