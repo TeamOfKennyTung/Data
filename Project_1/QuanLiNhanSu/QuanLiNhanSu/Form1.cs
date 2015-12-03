@@ -22,7 +22,7 @@ namespace QuanLiNhanSu
         private void frmMain_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLiNhanSuDataSet1.tblNhanVien' table. You can move, or remove it, as needed.
-            this.tblNhanVienTableAdapter.Fill(this.quanLiNhanSuDataSet1.tblNhanVien);
+            //this.tblNhanVienTableAdapter.Fill(this.quanLiNhanSuDataSet1.tblNhanVien);
             DataTable dt = NV.ShowNhanVien();
             DataTable dt1 = NV.ShowChucVu();
             DataTable dt2 = NV.ShowPhongBan();
