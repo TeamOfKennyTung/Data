@@ -66,7 +66,7 @@ namespace Quanlisieuthi
             }
             else
             {
-                MessageBox.Show("Tài khoản không hợp lệ");
+                MessageBox.Show("Tài khoản đăng nhập không hợp lệ không hợp lệ");
                 txtUser.Text = txtPass.Text = string.Empty;
             }
             conn.DongKetNoi();
