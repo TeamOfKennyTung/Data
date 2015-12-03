@@ -15,8 +15,6 @@ create table tblDocGia
 	GioiTinh nvarchar(3) check (GioiTinh in (N'Nữ', N'Nam'))
 )
 
-delete from tblMuonTra
-
 create table tblMuonTra
 (
 	MaPM varchar(10) primary key,

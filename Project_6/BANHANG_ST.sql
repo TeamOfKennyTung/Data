@@ -286,7 +286,7 @@ insert into PhieuNhap values(convert(varchar(10), + @i+1),'HH' + convert(varchar
 end
 else
 begin
-update HangHoa set SoLuong = SoLuong + @soluong, GiaBan = @giaban where TenHang = @tenhang
+update HangHoa set SoLuong = SoLuong + @soluong, GiaHang = @giaban where TenHang = @tenhang
 insert into PhieuNhap values(convert(varchar(10), + @i+1), @id2, @soluong, @giaban, @ngaynhap)
 end
 end

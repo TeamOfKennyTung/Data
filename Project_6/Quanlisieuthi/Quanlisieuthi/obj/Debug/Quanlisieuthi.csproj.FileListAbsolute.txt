@@ -68,3 +68,6 @@ C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\De
 C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmKhachHang.resources
 C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.Properties.Resources.resources
 C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.csproj.GenerateResource.Cache
+F:\Documents\GitHub\Data\Project_6\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.exe.config
+F:\Documents\GitHub\Data\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.exe
+F:\Documents\GitHub\Data\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.pdb
