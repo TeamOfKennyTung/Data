@@ -28,14 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Giới thiệu chung");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Đăng Nhập");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Giao diện chính");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Quản lí nhân viên");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Giới thiệu chi tiết", new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode3,
-            treeNode4});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Giới thiệu chung");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Giới thiệu chi tiết");
             this.trViewGioiThieu = new System.Windows.Forms.TreeView();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
@@ -44,19 +38,13 @@
             // 
             this.trViewGioiThieu.Location = new System.Drawing.Point(12, 12);
             this.trViewGioiThieu.Name = "trViewGioiThieu";
-            treeNode1.Name = "gtChung";
-            treeNode1.Text = "Giới thiệu chung";
-            treeNode2.Name = "gtFrmDangNhap";
-            treeNode2.Text = "Đăng Nhập";
-            treeNode3.Name = "gtfrmMain";
-            treeNode3.Text = "Giao diện chính";
-            treeNode4.Name = "gtfrmForm1";
-            treeNode4.Text = "Quản lí nhân viên";
-            treeNode5.Name = "gtChiTiet";
-            treeNode5.Text = "Giới thiệu chi tiết";
+            treeNode3.Name = "gtChung";
+            treeNode3.Text = "Giới thiệu chung";
+            treeNode4.Name = "gtChiTiet";
+            treeNode4.Text = "Giới thiệu chi tiết";
             this.trViewGioiThieu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode5});
+            treeNode3,
+            treeNode4});
             this.trViewGioiThieu.Size = new System.Drawing.Size(142, 482);
             this.trViewGioiThieu.TabIndex = 0;
             this.trViewGioiThieu.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trViewGioiThieu_AfterSelect);
@@ -67,14 +55,14 @@
             this.webBrowser1.Location = new System.Drawing.Point(160, 12);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(624, 482);
+            this.webBrowser1.Size = new System.Drawing.Size(748, 482);
             this.webBrowser1.TabIndex = 1;
             // 
             // frmChiDan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 506);
+            this.ClientSize = new System.Drawing.Size(920, 506);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.trViewGioiThieu);
             this.Name = "frmChiDan";
