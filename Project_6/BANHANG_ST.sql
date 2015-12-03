@@ -269,7 +269,7 @@ update HangHoa set SoLuong = SoLuong - @soluong where TenHang = @tenhang
 insert into PhieuXuat values (convert(varchar(10),@i+1),@id, @soluong, @ngayban)
 end
 
-drop proc NhapHang
+
 
 create proc NhapHang (@tenhang nvarchar(50), @soluong int, @giaban int, @ngaynhap datetime)
 as
@@ -286,7 +286,7 @@ insert into PhieuNhap values(convert(varchar(10), + @i+1),'HH' + convert(varchar
 end
 else
 begin
-update HangHoa set SoLuong = SoLuong + @soluong, GiaBan = @giaban where TenHang = @tenhang
+update HangHoa set SoLuong = SoLuong + @soluong, GiaHang = @giaban where TenHang = @tenhang
 insert into PhieuNhap values(convert(varchar(10), + @i+1), @id2, @soluong, @giaban, @ngaynhap)
 end
 end

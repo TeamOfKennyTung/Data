@@ -10,7 +10,7 @@ namespace QLPhongKS
     {
         public string GetConnect()
         {
-            return (@"Data Source=LUANJR11-PC\LUANJR_SQL;Initial Catalog=QuanLiPhongKS;Integrated Security=True");
+            return (@"Data Source=(local);Initial Catalog=QuanLiPhongKS;Integrated Security=True");
         }
     }
 }

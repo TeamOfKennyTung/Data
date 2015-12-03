@@ -16,42 +16,20 @@ namespace QuanLiNhanSu
         {
             InitializeComponent();
         }
-        private void GetFileAll(string tenfile)
-        {
-            StreamReader doc = File.OpenText(tenfile);
-            string s = doc.ReadToEnd();
-            txtGioiThieu.Text = s;
-        }
-
+       
         private void trViewGioiThieu_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            if (e.Node.Name == "gtChung")
+            string str;
+            if (trViewGioiThieu.SelectedNode.Name == "gtChung")
             {
-                GetFileAll("GioiThieuChung.txt");
-                Image img = Image.FromFile(@"marketshare.jpg");
-                pictureBox1.BackgroundImage=img;
+                str = Application.StartupPath + "\\Gioithieu.mht";
+                webBrowser1.Navigate(str);
             }
-            else
-                if (e.Node.Name == "gtFrmDangNhap")
-                { 
-                    GetFileAll("PhanDangNhap.txt");
-                    Image img = Image.FromFile(@"DangNhap.jpg");
-                    pictureBox1.BackgroundImage = img;
-                }
-                else
-                    if (e.Node.Name == "gtfrmMain")
-                    {
-                        GetFileAll("PhanMenu.txt");
-                        Image img = Image.FromFile(@"Menu.jpg");
-                        pictureBox1.BackgroundImage = img;
-                    }
-                    else
-                        if (e.Node.Name == "gtfrmForm1")
-                        {
-                            GetFileAll("PhanQuanLi.txt");
-                            Image img = Image.FromFile(@"QuanLi.jpg");
-                            pictureBox1.BackgroundImage = img;
-                        }
+            if (trViewGioiThieu.SelectedNode.Name == "gtChiTiet")
+            {
+                str = Application.StartupPath + "\\Chitiet.mht";
+                webBrowser1.Navigate(str);
+            } 
         }
 
         private void ChiDan_Load(object sender, EventArgs e)

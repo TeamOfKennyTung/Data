@@ -49,3 +49,25 @@ D:\ThucTapNhom\Data\New folder\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Q
 D:\ThucTapNhom\Data\New folder\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmThongKe.resources
 D:\ThucTapNhom\Data\New folder\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmTKBH.resources
 D:\ThucTapNhom\Data\New folder\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmTKNH.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.exe.config
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.exe
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.pdb
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.exe
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.pdb
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.csprojResolveAssemblyReference.cache
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmBanHang.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmHuongDan.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmNhanVien.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmNhapHang.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmThongKe.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmTKBH.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmTKNH.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmĐăngNhập.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmHangHoa.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmHoaDon.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.frmKhachHang.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.Properties.Resources.resources
+C:\Users\Quang1\Desktop\Data-master\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.csproj.GenerateResource.Cache
+F:\Documents\GitHub\Data\Project_6\Quanlisieuthi\Quanlisieuthi\bin\Debug\Quanlisieuthi.exe.config
+F:\Documents\GitHub\Data\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.exe
+F:\Documents\GitHub\Data\Project_6\Quanlisieuthi\Quanlisieuthi\obj\Debug\Quanlisieuthi.pdb

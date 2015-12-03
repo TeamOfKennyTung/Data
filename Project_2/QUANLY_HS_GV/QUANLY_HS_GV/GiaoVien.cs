@@ -79,7 +79,7 @@ namespace QUANLY_HS_GV
                     }
                     else
                     {
-                        MessageBox.Show("Data is empty!");
+                        MessageBox.Show("Data is empty!  ");
                         dgvGiaovien.Visible = false;
                     }
                 }

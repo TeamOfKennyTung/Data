@@ -17,8 +17,8 @@ namespace QuanLyKho
         {
             InitializeComponent();
         }
-        ConnectData con = new ConnectData();        
-        public string constr = @"Data Source=UBUNTU;Initial Catalog=Project_4;Integrated Security=True";        
+        ConnectData con = new ConnectData();
+        public string constr = @"Data Source=HP-PC;Initial Catalog=Project_4;Integrated Security=True";        
 
         private void btn_nhap_Click(object sender, EventArgs e)
         {
