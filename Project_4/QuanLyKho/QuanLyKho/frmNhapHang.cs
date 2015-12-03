@@ -39,7 +39,7 @@ namespace QuanLyKho
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
-                MessageBox.Show("Sửa thành công");
+                MessageBox.Show("Nhập thành công");
                 conn.KhoiTao(dgv_Hanghoa, @"select * from tblHangHoa");
                 txtMaHH.Text = txtTenHH.Text = txtMaNCC.Text = txtSoLuong.Text = string.Empty;
             }
@@ -62,7 +62,7 @@ namespace QuanLyKho
             int check = sqlcm.ExecuteNonQuery();
             if (check > 0)
             {
-                MessageBox.Show("Nhập thành công");
+                MessageBox.Show("Thêm thành công");
                 conn.KhoiTao(dgv_Hanghoa, @"select * from tblHangHoa");
                 txtMaHH.Text = txtTenHH.Text = txtMaNCC.Text = txtSoLuong.Text = string.Empty;
             }
