@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.treeView2 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(22, 22);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(245, 405);
-            this.treeView1.TabIndex = 0;
             // 
             // webBrowser1
             // 
             this.webBrowser1.Location = new System.Drawing.Point(273, 22);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(348, 405);
+            this.webBrowser1.Size = new System.Drawing.Size(537, 405);
             this.webBrowser1.TabIndex = 1;
+            // 
+            // treeView2
+            // 
+            this.treeView2.Location = new System.Drawing.Point(12, 22);
+            this.treeView2.Name = "treeView2";
+            this.treeView2.Size = new System.Drawing.Size(255, 405);
+            this.treeView2.TabIndex = 2;
             // 
             // frmHuongDan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 450);
+            this.ClientSize = new System.Drawing.Size(822, 450);
+            this.Controls.Add(this.treeView2);
             this.Controls.Add(this.webBrowser1);
-            this.Controls.Add(this.treeView1);
             this.Name = "frmHuongDan";
             this.Text = "Hướng dẫn";
             this.Load += new System.EventHandler(this.frmHuongDan_Load);
@@ -63,7 +63,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TreeView treeView2;
     }
 }
