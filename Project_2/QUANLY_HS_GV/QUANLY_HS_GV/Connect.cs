@@ -10,7 +10,7 @@ namespace QUANLY_HS_GV
     {
         public static string getconnect()
         {
-            return ("Data Source=UBUNTU;Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
+            return ("Data Source=(local);Initial Catalog=QUANLY_HS_GV;Integrated Security=True");
         }
     }
 }
