@@ -28,8 +28,10 @@ namespace QuanLiNhanSu
             DataTable dt2 = NV.ShowPhongBan();
             dtgNhanVien.DataSource = dt;
             dtgSuaNV.DataSource = dt;
-
-           
+            XoaNV xoa = new XoaNV();
+            DataTable dt3 = xoa.ShowMaNV();
+            cbxXoaMaNV.DataSource = dt3;
+            cbxXoaMaNV.DisplayMember = "ma";
 
             cbxTKMaCV.DataSource = dt1;
             cbxTKMaCV.DisplayMember = "Mã Chức Vụ";
@@ -168,15 +170,18 @@ namespace QuanLiNhanSu
             if (kq == "0")
                 MessageBox.Show("Không có mã nhân viên hoặc mã nhân viên bị sai");
             else
-                if (kq == "false")
-                    MessageBox.Show("Không thể xóa nhân viên");
+                if (kq == "2")
+                    MessageBox.Show("Không thể xóa vì ràng buộc với bảng thân nhân");
                 else
-            {
-                MessageBox.Show("Xóa thành công");
-                DataTable dt = NV.ShowNhanVien();
-                dtgXoaNV.DataSource = dt;
-                Init();
-            }
+                    if (kq == "false")
+                        MessageBox.Show("Không thể xóa nhân viên");
+                    else
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        DataTable dt = NV.ShowNhanVien();
+                        dtgXoaNV.DataSource = dt;
+                        Init();
+                    }
         }
 
         //private void txtTKTenNV_TextChanged(object sender, EventArgs e)

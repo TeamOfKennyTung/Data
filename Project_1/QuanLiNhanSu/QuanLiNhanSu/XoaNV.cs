@@ -36,6 +36,14 @@ namespace QuanLiNhanSu
             }
             return kq;
         }
-
+        public DataTable ShowMaNV()
+        {
+            string str = @"select MaNV as ma from tblNhanVien";
+            SqlConnection con = new SqlConnection(ConnectDATA.getconnect());
+            SqlDataAdapter ad = new SqlDataAdapter(str, con);
+            DataTable dt = new DataTable();
+            ad.Fill(dt);
+            return dt;
+        }
     }
 }
