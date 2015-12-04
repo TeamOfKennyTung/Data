@@ -21,14 +21,22 @@ namespace QuanLiNhanSu
         {
             Form frm1 = new frmMain();
             frm1.Show();
-            Hide();
+            //Hide();
         }
 
         private void ChiDan_Click(object sender, EventArgs e)
         {
             frmChiDan cd = new frmChiDan();
             cd.Show();
-            Hide();
+            //Hide();
+        }
+
+        private void mnuThoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

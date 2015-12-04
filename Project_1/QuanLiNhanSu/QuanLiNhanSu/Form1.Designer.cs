@@ -161,7 +161,7 @@
             // 
             // cbxXoaMaNV
             // 
-            this.cbxXoaMaNV.DataSource = this.tblNhanVienBindingSource;
+            //this.cbxXoaMaNV.DataSource = this.tblNhanVienBindingSource;
             this.cbxXoaMaNV.DisplayMember = "MaNV";
             this.cbxXoaMaNV.FormattingEnabled = true;
             this.cbxXoaMaNV.Location = new System.Drawing.Point(116, 22);
@@ -810,7 +810,7 @@
             // 
             // cbxTimKiemMaNV
             // 
-            this.cbxTimKiemMaNV.DataSource = this.tblNhanVienBindingSource;
+            //this.cbxTimKiemMaNV.DataSource = this.tblNhanVienBindingSource;
             this.cbxTimKiemMaNV.DisplayMember = "MaNV";
             this.cbxTimKiemMaNV.FormattingEnabled = true;
             this.cbxTimKiemMaNV.Location = new System.Drawing.Point(398, 55);

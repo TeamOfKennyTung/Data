@@ -31,6 +31,7 @@
             this.MenuMain = new System.Windows.Forms.MenuStrip();
             this.HoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.ChiDan = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,7 +40,8 @@
             this.MenuMain.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HoSo,
-            this.ChiDan});
+            this.ChiDan,
+            this.mnuThoat});
             this.MenuMain.Location = new System.Drawing.Point(0, 0);
             this.MenuMain.Name = "MenuMain";
             this.MenuMain.Size = new System.Drawing.Size(471, 24);
@@ -60,6 +62,13 @@
             this.ChiDan.Text = "Chỉ dẫn";
             this.ChiDan.Click += new System.EventHandler(this.ChiDan_Click);
             // 
+            // mnuThoat
+            // 
+            this.mnuThoat.Name = "mnuThoat";
+            this.mnuThoat.Size = new System.Drawing.Size(50, 20);
+            this.mnuThoat.Text = "Thoát";
+            this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -70,6 +79,7 @@
             this.Controls.Add(this.MenuMain);
             this.MainMenuStrip = this.MenuMain;
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.MenuMain.ResumeLayout(false);
             this.MenuMain.PerformLayout();
@@ -83,5 +93,6 @@
         private System.Windows.Forms.MenuStrip MenuMain;
         private System.Windows.Forms.ToolStripMenuItem HoSo;
         private System.Windows.Forms.ToolStripMenuItem ChiDan;
+        private System.Windows.Forms.ToolStripMenuItem mnuThoat;
     }
 }
